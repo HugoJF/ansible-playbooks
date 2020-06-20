@@ -9,7 +9,7 @@
 - name: download backup zip
   fetch:
     src: ./webapps/{{ item }}/{{ item }}-backups-{{ ansible_date_time.date }}.tar.gz
-    dest: /home/hugo/backups/
+    dest: /home/hugo/backups/logs/
     flat: yes
   with_items: "{{ webapps }}"
 

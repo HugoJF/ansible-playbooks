@@ -9,3 +9,16 @@ webapps:
   - 'csgo-sessions'
   - 'payment-system'
   - 'payment-system-staging'
+
+databases:
+  - cachet
+  - calladmin_middleware
+  - cksurf
+  - csgo_pipeline
+  - drivemais
+  - frontpage
+  - kaganus_weapons
+  - payment_system
+  - sourcebans_pp
+  - unity_blog
+  - vip_admin_2

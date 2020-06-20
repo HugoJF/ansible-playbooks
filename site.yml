@@ -3,4 +3,5 @@
 - name: backup logs
   hosts: main
   roles:
-    - backup-webapps
+    - {role: backup-webapps, tags: 'webapps'}
+    - {role: backup-databases, tags: 'databases'}

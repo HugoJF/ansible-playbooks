@@ -1,0 +1,28 @@
+---
+
+- name: create dump directory
+  file:
+    path: /tmp/ansible-db-dumps/{{ ansible_date_time.date }}
+    state: directory
+    mode: '0755'
+
+- name: dump databases
+  mysql_db:
+    state: dump
+    name: "{{ item }}"
+    login_user: ansible
+    login_password: ""
+    target: /tmp/ansible-db-dumps/{{ ansible_date_time.date }}/{{ item }}.sql.gz
+  with_items: "{{ databases }}"
+
+- name: download dumps
+  fetch:
+    src: /tmp/ansible-db-dumps/{{ ansible_date_time.date }}/{{ item }}.sql.gz
+    dest: /home/hugo/backups/db/{{ ansible_date_time.date }}/
+    flat: yes
+  with_items: "{{ databases }}"
+
+- name: remove dump directory
+  file:
+    path: /tmp/ansible-db-dumps/{{ ansible_date_time.date }}
+    state: absent
