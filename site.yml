@@ -1,0 +1,25 @@
+---
+
+- name: backup logs
+  hosts: main
+  roles:
+    - backup
+
+
+#- name: load default vars
+#  include_vars: "vars/defaults.yml"
+
+#- name: install metamod
+#  hosts: dm1,dm2
+#  roles:
+#    - metamod
+
+#- name: install sourcemod
+#  hosts: csgo
+#  roles:
+#    - sourcemod
+
+#- name: install sourcemod plugins
+#  hosts: csgo
+#  roles:
+#    - sourcemod-plugins

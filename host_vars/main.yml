@@ -1,0 +1,10 @@
+---
+apps:
+  - 'vip-admin'
+  - 'calladmin-middleware'
+  - 'vip-admin-2'
+  - 'vip-admin-2-staging'
+  - 'csgo-sessions-staging'
+  - 'csgo-sessions'
+  - 'payment-system'
+  - 'payment-system-staging'

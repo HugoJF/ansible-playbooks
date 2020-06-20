@@ -1,0 +1,2 @@
+[web]
+main ansible_host=104.156.246.245 ansible_user=runcloud
