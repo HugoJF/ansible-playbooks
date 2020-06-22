@@ -5,3 +5,8 @@
   roles:
     - {role: backup-logs, tags: 'logs'}
     - {role: backup-databases, tags: 'databases'}
+
+- name: backup logs
+  hosts: epsilon
+  roles:
+    - {role: cleanup-ogp-logs, tags: cleanup}

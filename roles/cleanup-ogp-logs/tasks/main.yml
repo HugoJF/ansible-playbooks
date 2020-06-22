@@ -1,0 +1,31 @@
+---
+
+- name: find log files
+  find:
+    paths: /home/ogpbot/OGP/screenlogs/
+    patterns: "screenlog.OGP_*"
+  register: logs
+
+#- debug: var=logs
+
+- name: stat log files
+  stat:
+    path: "{{ item.path }}"
+  with_items: "{{ logs.files }}"
+  register: stats
+
+#- debug: var=stats
+
+- name: empty log files
+  copy:
+    content: ""
+    dest: "{{ item.path }}"
+  with_items: "{{ logs.files }}"
+
+- name: sum total size
+  set_fact:
+    total: "{{ total|default(0)|int + item.stat.size|int }}"
+  with_items: "{{ stats.results }}"
+
+- debug:
+    msg: "OGP screenlogs diskspace: {{ total|int|human_readable }}"
