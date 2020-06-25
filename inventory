@@ -1,3 +1,4 @@
 [web]
 main ansible_host=104.156.246.245 ansible_user=runcloud
 epsilon ansible_host=177.54.150.15 ansible_user=ogpbot
+epsilon_root ansible_host=177.54.150.15 ansible_user=root

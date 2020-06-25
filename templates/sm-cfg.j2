@@ -1,0 +1,13 @@
+{%- if data is defined -%}
+{% for key, value in data.items() recursive %}
+{%- if value is mapping -%}
+
+{{ ' ' * 4 * (loop.depth - 1) }}"{{ key }}"
+{{ ' ' * 4 * (loop.depth - 1) }}{
+{{ loop(value.items()) -}}
+{{ ' ' * 4 * (loop.depth - 1) }}}
+{% else %}
+{{ ' ' * 4 * (loop.depth - 1) }}"{{ key }}" "{{ value }}"
+{% endif -%}
+{%- endfor -%}
+{%- endif -%}

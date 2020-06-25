@@ -1,0 +1,63 @@
+---
+
+#- name: find log files
+#  find:
+#    paths: /home/ogpbot/OGP/screenlogs/
+#    patterns: "screenlog.OGP_*"
+#  register: logs
+
+#- debug: var=logs
+
+- name: set template
+  template: 
+    src: sm-cfg.j2
+    dest: /tmp/template.txt
+  vars:
+    data: 
+      Databases: "{{ sm_databases }}"
+
+# - name: download files
+#   get_url:
+#     url: "{{ item.url }}"
+#     dest: "{{ item.dest }}"
+#   loop:
+#     - url: "{{ mm_download_url }}"
+#       dest: /tmp/mm.tar.gz
+#     - url: "{{ sm_download_url }}"
+#       dest: /tmp/sm.tar.gz
+
+
+# - name: ensure extraction directories exists
+#   file:
+#     path: /tmp/{{ item }}
+#     state: directory
+#     mode: '0755'
+#   with_items:
+#     - mm
+#     - sm
+
+
+# - name: unzip
+#   unarchive:
+#     src: "{{ item.src }}"
+#     dest: "{{ item.dest }}"
+#     remote_src: yes
+#   loop:
+#     - src: /tmp/mm.tar.gz
+#       dest: /tmp/mm/
+#     - src: /tmp/sm.tar.gz
+#       dest: /tmp/sm/
+
+
+# - name: install metamod
+#   copy:
+#     src: "/tmp/mm/"
+#     dest: "{{ sm_install_path }}/csgo"
+#     remote_src: yes
+
+
+# - name: install sourcemod
+#   copy:
+#     src: /tmp/sm
+#     dest: "{{ sm_install_path }}/csgo"
+#     remote_src: yes
