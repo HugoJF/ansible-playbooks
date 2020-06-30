@@ -1,0 +1,9 @@
+---
+
+sm_databases:
+  weapons:
+    driver: mysql
+    host: db
+    database: db-weapons
+    user: weaps
+    pass: secret

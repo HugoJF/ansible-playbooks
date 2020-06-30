@@ -20,26 +20,15 @@
 - name: install sourcemod
   hosts: epsilon_root
   vars:
-    mm_download_url: "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"
+    mm_download_url: "https://mm.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"
     sm_download_url: "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz"
     sm_install_path: "/home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3"
     sm_databases:
-      driver_default: mysql
+      driver_default: task
       default:
-        driver: default
+        driver: driver_default
         host: localhost
         database: sourcemod
-        user: root
-        pass: ""
-
-      storage-local:
-        driver: sqlite
-        database: sourcemod-local
-
-      clientprefs:
-        driver: sqlite
-        host: localhost
-        database: clientprefs-sqlite
         user: root
         pass: ""
   roles:
