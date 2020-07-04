@@ -1,0 +1,51 @@
+---
+
+- name: download files
+  get_url:
+    url: "{{ sm_rankme_url }}"
+    dest: "/tmp/rankme.zip"
+
+
+- name: ensure extraction directories exists
+  file:
+    path: /tmp/rankme/
+    state: directory
+    mode: '0755'
+
+
+- name: unzip
+  unarchive:
+    src: "/tmp/rankme.zip"
+    dest: "/tmp/rankme/"
+    remote_src: yes
+
+
+- name: get root directory that was created unzipping rankme
+  find:
+    paths: "/tmp/rankme/"
+    file_type: directory
+  register: base
+
+
+- name: extract directory path
+  set_fact:
+    base: "{{ base.files[0].path }}"
+    
+
+- name: copy rankme files to server
+  copy:
+    src: "{{ base }}/{{ item }}"
+    dest: "{{ sm_install_path }}/csgo/addons/sourcemod/"
+    owner: "root"
+    remote_src: yes
+    mode: 0755
+  with_items:
+    - plugins
+    - scripting
+    - translations
+
+
+- name: configure sourcemod databases
+  template: 
+    src: kento.rankme.cfg.j2
+    dest: "{{ sm_install_path }}/csgo/cfg/sourcemod/kento.rankme.cfg"

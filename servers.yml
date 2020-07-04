@@ -1,0 +1,10 @@
+---
+
+- name: install sourcemod
+  hosts: epsilon_root
+  vars:
+    sm_install_path: "/home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3"
+    sm_rankme_url: "https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip"
+  roles:
+    - role: install-kento-rankme
+      tags: rankme
