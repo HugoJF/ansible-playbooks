@@ -1,0 +1,34 @@
+---
+
+- name: include default vars
+  include_vars: defaults.yml
+
+
+- name: configure sourcemod core
+  template: 
+    src: core.cfg.j2
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/core.cfg.ansible"
+
+
+- name: configure sourcemod admin overrides
+  template:
+    src: sm-cfg.j2
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admin_overrides.cfg.ansible"
+  vars:
+    data: 
+      Overrides: "{{ sm_overrides | default({}) }}"
+
+
+- name: configure sourcemod admin simple
+  template:
+    src: admins-simple.ini.j2
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admins_simple.ini.ansible"
+
+
+- name: configure sourcemod databases
+  template: 
+    src: sm-cfg.j2
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/databases.cfg.ansible"
+  vars:
+    data: 
+      Databases: "{{ sm_databases | default({}) }}"

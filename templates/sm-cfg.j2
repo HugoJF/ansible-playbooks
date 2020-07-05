@@ -1,4 +1,4 @@
-{%- if data is defined -%}
+{%- if data is mapping -%}
 {% for key, value in data.items() recursive %}
 {%- if value is mapping -%}
 

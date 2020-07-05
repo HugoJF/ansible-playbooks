@@ -4,19 +4,17 @@
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
-    force: yes
   loop:
-    - url: "{{ mm_download_url }}"
+    - url: "https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz"
       dest: /tmp/mm.tar.gz
-    - url: "{{ sm_download_url }}"
+    - url: "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz"
       dest: /tmp/sm.tar.gz
 
 
 - name: ensure extraction directories exists
   file:
-    path: "/tmp/{{ item }}"
+    path: /tmp/{{ item }}
     state: directory
-    mode: 0755
   with_items:
     - mm
     - sm
@@ -34,15 +32,22 @@
       dest: /tmp/sm/
 
 
-- name: install metamod
+- name: copy metamod
   synchronize:
     src: /tmp/mm/
-    dest: "{{ sm_install_path }}/csgo/"
+    dest: /tmp/merged
   delegate_to: "{{ inventory_hostname }}"
 
 
-- name: install sourcemod
+- name: copy sourcemod
   synchronize:
     src: /tmp/sm/
-    dest: "{{ sm_install_path }}/csgo/"
+    dest: /tmp/merged
   delegate_to: "{{ inventory_hostname }}"
+
+
+- stat:
+    path: /tmp/merged/addons/metamod/sourcemod.vdf
+  register: missing
+
+- debug: var=missing

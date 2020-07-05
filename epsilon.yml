@@ -1,0 +1,7 @@
+---
+
+- name: configure sourcemod databases
+hosts: dm2
+  roles:
+    - role: configure-sourcemod
+      tags: [sourcemod, configure]
