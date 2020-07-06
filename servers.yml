@@ -15,6 +15,7 @@
         database: sourcemod
         user: root
         pass: ""
+    srm_download_url: 'https://github.com/HugoJF/sourcemod-slotreservation-modded/archive/4c016a4257f1f04af53eb15a2085a1cf9b4e8de5.zip'
   roles:
     - role: install-sourcemod
       tags: [sourcemod, install]
@@ -24,6 +25,9 @@
       
     - role: install-kento-rankme
       tags: rankme
+
+    - role: install-slot-reservation-modded
+      tags: slot
 
 
 # - name: test bug
