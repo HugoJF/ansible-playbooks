@@ -2,20 +2,6 @@
 
 - name: install sourcemod
   hosts: epsilon_root
-  vars:
-    mm_download_url: "https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz"
-    sm_download_url: "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz"
-    sm_install_path: "/home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3"
-    sm_rankme_url: "https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip"
-    sm_databases:
-      driver_default: task
-      default:
-        driver: driver_default
-        host: localhost
-        database: sourcemod
-        user: root
-        pass: ""
-    srm_download_url: 'https://github.com/HugoJF/sourcemod-slotreservation-modded/archive/4c016a4257f1f04af53eb15a2085a1cf9b4e8de5.zip'
   roles:
     - role: install-sourcemod
       tags: [sourcemod, install]
@@ -24,10 +10,10 @@
       tags: [sourcemod, configure]
       
     - role: install-kento-rankme
-      tags: rankme
+      tags: [rankme, install]
 
     - role: install-slot-reservation-modded
-      tags: slot
+      tags: [slot, install]
 
 
 # - name: test bug

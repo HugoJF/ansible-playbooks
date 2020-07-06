@@ -1,0 +1,20 @@
+---
+
+- name: install sourcemod
+  include_tasks: install-sourcemod.yml
+  tags: [install, sourcemod]
+
+
+- name: configure sourcemod
+  include_tasks: configure-sourcemod.yml
+  tags: [configure, sourcemod]
+
+
+- name: install slot reservation modded
+  include_tasks: install-slot-reservation-modded.yml
+  tags: [install, slot]
+
+
+- name: install kento rankme
+  include_tasks: install-kento-rankme.yml
+  tags: [install, rankme]

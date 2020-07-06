@@ -1,7 +1,7 @@
 ---
 
 - name: include default vars
-  include_vars: defaults.yml
+  include_vars: sourcemod-defaults.yml
 
 
 - name: configure sourcemod core
