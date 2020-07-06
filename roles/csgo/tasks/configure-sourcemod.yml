@@ -23,6 +23,8 @@
   template:
     src: admins-simple.ini.j2
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admins_simple.ini.ansible"
+  vars:
+    admins: "{{ sm_admins_simple | default({}) }}"
 
 
 - name: configure sourcemod databases

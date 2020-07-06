@@ -37,12 +37,12 @@
 - name: install metamod
   synchronize:
     src: /tmp/mm/
-    dest: "{{ sm_install_path }}/csgo/"
+    dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 
 
 - name: install sourcemod
   synchronize:
     src: /tmp/sm/
-    dest: "{{ sm_install_path }}/csgo/"
+    dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"

@@ -3,18 +3,7 @@
 - name: install sourcemod
   hosts: epsilon_root
   roles:
-    - role: install-sourcemod
-      tags: [sourcemod, install]
-
-    - role: configure-sourcemod
-      tags: [sourcemod, configure]
-      
-    - role: install-kento-rankme
-      tags: [rankme, install]
-
-    - role: install-slot-reservation-modded
-      tags: [slot, install]
-
+    - role: csgo
 
 # - name: test bug
 #   hosts: epsilon_root

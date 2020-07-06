@@ -1,0 +1,54 @@
+---
+
+- debug: var=plugin_url
+
+- name: download files
+  get_url:
+    url: "{{ plugin_url }}"
+    dest: "/tmp/{{ plugin_id }}.zip"
+    force: yes
+
+
+- name: ensure extraction directories exists
+  file:
+    path: "/tmp/{{ plugin_id }}/"
+    state: directory
+    mode: 0755
+
+
+- name: unzip
+  unarchive:
+    src: "/tmp/{{ plugin_id }}.zip"
+    dest: "/tmp/{{ plugin_id }}/"
+    remote_src: yes
+
+
+- name: find root directory path that was created unzipping the plugin
+  find:
+    paths: "/tmp/{{ plugin_id }}/"
+    file_type: directory
+  register: base
+
+
+- name: extract directory path
+  set_fact:
+    base: "{{ base.files[0].path }}"
+
+
+- name: copy files to server
+  copy:
+    src: "{{ base }}/{{ item }}"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
+    remote_src: yes
+    mode: 0755
+    directory_mode: 0755
+    owner: pterodactyl
+    group: pterodactyl
+  with_items: "{{ addons_diretories | default([]) }}"
+
+
+- name: install config templates
+  template: 
+    src: "{{ item.src }}"
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
+  with_items: "{{ cfg_templates | default({}) }}"

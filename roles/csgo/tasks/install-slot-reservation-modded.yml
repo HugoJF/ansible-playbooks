@@ -1,48 +1,11 @@
 ---
 
-- name: download files
-  get_url:
-    url: "{{ srm_download_url }}"
-    dest: "/tmp/srm.zip"
-    force: yes
 
-
-- name: ensure extraction directories exists
-  file:
-    path: /tmp/srm/
-    state: directory
-    mode: 0755
-
-
-- name: unzip
-  unarchive:
-    src: "/tmp/srm.zip"
-    dest: "/tmp/srm/"
-    remote_src: yes
-
-
-- name: find root directory path that was created unzipping rankme
-  find:
-    paths: "/tmp/srm/"
-    file_type: directory
-  register: base
-
-
-- name: extract directory path
-  set_fact:
-    base: "{{ base.files[0].path }}"
-
-
-- name: copy rankme files to server
-  copy:
-    src: "{{ base }}/{{ item }}"
-    dest: "{{ sm_install_path }}/csgo/addons/sourcemod/"
-    owner: "root"
-    remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
-  with_items:
-    - plugins
-    - scripting
+- name: install kento rankme
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: srm
+    plugin_url: "{{ srm_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
