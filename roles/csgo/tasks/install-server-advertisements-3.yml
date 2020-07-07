@@ -17,3 +17,6 @@
         dest: configs/ServerAdvertisements3.cfg
         data: 
           ServerAdvertisements3: "{{ sa3_config }}"
+    cfg_templates:
+      - src: ServerAdvertisements3.cfg.j2
+        dest: ServerAdvertisements3.cfg
