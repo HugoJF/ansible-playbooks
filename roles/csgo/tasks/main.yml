@@ -1,15 +1,19 @@
 ---
 
+# TODO:
+# - check if tmp folder is empty? 
+# - flag to empty tmp
 - name: install sourcemod
   include_tasks: install-sourcemod.yml
 
-
 - name: configure sourcemod
   include_tasks: configure-sourcemod.yml
-
 
 - name: install slot reservation modded
   include_tasks: install-slot-reservation-modded.yml
 
 - name: install kento rankme
   include_tasks: install-kento-rankme.yml
+
+- name: install server advertisements 3
+  include_tasks: install-server-advertisements-3.yml

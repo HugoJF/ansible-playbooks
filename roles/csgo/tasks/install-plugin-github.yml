@@ -47,7 +47,16 @@
   with_items: "{{ addons_diretories | default([]) }}"
 
 
-- name: install config templates
+- name: install addons templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
+  vars:
+    data: "{{ item.data | default({}) }}"
+  with_items: "{{ addons_templates | default({}) }}"
+
+
+- name: install configs templates
   template: 
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
