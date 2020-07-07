@@ -23,33 +23,9 @@
     remote_src: yes
 
 
-- name: find root directory path that was created unzipping the plugin
-  find:
-    paths: "/tmp/{{ plugin_id }}/"
-    file_type: directory
-  register: basefiles
-  when: not (skip_basepath|default(false)|bool)
-
-
-- name: extract directory path
-  set_fact:
-    base: "{{ basefiles.files[0].path }}/"
-  when: not (skip_basepath|default(false)|bool)
-
-
-- name: set basepath to plugins
-  set_fact:
-    base: "/tmp/{{ plugin_id }}/"
-  when: skip_basepath|default(false)|bool
-
-
-- debug: var=skip_basepath
-
-- debug: var=base
-
 - name: copy files to server
   copy:
-    src: "{{ base }}{{ item }}"
+    src: "{{ base }}/{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
     remote_src: yes
     mode: 0755

@@ -9,6 +9,9 @@
 - name: configure sourcemod
   include_tasks: configure-sourcemod.yml
 
+- name: install player analytics
+  include_tasks: install-player-analytics.yml
+  
 - name: install slot reservation modded
   include_tasks: install-slot-reservation-modded.yml
 
