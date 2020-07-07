@@ -1,0 +1,10 @@
+---
+
+- name: install print to console
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: ptc
+    plugin_url: "{{ ptc_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
