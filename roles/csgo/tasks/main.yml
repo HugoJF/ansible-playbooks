@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install curl extension
+  import_tasks: install-curl.yml
+  tags: curl
+
 - name: install dhooks
   import_tasks: install-dhooks.yml
   tags: dhooks
