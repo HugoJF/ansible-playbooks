@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install deathmatch loader
+  import_tasks: install-deathmatch-loader.yml
+  tags: dm-loader
+
 - name: install fps booster
   import_tasks: install-fps-booster.yml
   tags: fps
