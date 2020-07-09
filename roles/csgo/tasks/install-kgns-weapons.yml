@@ -1,10 +1,10 @@
 ---
 
-- name: install kgns gloves
+- name: install kgns weapons
   include_tasks: install-plugin-github.yml
   vars:
-    plugin_id: glo
-    plugin_url: "{{ glo_download_url }}"
+    plugin_id: wep
+    plugin_url: "{{ wep_download_url }}"
     skip_basepath: yes
     basepath: addons/sourcemod/
     addons_diretories:
@@ -13,5 +13,5 @@
       - scripting
       - translations
     cfg_templates:
-      - src: gloves.cfg.j2
-        dest: gloves.cfg
+      - src: weapons.cfg.j2
+        dest: weapons.cfg

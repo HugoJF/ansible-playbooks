@@ -14,6 +14,14 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install calladmin
+  import_tasks: install-calladmin.yml
+  tags: calladmin
+
+- name: install kgns weapons
+  import_tasks: install-kgns-weapons.yml
+  tags: weapons
+
 - name: install kgns gloves
   import_tasks: install-kgns-gloves.yml
   tags: gloves
