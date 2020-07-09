@@ -11,6 +11,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install dynamic
+  import_tasks: install-dynamic.yml
+  tags: dynamic
+
 - name: install deathmatch
   import_tasks: install-deathmatch.yml
   tags: deathmatch

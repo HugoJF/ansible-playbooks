@@ -1,0 +1,10 @@
+---
+
+- name: install dynamic
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: dyn
+    plugin_url: "{{ dyn_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
