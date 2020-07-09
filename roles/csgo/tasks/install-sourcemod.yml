@@ -46,3 +46,10 @@
     src: /tmp/sm/
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
+
+- name: copy disable plugins
+  copy:
+    src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
+    remote_src: yes
+  with_items: "{{ sm_disabled_plugins }}"
