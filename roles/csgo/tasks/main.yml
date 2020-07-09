@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install togs clantags
+  import_tasks: install-togs-clantags.yml
+  tags: clantags
+
 - name: install dynamic
   import_tasks: install-dynamic.yml
   tags: dynamic

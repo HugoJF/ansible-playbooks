@@ -1,0 +1,36 @@
+---
+
+tct_config:
+  Bot setup:
+    flag: BOT
+    tag: "[BOT TAG]"
+    exclude: 1   # this tag is NOT included in the allowable tags list when togsclantags_enforcetags = 1
+ 
+  Some Players: # Setup to Ignore Avoid VIP Group Tag
+    flag: STEAM_0:1:1234567
+    ignore: 1
+    exclude: 1 # this tag is NOT included in the allowable tags list when togsclantags_enforcetags = 1
+
+  Some player:
+    flag: STEAM_0:1:1234567
+    tag: "[SOME TAG]"
+    exclude: 1 # this tag is NOT included in the allowable tags list when togsclantags_enforcetags = 1
+ 
+  Some guy:
+    enabled: 0 # this setup is disabled! The tag is also not in the allowable tags list when togsclantags_enforcetags = 1
+    flag: STEAM_0:1:9876554
+    tag: "[ANOTHER TAG]"
+    exclude: 1 # this tag is NOT included in the allowable tags list when togsclantags_enforcetags = 1
+ 
+  Admin Tag:
+    flag: b
+    tag: "[ADMIN]"
+    exclude: 0 # this tag IS INCLUDED in the allowable tags list when togsclantags_enforcetags = 1
+ 
+  VIP Group:
+    flag: aost
+    tag: "[VIP]" # this tag IS INCLUDED in the allowable tags list when togsclantags_enforcetags = 1
+ 
+  Some other tag:
+    flag: a;st
+    tag: "[MEMBER]" # this tag IS INCLUDED in the allowable tags list when togsclantags_enforcetags = 1
