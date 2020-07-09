@@ -1,0 +1,14 @@
+---
+
+- name: install calladmin reports
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: car
+    plugin_url: "{{ car_download_url }}"
+    skip_basepath: yes
+    addons_diretories:
+      - plugins
+      - scripting
+    cfg_templates:
+      - src: calladmin_reports.cfg.j2
+        dest: calladmin_reports.cfg
