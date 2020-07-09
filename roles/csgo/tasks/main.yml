@@ -4,25 +4,37 @@
 # - check if tmp folder is empty? 
 # - flag to empty tmp
 - name: install sourcemod
-  include_tasks: install-sourcemod.yml
+  import_tasks: install-sourcemod.yml
+  tags: sourcemod
 
 - name: configure sourcemod
-  include_tasks: configure-sourcemod.yml
+  import_tasks: configure-sourcemod.yml
+  tags: sourcemod
+
+- name: install deathmatch
+  import_tasks: install-deathmatch.yml
+  tags: deathmatch
 
 - name: install print to console
-  include_tasks: install-print-to-console.yml
+  import_tasks: install-print-to-console.yml
+  tags: print-to-console
 
 - name: install abner killfeed filter
-  include_tasks: install-abner-killfeed-filter.yml
+  import_tasks: install-abner-killfeed-filter.yml
+  tags: killfeed
 
 - name: install player analytics
-  include_tasks: install-player-analytics.yml
+  import_tasks: install-player-analytics.yml
+  tags: analytics
 
 - name: install slot reservation modded
-  include_tasks: install-slot-reservation-modded.yml
+  import_tasks: install-slot-reservation-modded.yml
+  tags: slot
 
 - name: install kento rankme
-  include_tasks: install-kento-rankme.yml
+  import_tasks: install-kento-rankme.yml
+  tags: kento
 
 - name: install server advertisements 3
-  include_tasks: install-server-advertisements-3.yml
+  import_tasks: install-server-advertisements-3.yml
+  tags: advertisements
