@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install steamworks
+  import_tasks: install-steamworks.yml
+  tags: steamworks
+
 - name: install calladmin reports
   import_tasks: install-calladmin-reports.yml
   tags: reports
