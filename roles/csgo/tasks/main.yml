@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install dhooks
+  import_tasks: install-dhooks.yml
+  tags: dhooks
+
 - name: install ptah
   import_tasks: install-ptah.yml
   tags: ptah

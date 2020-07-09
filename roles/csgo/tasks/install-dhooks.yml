@@ -1,0 +1,13 @@
+---
+
+- name: install dhooks
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: dh
+    plugin_url: "{{ dh_download_url }}"
+    skip_basepath: yes
+    basepath: addons/sourcemod/
+    addons_diretories:
+      - extensions
+      - gamedata
+      - scripting
