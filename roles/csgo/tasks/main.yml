@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install ptah
+  import_tasks: install-ptah.yml
+  tags: ptah
+
 - name: install my weapon allocator
   import_tasks: install-my-weapon-allocator.yml
   tags: allocator
