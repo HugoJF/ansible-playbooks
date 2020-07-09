@@ -1,0 +1,17 @@
+---
+
+- name: install server advertisements 3
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: glo
+    plugin_url: "{{ glo_download_url }}"
+    skip_basepath: yes
+    basepath: addons/sourcemod/
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+      - translations
+    cfg_templates:
+      - src: gloves.cfg.j2
+        dest: gloves.cfg

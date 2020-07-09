@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install kgns gloves
+  import_tasks: install-kgns-gloves.yml
+  tags: gloves
+
 - name: install steamworks
   import_tasks: install-steamworks.yml
   tags: steamworks
