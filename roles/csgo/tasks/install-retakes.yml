@@ -1,0 +1,23 @@
+---
+
+- name: install retakes
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: ret
+    plugin_url: "{{ ret_download_url }}"
+    skip_basepath: yes
+    basepath: addons/sourcemod/
+    cfg_basepath: cfg/sourcemod/
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+      - translations
+    cfg_directories:
+      - retakes
+    cfg_files:
+      - src: retakes/retakes_game.cfg
+        dest: retakes/retakes_game.cfg
+    cfg_templates:
+      - src: retakes/retakes.cfg.j2
+        dest: retakes/retakes.cfg

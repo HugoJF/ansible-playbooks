@@ -33,19 +33,20 @@
 
 - name: extract directory path
   set_fact:
-    base: "{{ basefiles.files[0].path }}/"
+    plugin_base: "{{ basefiles.files[0].path }}/"
   when: not (skip_basepath|default(false)|bool)
 
 
 - name: set basepath to plugins
   set_fact:
-    base: "/tmp/{{ plugin_id }}/{{ basepath | default('') }}"
+    plugin_base: "/tmp/{{ plugin_id }}/{{ basepath | default('') }}"
+    cfg_base: "/tmp/{{ plugin_id }}/{{ cfg_basepath | default('') }}"
   when: skip_basepath|default(false)|bool
 
 
 - name: copy files to server
   copy:
-    src: "{{ base }}{{ item }}"
+    src: "{{ plugin_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
     remote_src: yes
     mode: 0755
@@ -55,7 +56,7 @@
   with_items: "{{ addons_diretories | default([]) }}"
 
 
-- name: install addons templates
+- name: install addons/ templates
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
@@ -64,8 +65,23 @@
   with_items: "{{ addons_templates | default({}) }}"
 
 
-- name: install configs templates
+- name: create cfg/ directories
+  file:
+    path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
+    state: directory
+  with_items: "{{ cfg_directories | default([]) }}"
+
+
+- name: install cfg/ templates
   template: 
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
   with_items: "{{ cfg_templates | default({}) }}"
+
+
+- name: install cfg/ files
+  copy:
+    src: "{{ cfg_base }}{{ item.src }}"
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
+    remote_src: yes
+  with_items: "{{ cfg_files | default({}) }}"
