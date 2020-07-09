@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install my weapon allocator
+  import_tasks: install-my-weapon-allocator.yml
+  tags: allocator
+
 - name: install deathmatch loader
   import_tasks: install-deathmatch-loader.yml
   tags: dm-loader

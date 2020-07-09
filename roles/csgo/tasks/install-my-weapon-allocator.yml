@@ -1,0 +1,14 @@
+---
+
+- name: install my weapon allocator
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: mwa
+    plugin_url: "{{ mwa_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
+      - translations
+    cfg_templates:
+      - src: MyWeaponAllocator.cfg.j2
+        dest: MyWeaponAllocator.cfg
