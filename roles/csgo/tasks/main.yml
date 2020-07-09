@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install fps booster
+  import_tasks: install-fps-booster.yml
+  tags: fps
+
 - name: install calladmin
   import_tasks: install-calladmin.yml
   tags: calladmin
