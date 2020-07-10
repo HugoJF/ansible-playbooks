@@ -19,5 +19,5 @@
       - src: retakes/retakes_game.cfg
         dest: retakes/retakes_game.cfg
     cfg_templates:
-      - src: retakes/retakes.cfg.j2
+      - src: retakes.cfg.j2
         dest: retakes/retakes.cfg
