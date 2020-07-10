@@ -1,8 +1,8 @@
 ---
 
-csgo_root: "/home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3"
-mm_download_url: "https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz"
-sm_download_url: "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz"
+csgo_root: /home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3
+mm_download_url: https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz
+sm_download_url: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz
 sm_databases:
   driver_default: task
   default:
@@ -12,7 +12,7 @@ sm_databases:
     user: root
     pass: ""
 
-sm_rankme_url: "https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip"
+sm_rankme_url: https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip
 srm_download_url: https://github.com/HugoJF/sourcemod-slotreservation-modded/archive/4c016a4257f1f04af53eb15a2085a1cf9b4e8de5.zip
 sa3_download_url: https://github.com/ESK0/ServerAdvertisement3/archive/f88fe5054c143fed069637886cbded7f49449c92.zip
 pa_download_url: https://github.com/HugoJF/PlayerAnalytics/releases/download/v0.3/player_analytics-sm1.10.6490.zip
