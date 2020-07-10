@@ -1,8 +1,5 @@
 ---
 
-# TODO:
-# - check if tmp folder is empty? 
-# - flag to empty tmp
 - name: install sourcemod
   import_tasks: install-sourcemod.yml
   tags: sourcemod
