@@ -11,7 +11,6 @@
     - url: "{{ sm_download_url }}"
       dest: /tmp/sm.tar.gz
 
-
 - name: ensure extraction directories exists
   file:
     path: "/tmp/{{ item }}"
@@ -20,7 +19,6 @@
   with_items:
     - mm
     - sm
-
 
 - name: unzip
   unarchive:
@@ -33,13 +31,11 @@
     - src: /tmp/sm.tar.gz
       dest: /tmp/sm/
 
-
 - name: install metamod
   synchronize:
     src: /tmp/mm/
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
-
 
 - name: install sourcemod
   synchronize:

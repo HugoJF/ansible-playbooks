@@ -8,20 +8,17 @@
     dest: "/tmp/{{ plugin_id }}.zip"
     force: yes
 
-
 - name: ensure extraction directories exists
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: directory
     mode: 0755
 
-
 - name: unzip
   unarchive:
     src: "/tmp/{{ plugin_id }}.zip"
     dest: "/tmp/{{ plugin_id }}/"
     remote_src: yes
-
 
 - name: copy files to server
   copy:
@@ -34,7 +31,6 @@
     group: pterodactyl
   with_items: "{{ addons_diretories | default([]) }}"
 
-
 - name: install addons templates
   template:
     src: "{{ item.src }}"
@@ -42,7 +38,6 @@
   vars:
     data: "{{ item.data | default({}) }}"
   with_items: "{{ addons_templates | default({}) }}"
-
 
 - name: install configs templates
   template: 

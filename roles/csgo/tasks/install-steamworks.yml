@@ -6,7 +6,7 @@
     plugin_id: sw
     plugin_url: "{{ sw_download_url }}"
     skip_basepath: yes
-    basepath: package/addons/sourcemod/
+    addons_basepath: package/addons/sourcemod/
     addons_diretories:
       - extensions
       - scripting

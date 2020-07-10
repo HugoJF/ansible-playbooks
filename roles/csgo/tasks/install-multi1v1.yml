@@ -12,7 +12,7 @@
     plugin_id: arena
     plugin_url: "{{ arena_download_url }}"
     skip_basepath: yes
-    plugin_basepath: addons/sourcemod/
+    addons_basepath: addons/sourcemod/
     cfg_basepath: cfg/sourcemod/
     addons_diretories:
       - configs
@@ -20,14 +20,14 @@
       - scripting
       - translations
     addons_templates:
-        - src: sm-cfg.j2
-          dest: configs/multi1v1_customrounds.cfg
-          data:
-            CustomRoundTypes: "{{ arena_custom_rounds }}"
-        - src: sm-cfg.j2
-          dest: configs/multi1v1_weapons.cfg
-          data:
-            Weapons: "{{ arena_weapons }}"
+      - src: sm-cfg.j2
+        dest: configs/multi1v1_customrounds.cfg
+        data:
+          CustomRoundTypes: "{{ arena_custom_rounds }}"
+      - src: sm-cfg.j2
+        dest: configs/multi1v1_weapons.cfg
+        data:
+          Weapons: "{{ arena_weapons }}"
     cfg_directories:
       - multi1v1
     cfg_files:

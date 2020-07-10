@@ -15,7 +15,7 @@
     addons_templates:
       - src: sm-cfg.j2
         dest: configs/ServerAdvertisements3.cfg
-        data: 
+        data:
           ServerAdvertisements3: "{{ sa3_config }}"
     cfg_templates:
       - src: ServerAdvertisements3.cfg.j2

@@ -15,5 +15,5 @@
     addons_templates:
       - src: sm-cfg.j2
         dest: configs/togsclantags.cfg
-        data: 
+        data:
           Setups: "{{ tct_config }}"

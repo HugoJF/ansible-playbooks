@@ -5,9 +5,6 @@
 # - flag to empty tmp
 - name: install sourcemod
   import_tasks: install-sourcemod.yml
-  vars:
-    sm_disabled_plugins:
-      - sql-admin-manager
   tags: sourcemod
 
 - name: configure sourcemod

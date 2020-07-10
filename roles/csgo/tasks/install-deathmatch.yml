@@ -17,5 +17,5 @@
     addons_templates:
       - src: sm-cfg.j2
         dest: configs/deathmatch/deathmatch.ini
-        data: 
+        data:
           Deathmatch Config: "{{ dm_config }}"

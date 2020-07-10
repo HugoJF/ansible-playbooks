@@ -1,6 +1,5 @@
 ---
 
-
 - name: install kento rankme
   include_tasks: install-plugin-github.yml
   vars:

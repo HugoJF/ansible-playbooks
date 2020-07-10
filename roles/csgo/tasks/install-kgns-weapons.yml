@@ -6,7 +6,7 @@
     plugin_id: wep
     plugin_url: "{{ wep_download_url }}"
     skip_basepath: yes
-    basepath: addons/sourcemod/
+    addons_basepath: addons/sourcemod/
     addons_diretories:
       - configs
       - plugins

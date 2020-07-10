@@ -6,20 +6,17 @@
     dest: "/tmp/{{ plugin_id }}.zip"
     force: yes
 
-
 - name: ensure extraction directories exists
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: directory
     mode: 0755
 
-
 - name: unzip
   unarchive:
     src: "/tmp/{{ plugin_id }}.zip"
     dest: "/tmp/{{ plugin_id }}/"
     remote_src: yes
-
 
 - name: find root directory path that was created unzipping the plugin
   find:
@@ -28,23 +25,20 @@
   register: basefiles
   when: not (skip_basepath|default(false)|bool)
 
-
 - name: extract directory path
   set_fact:
     base: "{{ basefiles.files[0].path }}/"
   when: not (skip_basepath|default(false)|bool)
 
-
 - name: set basepath to plugins
   set_fact:
-    plugin_base: "/tmp/{{ plugin_id }}/{{ basepath | default('') }}/{{ plugin_basepath | default('') }}"
+    addons_base: "/tmp/{{ plugin_id }}/{{ basepath | default('') }}/{{ addons_basepath | default('') }}"
     cfg_base: "/tmp/{{ plugin_id }}/{{ basepath | default('') }}/{{ cfg_basepath | default('') }}"
   when: skip_basepath|default(false)|bool
 
-
 - name: copy addons/ directories
   copy:
-    src: "{{ plugin_base }}{{ item }}"
+    src: "{{ addons_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
     remote_src: yes
     mode: 0755
@@ -52,7 +46,6 @@
     owner: pterodactyl
     group: pterodactyl
   with_items: "{{ addons_diretories | default([]) }}"
-
 
 - name: copy addons/ files
   copy:
@@ -65,7 +58,6 @@
     group: pterodactyl
   with_items: "{{ addons_files | default({}) }}"
 
-
 - name: copy addons/ templates
   template:
     src: "{{ item.src }}"
@@ -74,20 +66,17 @@
     data: "{{ item.data | default({}) }}"
   with_items: "{{ addons_templates | default({}) }}"
 
-
 - name: create cfg/ directories
   file:
     path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
     state: directory
   with_items: "{{ cfg_directories | default([]) }}"
 
-
 - name: copy cfg/ templates
-  template: 
+  template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
   with_items: "{{ cfg_templates | default({}) }}"
-
 
 - name: copy cfg/ files
   copy:
