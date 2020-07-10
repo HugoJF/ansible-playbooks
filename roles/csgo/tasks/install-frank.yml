@@ -1,0 +1,24 @@
+---
+
+- name: install fake frank
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: frank
+    plugin_url: "{{ frank_download_url }}"
+    plugin_basepath: addons/sourcemod/
+    cfg_basepath: cfg/sourcemod/
+    addons_files:
+      - src: frank.cfg
+        dest: configs/frank.cfg
+
+      - src: frank-basic.smx
+        dest: plugins/frank-basic.smx
+
+      - src: frank-basic.sp
+        dest: scripting/frank-basic.sp
+
+      - src: frank.phrases.txt
+        dest: translations/frank.phrases.txt
+    cfg_templates:
+      - src: frank.cfg.j2
+        dest: frank.cfg
