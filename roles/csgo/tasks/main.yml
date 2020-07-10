@@ -8,6 +8,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install firebulletsfix
+  import_tasks: install-firebulletsfix.yml
+  tags: firebulletsfix
+
 - name: install retakes autoplant
   import_tasks: install-retakes-autoplant.yml
   tags: autoplant
