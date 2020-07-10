@@ -11,6 +11,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install arena challenge
+  import_tasks: install-arena-challenge.yml
+  tags: challenge
+
 - name: install frank
   import_tasks: install-frank.yml
   tags: frank

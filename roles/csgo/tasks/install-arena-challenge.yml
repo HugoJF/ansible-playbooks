@@ -1,0 +1,20 @@
+---
+
+- name: install arena challenge
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: arc
+    plugin_url: "{{ arc_download_url }}"
+    skip_basepath: yes
+    addons_files:
+      - src: hl_challenge.smx
+        dest: plugins/hl_challenge.smx
+
+      - src: hl_challenge.inc
+        dest: scripting/include/hl_challenge.inc
+
+      - src: hl_challenge.sp
+        dest: scripting/hl_challenge.sp
+    cfg_templates:
+      - src: hl_challenge.cfg.j2
+        dest: hl_challenge.cfg

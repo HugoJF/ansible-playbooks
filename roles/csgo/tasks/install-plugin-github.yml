@@ -49,7 +49,7 @@
 
 - name: copy addons/ files
   copy:
-    src: "{{ base }}{{ item.src }}"
+    src: "{{ addons_base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
     remote_src: yes
     mode: 0755
