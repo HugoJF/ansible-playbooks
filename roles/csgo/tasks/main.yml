@@ -11,6 +11,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install retakes autoplant
+  import_tasks: install-retakes-autoplant.yml
+  tags: autoplant
+
 - name: install arena challenge
   import_tasks: install-arena-challenge.yml
   tags: challenge

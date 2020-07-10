@@ -39,3 +39,4 @@ ret_download_url: https://ci.splewis.net/job/csgo-retakes/lastSuccessfulBuild/ar
 arena_download_url: https://ci.splewis.net/job/csgo-multi-1v1/lastSuccessfulBuild/artifact/builds/multi1v1-release/multi1v1-220.zip
 frank_download_url: https://github.com/rogeraabbccdd/Fake-Competitive-Rank-and-Coins/archive/84e88ca75d05f99ddeec0272f473bbb7a052b0be.zip
 arc_download_url: https://github.com/Headline/Challenge/releases/download/v1.1.5/hl_challenge.zip
+rap_download_url: https://github.com/HugoJF/retakes-autoplant/releases/download/v0.3/retakes_autoplant-sm1.10.6490.zip
