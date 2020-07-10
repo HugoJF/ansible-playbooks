@@ -1,0 +1,35 @@
+---
+
+- name: include default custom rounds
+  include_vars: arena-custom-rounds.yml
+
+- name: include default weapons
+  include_vars: arena-weapons.yml
+
+- name: install multi1v1
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: arena
+    plugin_url: "{{ arena_download_url }}"
+    skip_basepath: yes
+    basepath: addons/sourcemod/
+    cfg_basepath: cfg/sourcemod/
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+      - translations
+    addons_templates:
+        - src: sm-cfg.j2
+          dest: configs/multi1v1_customrounds.cfg
+          data:
+            CustomRoundTypes: "{{ arena_custom_rounds }}"
+        - src: sm-cfg.j2
+          dest: configs/multi1v1_weapons.cfg
+          data:
+            Weapons: "{{ arena_weapons }}"
+    cfg_directories:
+      - multi1v1
+    cfg_files:
+      - src: multi1v1/game_cvars.cfg
+        dest: multi1v1/game_cvars.cfg

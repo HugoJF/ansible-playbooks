@@ -14,6 +14,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install arena
+  import_tasks: install-multi1v1.yml
+  tags: arena
+
 - name: install retakes
   import_tasks: install-retakes.yml
   tags: retakes

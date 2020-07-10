@@ -1,0 +1,14 @@
+---
+arena_custom_rounds:
+  scout:
+    name: Scout
+    ranked: 1
+    ratingFieldName: scoutRating
+    optional: 1
+    enabled: 0
+    armor: 1
+    helmet: 1
+    health: 100
+    weapons:
+      weapon_knife: ''
+      weapon_ssg08: ''

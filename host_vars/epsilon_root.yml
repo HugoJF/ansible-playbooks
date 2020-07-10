@@ -33,3 +33,4 @@ ptah_download_url: https://ptah.zizt.ru/files/PTaH-V1.1.2-build18-linux.zip
 dh_download_url: https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours14/dhooks-2.2.0-detours14-sm110.zip
 curl_download_url: http://csgottt.com/curl.zip
 ret_download_url: https://ci.splewis.net/job/csgo-retakes/lastSuccessfulBuild/artifact/builds/retakes-release/retakes-170.zip
+arena_download_url: https://ci.splewis.net/job/csgo-multi-1v1/lastSuccessfulBuild/artifact/builds/multi1v1-release/multi1v1-220.zip
