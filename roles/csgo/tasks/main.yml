@@ -8,6 +8,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install skybox
+  import_tasks: install-skybox.yml
+  tags: skybox
+
 - name: install firebulletsfix
   import_tasks: install-firebulletsfix.yml
   tags: firebulletsfix

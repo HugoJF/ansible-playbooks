@@ -1,0 +1,66 @@
+---
+
+skybox_config:
+  1:
+    path: amethyst
+    name: Amethyst
+  2:
+    path: dreamyocean
+    name: Dreamy Ocean
+  3:
+    path: grimmnight
+    name: Grimm Night
+  4:
+    path: otherworld
+    name: Other World
+  12:
+    path: Clear_night_sky
+    name: Clear Night Sky
+  13:
+    path: cloudynight
+    name: Cloudy Night
+  6:
+    path: sky051
+    name: Cloudy Sky
+  8:
+    path: sky081
+    name: Ethereal Sky
+  9:
+    path: sky091
+    name: Void Sky
+  11:
+    path: sky561
+    name: Dream World
+  14:
+    path: cs_tibet
+    name: cs_tibet
+  15:
+    path: embassy
+    name: embassy
+  17:
+    path: jungle
+    name: jungle
+  18:
+    path: office
+    name: office
+  19:
+    path: sky_cs15_daylight01_hdr
+    name: sky_cs15_daylight01_hdr
+  20:
+    path: sky_csgo_cloudy01
+    name: sky_csgo_cloudy01
+  21:
+    path: sky_csgo_night_flat
+    name: sky_csgo_night_flat
+  22:
+    path: sky_csgo_night02
+    name: sky_csgo_night02
+  23:
+    path: sky_dust
+    name: sky_dust
+  25:
+    path: vertigo
+    name: vertigo
+  26:
+    path: vietnam
+    name: vietnam

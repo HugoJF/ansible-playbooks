@@ -1,0 +1,23 @@
+---
+
+- name: include default vars
+  include_vars: skybox-defaults.yml
+
+- name: install skybox
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: skybox
+    plugin_url: "{{ skybox_download_url }}"
+    skip_basepath: yes
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+    addons_templates:
+      - src: sm-cfg.j2
+        dest: configs/deathmatch/deathmatch.ini
+        data:
+          skybox: "{{ skybox_config }}"
+    other_files:
+      - src: skybox/
+        dest: materials/skybox
