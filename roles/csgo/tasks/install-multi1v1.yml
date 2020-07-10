@@ -12,7 +12,7 @@
     plugin_id: arena
     plugin_url: "{{ arena_download_url }}"
     skip_basepath: yes
-    basepath: addons/sourcemod/
+    plugin_basepath: addons/sourcemod/
     cfg_basepath: cfg/sourcemod/
     addons_diretories:
       - configs
