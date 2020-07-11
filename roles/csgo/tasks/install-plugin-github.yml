@@ -23,19 +23,27 @@
     paths: "/tmp/{{ plugin_id }}/"
     file_type: directory
   register: basefiles
-  when: not (skip_basepath|default(false)|bool)
+  when: ignore_first_directory|default(false)|bool
 
 - name: extract directory path
   set_fact:
     weird_github_dir: "{{ basefiles.files[0].path }}/"
-  when: not (skip_basepath|default(false)|bool)
+  when: ignore_first_directory|default(false)|bool
 
 - name: set basepath to plugins
   set_fact:
-    base: "/tmp/{{ plugin_id }}/{{ weird_github_dir | default('') }}/"
-    addons_base: "/tmp/{{ plugin_id }}/{{ base | default('') }}/{{ addons_basepath | default('') }}"
-    cfg_base: "/tmp/{{ plugin_id }}/{{ base | default('') }}/{{ cfg_basepath | default('') }}"
-  when: skip_basepath|default(false)|bool
+    base: "{{ weird_github_dir }}"
+    addons_base: "{{ weird_github_dir }}{{ addons_basepath | default('') }}"
+    cfg_base: "{{ weird_github_dir }}{{ cfg_basepath | default('') }}"
+  when: ignore_first_directory|default(false)|bool
+
+- name: set basepath to plugins
+  set_fact:
+    base: "/tmp/{{ plugin_id }}/"
+    addons_base: "/tmp/{{ plugin_id }}/{{ addons_basepath | default('') }}"
+    cfg_base: "/tmp/{{ plugin_id }}/{{ cfg_basepath | default('') }}"
+  when: not (ignore_first_directory|default(false)|bool)
+
 
 - name: copy addons/ directories
   copy:

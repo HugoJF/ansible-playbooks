@@ -8,6 +8,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install arena crash fix
+  import_tasks: install-arena-crash-fix.yml
+  tags: arena-crash-fix
+
 - name: install executes
   import_tasks: install-executes.yml
   tags: executes
