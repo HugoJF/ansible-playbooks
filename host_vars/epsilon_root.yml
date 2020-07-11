@@ -42,3 +42,4 @@ arc_download_url: https://github.com/Headline/Challenge/releases/download/v1.1.5
 rap_download_url: https://github.com/HugoJF/retakes-autoplant/releases/download/v0.3/retakes_autoplant-sm1.10.6490.zip
 fbf_download_url: https://github.com/HugoJF/firebulletsfix/releases/download/v0.4/firebulletsfix-sm1.10.6490.zip
 skybox_download_url: https://github.com/HugoJF/skybox/releases/download/v0.2/skybox-sm1.10.6490.zip
+exec_download_url: https://ci.splewis.net/job/csgo-executes/lastSuccessfulBuild/artifact/builds/executes-release/executes-44.zip
