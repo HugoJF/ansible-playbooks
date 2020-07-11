@@ -1,4 +1,6 @@
 ---
+# TODO:
+# use get_url dest to and stop redownloading files if they have the same name (are the same) + delete dest temp folder
 
 - name: install sourcemod
   import_tasks: install-sourcemod.yml
@@ -7,6 +9,10 @@
 - name: configure sourcemod
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
+
+- name: install accelerator
+  import_tasks: install-accelerator.yml
+  tags: accelerator
 
 - name: install fix hint color messages
   import_tasks: install-fix-hint-color-messages.yml

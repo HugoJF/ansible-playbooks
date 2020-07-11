@@ -1,0 +1,11 @@
+---
+
+- name: install accelerator
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: acc
+    plugin_url: "{{ acc_download_url }}"
+    addons_basepath: addons/sourcemod/
+    addons_diretories:
+      - extensions
+      - gamedata
