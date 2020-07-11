@@ -1,0 +1,23 @@
+---
+
+- name: install fake frank
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: fac
+    plugin_url: "{{ fac_download_url }}"
+    ignore_first_directory: yes
+    addons_files:
+      - src: csgo_agentschooser.smx
+        dest: plugins/csgo_agentschooser.smx
+
+      - src: csgo_voiceagents_enabler.smx
+        dest: plugins/csgo_voiceagents_enabler.smx
+
+      - src: csgo_agentschooser.sp
+        dest: scripting/csgo_agentschooser.sp
+
+      - src: csgo_voiceagents_enabler.sp
+        dest: scripting/csgo_voiceagents_enabler.sp
+    cfg_templates:
+      - src: frank.cfg.j2
+        dest: frank.cfg
