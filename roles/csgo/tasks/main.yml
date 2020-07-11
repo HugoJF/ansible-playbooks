@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install teamchange unlimited
+  import_tasks: install-teamchange-unlimited.yml
+  tags: teamchange-unlimited
+
 - name: install free2bekicked
   import_tasks: install-free2bekicked.yml
   tags: free2bekicked

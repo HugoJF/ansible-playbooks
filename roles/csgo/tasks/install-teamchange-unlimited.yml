@@ -1,0 +1,14 @@
+---
+
+- name: install teamchange unlimited
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: tcu
+    plugin_url: "{{ tcu_download_url }}"
+    ignore_first_directory: yes
+    addons_files:
+      - src: teamchange_unlimited.smx
+        dest: plugins/teamchange_unlimited.smx
+
+      - src: teamchange_unlimited.sp
+        dest: scripting/teamchange_unlimited.sp
