@@ -1,0 +1,10 @@
+---
+
+- name: install free2bekicked
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: f2bk
+    plugin_url: "{{ f2bk_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting

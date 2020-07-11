@@ -10,6 +10,14 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install free2bekicked
+  import_tasks: install-free2bekicked.yml
+  tags: free2bekicked
+
+- name: install hex tags
+  import_tasks: install-hex-tags.yml
+  tags: hex-tags
+
 - name: install accelerator
   import_tasks: install-accelerator.yml
   tags: accelerator
