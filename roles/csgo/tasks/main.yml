@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install retakes instadefuse
+  import_tasks: install-retakes-instadefuse.yml
+  tags: instafuse
+
 - name: install teamchange unlimited
   import_tasks: install-teamchange-unlimited.yml
   tags: teamchange-unlimited

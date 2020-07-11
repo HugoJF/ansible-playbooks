@@ -1,0 +1,10 @@
+---
+
+- name: install retakes instadefuse
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: rid
+    plugin_url: "{{ rid_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
