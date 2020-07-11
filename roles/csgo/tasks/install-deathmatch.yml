@@ -8,7 +8,6 @@
   vars:
     plugin_id: dm
     plugin_url: "{{ dm_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - plugins
       - scripting

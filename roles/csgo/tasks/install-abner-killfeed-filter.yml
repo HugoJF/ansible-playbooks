@@ -5,6 +5,7 @@
   vars:
     plugin_id: akf
     plugin_url: "{{ akf_download_url }}"
+    ignore_first_directory: yes
     addons_diretories:
       - plugins
       - scripting

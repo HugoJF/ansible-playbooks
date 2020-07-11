@@ -5,7 +5,6 @@
   vars:
     plugin_id: exec
     plugin_url: "{{ exec_download_url }}"
-    skip_basepath: yes
     addons_basepath: addons/sourcemod/
     cfg_basepath: cfg/sourcemod/
     addons_diretories:

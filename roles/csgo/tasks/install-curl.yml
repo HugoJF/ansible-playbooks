@@ -5,7 +5,6 @@
   vars:
     plugin_id: curl
     plugin_url: "{{ curl_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - extensions
       - scripting

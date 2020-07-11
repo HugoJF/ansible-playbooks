@@ -8,7 +8,6 @@
   vars:
     plugin_id: skybox
     plugin_url: "{{ skybox_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - configs
       - plugins

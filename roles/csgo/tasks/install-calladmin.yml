@@ -5,7 +5,6 @@
   vars:
     plugin_id: ca
     plugin_url: "{{ ca_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - plugins
       - scripting

@@ -5,7 +5,6 @@
   vars:
     plugin_id: ptah
     plugin_url: "{{ ptah_download_url }}"
-    skip_basepath: yes
     addons_basepath: addons/sourcemod/
     addons_diretories:
       - extensions

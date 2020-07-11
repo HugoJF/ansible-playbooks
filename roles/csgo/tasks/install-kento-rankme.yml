@@ -5,6 +5,7 @@
   vars:
     plugin_id: rankme
     plugin_url: "{{ sm_rankme_url }}"
+    ignore_first_directory: yes
     addons_diretories:
       - plugins
       - scripting

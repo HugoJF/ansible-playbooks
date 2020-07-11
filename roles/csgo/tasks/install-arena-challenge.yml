@@ -5,7 +5,6 @@
   vars:
     plugin_id: arc
     plugin_url: "{{ arc_download_url }}"
-    skip_basepath: yes
     addons_files:
       - src: hl_challenge.smx
         dest: plugins/hl_challenge.smx

@@ -5,7 +5,6 @@
   vars:
     plugin_id: ret
     plugin_url: "{{ ret_download_url }}"
-    skip_basepath: yes
     addons_basepath: addons/sourcemod/
     cfg_basepath: cfg/sourcemod/
     addons_diretories:

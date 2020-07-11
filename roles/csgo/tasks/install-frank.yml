@@ -5,8 +5,7 @@
   vars:
     plugin_id: frank
     plugin_url: "{{ frank_download_url }}"
-    addons_basepath: addons/sourcemod/
-    cfg_basepath: cfg/sourcemod/
+    ignore_first_directory: yes
     addons_files:
       - src: frank.cfg
         dest: configs/frank.cfg

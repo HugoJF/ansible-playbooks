@@ -8,6 +8,7 @@
   vars:
     plugin_id: tct
     plugin_url: "{{ tct_download_url }}"
+    ignore_first_directory: yes
     addons_diretories:
       - plugins
       - scripting

@@ -5,7 +5,6 @@
   vars:
     plugin_id: fps
     plugin_url: "{{ fps_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - plugins
       - scripting

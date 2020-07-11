@@ -5,7 +5,6 @@
   vars:
     plugin_id: pa
     plugin_url: "{{ pa_download_url }}"
-    skip_basepath: yes
     addons_diretories:
       - plugins
       - gamedata

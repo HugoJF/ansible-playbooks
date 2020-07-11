@@ -5,6 +5,7 @@
   vars:
     plugin_id: ptc
     plugin_url: "{{ ptc_download_url }}"
+    ignore_first_directory: yes
     addons_diretories:
       - plugins
       - scripting

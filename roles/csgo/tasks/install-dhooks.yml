@@ -5,7 +5,6 @@
   vars:
     plugin_id: dh
     plugin_url: "{{ dh_download_url }}"
-    skip_basepath: yes
     addons_basepath: addons/sourcemod/
     addons_diretories:
       - extensions
