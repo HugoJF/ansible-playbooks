@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install afk manager4
+  import_tasks: install-afk-manager4.yml
+  tags: afk-manager
+
 - name: install retakes instadefuse
   import_tasks: install-retakes-instadefuse.yml
   tags: instafuse

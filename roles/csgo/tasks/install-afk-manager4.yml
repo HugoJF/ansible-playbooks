@@ -1,0 +1,12 @@
+---
+
+- name: install afk manager4
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: afkm
+    plugin_url: "{{ afkm_download_url }}"
+    ignore_first_directory: yes
+    addons_diretories:
+      - plugins
+      - scripting
+      - translations
