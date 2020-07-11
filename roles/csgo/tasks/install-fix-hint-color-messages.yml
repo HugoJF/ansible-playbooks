@@ -1,0 +1,14 @@
+---
+
+- name: install fix hint color messages
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: fhcm
+    plugin_url: "{{ fhcm_download_url }}"
+    ignore_first_directory: yes
+    addons_files:
+      - src: FixHintColorMessages.smx
+        dest: plugins/FixHintColorMessages.smx
+
+      - src: FixHintColorMessages.sp
+        dest: scripting/FixHintColorMessages.sp

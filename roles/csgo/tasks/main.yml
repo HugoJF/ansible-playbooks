@@ -8,6 +8,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install fix hint color messages
+  import_tasks: install-fix-hint-color-messages.yml
+  tags: fix-hints
+
 - name: install arena crash fix
   import_tasks: install-arena-crash-fix.yml
   tags: arena-crash-fix
