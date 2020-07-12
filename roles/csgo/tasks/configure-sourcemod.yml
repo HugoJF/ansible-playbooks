@@ -30,3 +30,18 @@
   vars:
     data:
       Databases: "{{ sm_databases | default({}) }}"
+
+- name: configure basevotes plugin
+  template:
+    src: basevotes.cfg.j2
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/basevotes.cfg"
+
+- name: configure fun commands plugin
+  template:
+    src: funcommands.cfg.j2
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funcommands.cfg"
+
+- name: configure fun votes plugin
+  template:
+    src: funvotes.cfg.j2
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funvotes.cfg"
