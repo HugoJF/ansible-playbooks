@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install restart empty
+  import_tasks: install-restart-empty.yml
+  tags: restart-empty
+
 - name: install noblood
   import_tasks: install-noblood.yml
   tags: noblood
