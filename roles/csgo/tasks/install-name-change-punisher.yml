@@ -1,0 +1,11 @@
+---
+
+- name: install name change punisher
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: ncp
+    plugin_url: "{{ ncp_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
+      - translations

@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install name change punisher
+  import_tasks: install-name-change-punisher.yml
+  tags: name-change-punisher
+
 - name: install chat processor
   import_tasks: install-chat-processor.yml
   tags: chat-processor
