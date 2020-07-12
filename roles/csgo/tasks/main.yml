@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install noblood
+  import_tasks: install-noblood.yml
+  tags: noblood
+
 - name: install name change punisher
   import_tasks: install-name-change-punisher.yml
   tags: name-change-punisher
