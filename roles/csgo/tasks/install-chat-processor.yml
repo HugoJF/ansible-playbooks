@@ -1,0 +1,11 @@
+---
+
+- name: install chat processor
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: cp
+    plugin_url: "{{ cp_download_url }}"
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting

@@ -10,6 +10,10 @@
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
 
+- name: install chat processor
+  import_tasks: install-chat-processor.yml
+  tags: chat-processor
+
 - name: install afk manager4
   import_tasks: install-afk-manager4.yml
   tags: afk-manager
