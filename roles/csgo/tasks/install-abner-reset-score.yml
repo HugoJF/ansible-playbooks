@@ -10,3 +10,6 @@
       - plugins
       - scripting
       - translations
+    cfg_templates:
+      - src: plugin.abner_resetscore.cfg.j2
+        dest: plugin.abner_resetscore.cfg

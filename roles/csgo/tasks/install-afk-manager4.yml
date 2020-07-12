@@ -9,3 +9,6 @@
       - plugins
       - scripting
       - translations
+    cfg_templates:
+        - src: afk_manager.cfg.j2
+          dest: afk_manager.cfg

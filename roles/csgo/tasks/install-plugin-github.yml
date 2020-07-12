@@ -76,6 +76,9 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
+    mode: 0755
+    owner: pterodactyl
+    group: pterodactyl
   vars:
     data: "{{ item.data | default({}) }}"
   with_items: "{{ addons_templates | default({}) }}"
@@ -84,12 +87,18 @@
   file:
     path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
     state: directory
+    mode: 0755
+    owner: pterodactyl
+    group: pterodactyl
   with_items: "{{ cfg_directories | default([]) }}"
 
 - name: copy cfg/ templates
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
+    mode: 0755
+    owner: pterodactyl
+    group: pterodactyl
   with_items: "{{ cfg_templates | default({}) }}"
 
 - name: copy cfg/ files

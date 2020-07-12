@@ -9,3 +9,6 @@
       - plugins
       - scripting
       - translations
+    cfg_templates:
+      - src: namechangepunisher.cfg.j2
+        dest: namechangepunisher.cfg

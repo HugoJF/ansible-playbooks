@@ -12,3 +12,6 @@
 
       - src: teamchange_unlimited.sp
         dest: scripting/teamchange_unlimited.sp
+    cfg_templates:
+      - src: teamchange_unlimited.cfg.j2
+        dest: teamchange_unlimited.cfg

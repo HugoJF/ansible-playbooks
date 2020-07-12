@@ -12,3 +12,9 @@
     cfg_templates:
       - src: plugin.calladmin.cfg.j2
         dest: plugin.calladmin.cfg
+
+      - src: plugin.calladmin_mysql.cfg.j2
+        dest: plugin.calladmin_mysql.cfg
+
+      - src: plugin.calladmin_usermanager.cfg.j2
+        dest: plugin.calladmin_usermanager.cfg

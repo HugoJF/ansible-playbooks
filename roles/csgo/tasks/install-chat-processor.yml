@@ -9,3 +9,6 @@
       - configs
       - plugins
       - scripting
+    cfg_templates:
+      - src: chat-processor.cfg.j2
+        dest: chat-processor.cfg

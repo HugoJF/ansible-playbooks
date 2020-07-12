@@ -18,3 +18,6 @@
         dest: configs/togsclantags.cfg
         data:
           Setups: "{{ tct_config }}"
+    cfg_templates:
+      - src: togsclantags.cfg.j2
+        dest: togsclantags.cfg

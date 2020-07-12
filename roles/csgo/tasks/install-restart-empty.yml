@@ -8,3 +8,6 @@
     addons_diretories:
       - plugins
       - scripting
+    cfg_templates:
+      - src: sm_restart_empty.cfg.j2
+        dest: sm_restart_empty.cfg

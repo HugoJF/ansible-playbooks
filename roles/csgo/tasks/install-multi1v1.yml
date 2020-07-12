@@ -32,3 +32,6 @@
     cfg_files:
       - src: multi1v1/game_cvars.cfg
         dest: multi1v1/game_cvars.cfg
+    cfg_templates:
+      - src: multi1v1.cfg.j2
+        dest: multi1v1.cfg
