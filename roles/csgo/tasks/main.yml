@@ -1,9 +1,11 @@
 ---
 # TODO:
 # use get_url dest to and stop redownloading files if they have the same name (are the same) + delete dest temp folder
+# flag to redownload
+# task name prefixes
 
 - name: cleanup addons directory
-  import_tasks: cleanup-addons.yml
+  import_tasks: cleanup-sourcemod.yml
   tags: cleanup
 
 - name: install sourcemod
@@ -40,7 +42,7 @@
 
 - name: install retakes instadefuse
   import_tasks: install-retakes-instadefuse.yml
-  tags: instafuse
+  tags: instadefuse
 
 - name: install teamchange unlimited
   import_tasks: install-teamchange-unlimited.yml
@@ -71,7 +73,7 @@
   tags: executes
 
 - name: install skybox
-  import_tasks: install-skybox.yml
+  include_tasks: install-skybox.yml
   tags: skybox
 
 - name: install firebulletsfix

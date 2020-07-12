@@ -6,7 +6,12 @@
     dest: "/tmp/{{ plugin_id }}.zip"
     force: yes
 
-- name: ensure extraction directories exists
+- name: ensure extraction directory is clean
+  file:
+    path: "/tmp/{{ plugin_id }}/"
+    state: absent
+
+- name: create extraction directory
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: directory

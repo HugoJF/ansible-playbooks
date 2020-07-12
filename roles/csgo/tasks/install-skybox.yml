@@ -14,9 +14,9 @@
       - scripting
     addons_templates:
       - src: sm-cfg.j2
-        dest: configs/deathmatch/deathmatch.ini
+        dest: configs/skybox.ini
         data:
-          skybox: "{{ skybox_config }}"
+          skybox: "{{ sm_skybox_config }}"
     other_files:
       - src: skybox/
         dest: materials/skybox

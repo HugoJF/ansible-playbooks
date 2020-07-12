@@ -1,0 +1,11 @@
+---
+
+- name: "{{ pre }} | remove addons directory"
+  file:
+    path: "{{ csgo_root }}/csgo/addons/"
+    state: absent
+
+- name: remove cfg/sourcemod directory
+  file:
+    path: "{{ csgo_root }}/csgo/cfg/sourcemod/"
+    state: absent

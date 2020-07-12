@@ -20,3 +20,9 @@
     cfg_templates:
       - src: executes.cfg.j2
         dest: executes/executes.cfg
+
+- name: fix chinese translations
+  get_url:
+    url: https://raw.githubusercontent.com/HugoJF/csgo-executes/master/translations/chi/executes.phrases.txt
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/translations/chi/executes.phrases.txt"
+    force: yes

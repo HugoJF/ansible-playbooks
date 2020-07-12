@@ -40,7 +40,7 @@ arena_download_url: https://ci.splewis.net/job/csgo-multi-1v1/lastSuccessfulBuil
 frank_download_url: https://github.com/rogeraabbccdd/Fake-Competitive-Rank-and-Coins/archive/84e88ca75d05f99ddeec0272f473bbb7a052b0be.zip
 arc_download_url: https://github.com/Headline/Challenge/releases/download/v1.1.5/hl_challenge.zip
 rap_download_url: https://github.com/HugoJF/retakes-autoplant/releases/download/v0.3/retakes_autoplant-sm1.10.6490.zip
-fbf_download_url: https://github.com/HugoJF/firebulletsfix/releases/download/v0.4/firebulletsfix-sm1.10.6490.zip
+fbf_download_url: https://github.com/HugoJF/firebulletsfix/releases/download/v0.5/firebulletsfix-sm1.10.6490.zip
 skybox_download_url: https://github.com/HugoJF/skybox/releases/download/v0.2/skybox-sm1.10.6490.zip
 exec_download_url: https://ci.splewis.net/job/csgo-executes/lastSuccessfulBuild/artifact/builds/executes-release/executes-44.zip
 acf_download_url: https://github.com/ismail0234/Benson-Map-Crash-Fixer/archive/82b04e08feeba2fe3413cca35a77ca2efe97d010.zip
@@ -50,8 +50,8 @@ acc_download_url: https://builds.limetech.io/files/accelerator-2.5.0-git138-cd57
 hex_download_url: https://github.com/Hexer10/HexTags/releases/download/2.02/hextags.zip
 f2bk_download_url: https://github.com/HugoJF/free2bekicked/releases/download/v0.1/free2bekicked-sm1.10.6490.zip
 tcu_download_url: https://github.com/Franc1sco/TeamChange-Unlimited/archive/3f2066e96e27affb305341b83ef534c2d7c9f8a0.zip
-rid_download_url: https://github.com/HugoJF/retakes-instadefuse/releases/download/v0.1/retakes_instadefuse-sm1.10.6490.zip
-afkm_download_url: https://github.com/HugoJF/afk_manager4/releases/download/v0.1/afk_manager4-sm1.10.6490.zip
+rid_download_url: https://github.com/HugoJF/retakes-instadefuse/releases/download/v0.2/retakes_instadefuse-sm1.10.6490.zip
+afkm_download_url: https://github.com/HugoJF/afk_manager4/releases/download/v0.2/afk_manager4-sm1.10.6490.zip
 cp_download_url: https://github.com/HugoJF/Chat-Processor/releases/download/v0.1/chat-processor-sm1.10.6490.zip
 ncp_download_url: https://github.com/HugoJF/namechangepunisher/releases/download/v0.1/namechangepunisher-sm1.10.6490.zip
 nb_download_url: https://github.com/HugoJF/noblood/releases/download/v0.2/noblood-sm1.10.6490.zip

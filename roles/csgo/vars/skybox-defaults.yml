@@ -1,6 +1,6 @@
 ---
 
-skybox_config:
+sm_skybox_config:
   1:
     path: amethyst
     name: Amethyst

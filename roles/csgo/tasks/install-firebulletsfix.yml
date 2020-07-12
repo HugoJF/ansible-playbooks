@@ -7,4 +7,5 @@
     plugin_url: "{{ fbf_download_url }}"
     addons_diretories:
       - plugins
+      - gamedata
       - scripting
