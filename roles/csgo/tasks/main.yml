@@ -2,6 +2,10 @@
 # TODO:
 # use get_url dest to and stop redownloading files if they have the same name (are the same) + delete dest temp folder
 
+- name: cleanup addons directory
+  import_tasks: cleanup-addons.yml
+  tags: cleanup
+
 - name: install sourcemod
   import_tasks: install-sourcemod.yml
   tags: sourcemod
@@ -9,6 +13,10 @@
 - name: configure sourcemod
   import_tasks: configure-sourcemod.yml
   tags: sourcemod
+
+- name: install abner reset score
+  import_tasks: install-abner-reset-score.yml
+  tags: abner-reset-score
 
 - name: install restart empty
   import_tasks: install-restart-empty.yml

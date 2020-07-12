@@ -1,0 +1,12 @@
+---
+
+- name: install abner reset score
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: ars
+    plugin_url: "{{ ars_download_url }}"
+    addons_basepath: addons/sourcemod/
+    addons_diretories:
+      - plugins
+      - scripting
+      - translations
