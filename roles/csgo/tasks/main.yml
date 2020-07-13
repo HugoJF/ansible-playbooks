@@ -16,6 +16,10 @@
   tags: sourcemod
   when: configure_sourcemod | default(false)
 
+- import_tasks: install-sourcebanspp.yml
+  tags: sourcebanspp
+  when: install_sourcebanspp | default(false)
+
 - import_tasks: install-deathmatch-3.yml
   tags: deathmatch-3
   when: install_deathmatch_3 | default(false)

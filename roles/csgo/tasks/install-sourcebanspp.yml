@@ -1,0 +1,29 @@
+---
+
+- name: include default vars
+  include_vars: sbpp-defaults.yml
+
+- name: include sourcecomms default vars
+  include_vars: sourcecomms-defaults.yml
+
+- name: install sourcebans++
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: sbpp
+    plugin_url: "{{ sbpp_download_url }}"
+    ignore_first_directory: yes
+    addons_basepath: addons/sourcemod/
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+      - translations
+    addons_templates:
+      - src: sm-cfg.j2
+        dest: configs/sourcebans/sourcebans.cfg
+        data:
+          SourceBans: "{{ sbpp_config }}"
+      - src: sm-cfg.j2
+        dest: configs/sourcebans/sourcecomms.cfg
+        data:
+          SourceComms: "{{ sourcecomms_config }}"
