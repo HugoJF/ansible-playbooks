@@ -1,0 +1,36 @@
+---
+
+- name: Install GeoIP City
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: gipc
+    plugin_url: "{{ gipc_download_url }}"
+    addons_diretories:
+      - extensions
+      - scripting
+
+- name: Download GeoIPCity.zip
+  get_url:
+    url: https://share.snksrv.com/f/ypA7GK.zip
+    dest: /tmp/geoipcity.zip
+
+- name: Ensure extraction directory exists
+  file:
+    path: /tmp/geoipcity/
+    state: directory
+    mode: 0755
+
+- name: Unzip GeoIPCity
+  unarchive:
+    src: /tmp/geoipcity.zip
+    dest: /tmp/geoipcity/
+    remote_src: yes
+
+- name: Copy GeoIPCity.dat
+  copy:
+    src: /tmp/geoipcity/GeoIPCity.dat
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/geoip/"
+    remote_src: yes
+    mode: 0755
+    owner: pterodactyl
+    group: pterodactyl

@@ -16,6 +16,10 @@
   tags: sourcemod
   when: configure_sourcemod | default(false)
 
+- import_tasks: install-geoipcity.yml
+  tags: geoipcity
+  when: install_geoipcity | default(false)
+
 - import_tasks: install-sourcebanspp.yml
   tags: sourcebanspp
   when: install_sourcebanspp | default(false)
