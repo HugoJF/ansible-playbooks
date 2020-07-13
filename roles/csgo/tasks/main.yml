@@ -4,178 +4,182 @@
 # flag to redownload
 # task name prefixes
 
-- name: cleanup addons directory
-  import_tasks: cleanup-sourcemod.yml
+- import_tasks: cleanup-sourcemod.yml
   tags: cleanup
+  when: cleanup | default(false)
 
-- name: install sourcemod
-  import_tasks: install-sourcemod.yml
+- import_tasks: install-sourcemod.yml
   tags: sourcemod
+  when: install_sourcemod | default(false)
 
-- name: configure sourcemod
-  import_tasks: configure-sourcemod.yml
+- import_tasks: configure-sourcemod.yml
   tags: sourcemod
+  when: configure_sourcemod | default(false)
 
-- name: install abner reset score
-  import_tasks: install-abner-reset-score.yml
+- import_tasks: install-deathmatch-3.yml
+  tags: deathmatch-3
+  when: install_deathmatch_3 | default(false)
+
+- import_tasks: install-abner-reset-score.yml
   tags: abner-reset-score
+  when: install_abner_reset_score | default(false)
 
-- name: install restart empty
-  import_tasks: install-restart-empty.yml
+- import_tasks: install-restart-empty.yml
   tags: restart-empty
+  when: install_restart_empty | default(false)
 
-- name: install noblood
-  import_tasks: install-noblood.yml
+- import_tasks: install-noblood.yml
   tags: noblood
+  when: install_noblood | default(false)
 
-- name: install name change punisher
-  import_tasks: install-name-change-punisher.yml
+- import_tasks: install-name-change-punisher.yml
   tags: name-change-punisher
+  when: install_name_change_punisher | default(false)
 
-- name: install chat processor
-  import_tasks: install-chat-processor.yml
+- import_tasks: install-chat-processor.yml
   tags: chat-processor
+  when: install_chat_processor | default(false)
 
-- name: install afk manager4
-  import_tasks: install-afk-manager4.yml
+- import_tasks: install-afk-manager4.yml
   tags: afk-manager
+  when: install_afk_manager | default(false)
 
-- name: install retakes instadefuse
-  import_tasks: install-retakes-instadefuse.yml
+- import_tasks: install-retakes-instadefuse.yml
   tags: instadefuse
+  when: install_instadefuse | default(false)
 
-- name: install teamchange unlimited
-  import_tasks: install-teamchange-unlimited.yml
+- import_tasks: install-teamchange-unlimited.yml
   tags: teamchange-unlimited
+  when: install_teamchange_unlimited | default(false)
 
-- name: install free2bekicked
-  import_tasks: install-free2bekicked.yml
+- import_tasks: install-free2bekicked.yml
   tags: free2bekicked
+  when: install_free2bekicked | default(false)
 
-- name: install hex tags
-  import_tasks: install-hex-tags.yml
+- import_tasks: install-hex-tags.yml
   tags: hex-tags
+  when: install_hex_tags | default(false)
 
-- name: install accelerator
-  import_tasks: install-accelerator.yml
+- import_tasks: install-accelerator.yml
   tags: accelerator
+  when: install_accelerator | default(false)
 
-- name: install fix hint color messages
-  import_tasks: install-fix-hint-color-messages.yml
+- import_tasks: install-fix-hint-color-messages.yml
   tags: fix-hints
+  when: install_fix_hints | default(false)
 
-- name: install arena crash fix
-  import_tasks: install-arena-crash-fix.yml
+- import_tasks: install-arena-crash-fix.yml
   tags: arena-crash-fix
+  when: install_arena_crash_fix | default(false)
 
-- name: install executes
-  import_tasks: install-executes.yml
+- import_tasks: install-executes.yml
   tags: executes
+  when: install_executes | default(false)
 
-- name: install skybox
-  include_tasks: install-skybox.yml
+- include_tasks: install-skybox.yml
   tags: skybox
+  when: install_skybox | default(false)
 
-- name: install firebulletsfix
-  import_tasks: install-firebulletsfix.yml
+- import_tasks: install-firebulletsfix.yml
   tags: firebulletsfix
+  when: install_firebulletsfix | default(false)
 
-- name: install retakes autoplant
-  import_tasks: install-retakes-autoplant.yml
+- import_tasks: install-retakes-autoplant.yml
   tags: autoplant
+  when: install_autoplant | default(false)
 
-- name: install arena challenge
-  import_tasks: install-arena-challenge.yml
+- import_tasks: install-arena-challenge.yml
   tags: challenge
+  when: install_challenge | default(false)
 
-- name: install frank
-  import_tasks: install-frank.yml
+- import_tasks: install-frank.yml
   tags: frank
+  when: install_frank | default(false)
 
-- name: install arena
-  import_tasks: install-multi1v1.yml
+- import_tasks: install-multi1v1.yml
   tags: arena
+  when: install_arena | default(false)
 
-- name: install retakes
-  import_tasks: install-retakes.yml
+- import_tasks: install-retakes.yml
   tags: retakes
+  when: install_retakes | default(false)
 
-- name: install curl extension
-  import_tasks: install-curl.yml
+- import_tasks: install-curl.yml
   tags: curl
+  when: install_curl | default(false)
 
-- name: install dhooks
-  import_tasks: install-dhooks.yml
+- import_tasks: install-dhooks.yml
   tags: dhooks
+  when: install_dhooks | default(false)
 
-- name: install ptah
-  import_tasks: install-ptah.yml
+- import_tasks: install-ptah.yml
   tags: ptah
+  when: install_ptah | default(false)
 
-- name: install my weapon allocator
-  import_tasks: install-my-weapon-allocator.yml
+- import_tasks: install-my-weapon-allocator.yml
   tags: allocator
+  when: install_allocator | default(false)
 
-- name: install deathmatch loader
-  import_tasks: install-deathmatch-loader.yml
+- import_tasks: install-deathmatch-loader.yml
   tags: dm-loader
+  when: install_dm_loader | default(false)
 
-- name: install fps booster
-  import_tasks: install-fps-booster.yml
+- import_tasks: install-fps-booster.yml
   tags: fps
+  when: install_fps | default(false)
 
-- name: install calladmin
-  import_tasks: install-calladmin.yml
+- import_tasks: install-calladmin.yml
   tags: calladmin
+  when: install_calladmin | default(false)
 
-- name: install kgns weapons
-  import_tasks: install-kgns-weapons.yml
+- import_tasks: install-kgns-weapons.yml
   tags: weapons
+  when: install_weapons | default(false)
 
-- name: install kgns gloves
-  import_tasks: install-kgns-gloves.yml
+- import_tasks: install-kgns-gloves.yml
   tags: gloves
+  when: install_gloves | default(false)
 
-- name: install steamworks
-  import_tasks: install-steamworks.yml
+- import_tasks: install-steamworks.yml
   tags: steamworks
+  when: install_steamworks | default(false)
 
-- name: install calladmin reports
-  import_tasks: install-calladmin-reports.yml
+- import_tasks: install-calladmin-reports.yml
   tags: reports
+  when: install_reports | default(false)
 
-- name: install togs clantags
-  import_tasks: install-togs-clantags.yml
+- import_tasks: install-togs-clantags.yml
   tags: clantags
+  when: install_clantags | default(false)
 
-- name: install dynamic
-  import_tasks: install-dynamic.yml
+- import_tasks: install-dynamic.yml
   tags: dynamic
+  when: install_dynamic | default(false)
 
-- name: install deathmatch
-  import_tasks: install-deathmatch.yml
+- import_tasks: install-deathmatch.yml
   tags: deathmatch
+  when: install_deathmatch | default(false)
 
-- name: install print to console
-  import_tasks: install-print-to-console.yml
+- import_tasks: install-print-to-console.yml
   tags: print-to-console
+  when: install_print_to_console | default(false)
 
-- name: install abner killfeed filter
-  import_tasks: install-abner-killfeed-filter.yml
+- import_tasks: install-abner-killfeed-filter.yml
   tags: killfeed
+  when: install_killfeed | default(false)
 
-- name: install player analytics
-  import_tasks: install-player-analytics.yml
+- import_tasks: install-player-analytics.yml
   tags: analytics
+  when: install_analytics | default(false)
 
-- name: install slot reservation modded
-  import_tasks: install-slot-reservation-modded.yml
+- import_tasks: install-slot-reservation-modded.yml
   tags: slot
+  when: install_slot | default(false)
 
-- name: install kento rankme
-  import_tasks: install-kento-rankme.yml
+- import_tasks: install-kento-rankme.yml
   tags: kento
+  when: install_kento | default(false)
 
-- name: install server advertisements 3
-  import_tasks: install-server-advertisements-3.yml
+- import_tasks: install-server-advertisements-3.yml
   tags: advertisements
+  when: install_advertisements | default(false)

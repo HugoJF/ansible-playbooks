@@ -3,5 +3,10 @@ main ansible_host=104.156.246.245 ansible_user=runcloud
 epsilon ansible_host=177.54.150.15 ansible_user=ogpbot
 epsilon_root ansible_host=177.54.150.15 ansible_user=root
 
-[csgo]
+
+[denerd]
 dm2 ansible_host=177.54.150.15 ansible_user=ogpbot csgo_root=/home/ogpbot/OGP_User_Files/82
+
+[csgo:children]
+denerd
+web

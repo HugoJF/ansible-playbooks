@@ -1,0 +1,412 @@
+---
+
+dm3_config:
+    Config:
+      # Name of configuration file
+      # --
+      # Default: Default
+      dm_config_name: Default
+
+    Options:
+      # Enable Deathmatch.
+      # --
+      # Default: yes
+      dm_enabled: 'yes'
+
+      # Enable compatibility for Valve Deathmatch (game_type 1 & game_mode 2) or Custom (game_type 3 & game_mode 0).
+      # --
+      # Default: no
+      dm_enable_valve_deathmatch: 'no'
+
+      # Display a message saying that your server is running Deathmatch.
+      # --
+      # Default: yes
+      dm_welcomemsg: 'yes'
+
+      # Free for all mode.
+      # --
+      # Default: no
+      dm_free_for_all: 'no'
+
+      # Hides the radar from players.
+      # --
+      # Default: no
+      dm_hide_radar: 'no'
+
+      # Enable kill feed to be displayed to all players.
+      # --
+      # Default: yes
+      dm_display_killfeed: 'yes'
+
+      # Enable to show kill feed to only the attacker and victim.
+      # --
+      # Default: no
+      dm_display_killfeed_player: 'no'
+
+      # Display a panel showing enemies health and the damage done to a player.
+      # --
+      # Default: "no"
+      dm_display_damage_panel: 'no'
+
+      # Display text above the enemy showing damage done to an enemy.
+      # --
+      # Default: no
+      dm_display_damage_popup: 'no'
+
+      # Display text in chat showing damage done to an enemy.
+      # --
+      # Default: no
+      dm_display_damage_text: 'no'
+
+      # Enable the sounds of bodyshots.
+      # --
+      # Default: yes
+      dm_sounds_bodyshots: 'yes'
+
+      # Enable the sounds of headshots.
+      # --
+      # Default: yes
+      dm_sounds_headshots: 'yes'
+
+      # Headshot only mode.
+      # --
+      # Default: no
+      dm_headshot_only: 'no'
+
+      # Enable clients to have their own personal headshot only mode.
+      # --
+      # Default: yes
+      dm_headshot_only_allow_client: 'yes'
+
+      # Enable world damage during headshot only mode.
+      # --
+      # Default: no
+      dm_headshot_only_allow_world: 'no'
+
+      # Enable knife damage during headshot only mode.
+      # --
+      # Default: no
+      dm_headshot_only_allow_knife: 'no'
+
+      # Enable taser damage during headshot only mode.
+      # --
+      # Default: no
+      dm_headshot_only_allow_taser: 'no'
+
+      # Enable grenade damage during headshot only mode.
+      # --
+      # Default: no
+      dm_headshot_only_allow_nade: 'no'
+
+      # Enable respawning.
+      # --
+      # Default: yes
+      dm_respawn: 'yes'
+
+      # Respawn time.
+      # --
+      # Default: 1.0
+      dm_respawn_time: 1.0
+
+      # Enable Valve Deathmatch respawning. This disables the plugin respawning method.
+      # --
+      # Default: no
+      dm_respawn_valve: 'no'
+
+      # Enable default map spawn points. Overrides Valve Deathmatch respawning.
+      # --
+      # Default: no
+      dm_spawn_default: 'no'
+
+      # Enable line of sight spawning. If enabled, players will be spawned at
+      # a point where they cannot see enemies, and enemies cannot see them.
+      # --
+      # Default: yes
+      dm_spawn_los: 'yes'
+
+      # Maximum number of attempts to find a suitable line of sight spawn point.
+      # --
+      # Default: 10
+      dm_spawn_los_attempts: 64
+
+      # Minimum distance from enemies at which a player can spawn.
+      # --
+      # Default: 500000.0
+      dm_spawn_distance: 500000.0
+
+      # Maximum number of attempts to find a suitable distance spawn point.
+      # --
+      # Default: 10
+      dm_spawn_distance_attempts: 64
+
+      # Spawn protection time.
+      # --
+      # Default: 1.0
+      dm_spawn_protection_time: 1.0
+
+      # Remove damage from knife attacks.
+      # --
+      # Default: no
+      dm_remove_knife_damage: 'no'
+
+      # Remove blood splatter from player.
+      # --
+      # Default: yes
+      dm_remove_blood_player: 'yes'
+
+      # Remove blood splatter from walls.
+      # --
+      # Default: yes
+      dm_remove_blood_walls: 'yes'
+
+      # Remove client cash.
+      # --
+      # Default: yes
+      dm_remove_cash: 'yes'
+
+      # Remove chickens from the map and from spawning.
+      # --
+      # Default: yes
+      dm_remove_chickens: 'yes'
+
+      # Remove buyzones from map.
+      # --
+      # Default: yes
+      dm_remove_buyzones: 'yes'
+
+      # Remove objectives (disables bomb sites, and removes c4 and hostages).
+      # --
+      # Default: yes
+      dm_remove_objectives: 'yes'
+
+      # Remove ragdoll after a player dies.
+      # --
+      # Default: yes
+      dm_remove_ragdoll: 'yes'
+
+      # Amount of time before removing ragdoll.
+      # --
+      # Default: 1.0
+      dm_remove_ragdoll_time: 1.0
+
+      # Remove spawned client weapons.
+      # --
+      # Default: yes
+      dm_remove_spawn_weapons: 'yes'
+
+      # Remove ground weapons.
+      # --
+      # Default: yes
+      dm_remove_ground_weapons: 'yes'
+
+      # Remove dropped weapons.
+      # --
+      # Default: yes
+      dm_remove_dropped_weapons: 'yes'
+
+      # Replenish ammo when weapon is empty.
+      # --
+      # Default: yes
+      dm_replenish_ammo_empty: 'yes'
+
+      # Replenish ammo on reload action.
+      # --
+      # Default: no
+      dm_replenish_ammo_reload: 'no'
+
+      # Replenish ammo on kill.
+      # --
+      # Default: yes
+      dm_replenish_ammo_kill: 'yes'
+
+      # Replenish type. 1) Clip only. 2) Reserve only. 3) Both.
+      # --
+      # Default: 2
+      dm_replenish_ammo_type: 2
+
+      # Replenish ammo on kill.
+      # --
+      # Default: no
+      dm_replenish_ammo_hs_kill: 'no'
+
+      # Replenish type. 1) Clip only. 2) Reserve only. 3) Both.
+      # --
+      # Default: 1
+      dm_replenish_ammo_hs_type: 1
+
+      # Unlimited player grenades.
+      # --
+      # Default: no
+      dm_replenish_grenade: 'no'
+
+      # Give players their grenade back on successful kill.
+      # --
+      # Default: no
+      dm_replenish_grenade_kill: 'no'
+
+      # Disable grenade messages.
+      # --
+      # Default: yes
+      dm_nade_messages: 'yes'
+
+      # Disable cash award messages.
+      # --
+      # Default: yes
+      dm_cash_messages: 'yes'
+
+      # Spawn Health Points (HP).
+      # --
+      # Default: 100
+      dm_hp_start: 100
+
+      # Maximum Health Points (HP).
+      # --
+      # Default: 100
+      dm_hp_max: 100
+
+      # Health Points (HP) per kill.
+      # --
+      # Default: 5
+      dm_hp_kill: 5
+
+      # Health Points (HP) per headshot kill.
+      # --
+      # Default: 10
+      dm_hp_headshot: 10
+
+      # Health Points (HP) per knife kill.
+      # --
+      # Default: 50
+      dm_hp_knife: 50
+
+      # Health Points (HP) per nade kill.
+      # --
+      # Default: 30
+      dm_hp_nade: 30
+
+      # Display HP messages.
+      # --
+      # Default: yes
+      dm_hp_messages: 'yes'
+
+      # Maximum Armor Points (AP).
+      # --
+      # Default: 100
+      dm_ap_max: 100
+
+      # Armor Points (AP) per kill.
+      # --
+      # Default: 5
+      dm_ap_kill: 5
+
+      # Armor Points (AP) per headshot kill.
+      # --
+      # Default: 10
+      dm_ap_headshot: 10
+
+      # Armor Points (AP) per knife kill.
+      # --
+      # Default: 50
+      dm_ap_knife: 50
+
+      # Armor Points (AP) per nade kill.
+      # --
+      # Default: 30
+      dm_ap_nade: 30
+
+      # Display AP messages.
+      # --
+      # Default: yes
+      dm_ap_messages: 'yes'
+
+    Equipment:
+      Loadout:
+        dm_gun_menu_mode: 1  # Gun menu mode. 1) Enabled. 2) Primary weapons only. 3) Secondary weapons only. 4) Tertiary weapons only. 5) Random weapons only. 6) Disabled.
+        dm_loadout_style: 1  # When players can receive weapons. 1) On respawn. 2) Immediately.
+        dm_fast_equip: 'no' # Enable fast weapon equipping.
+
+      Primary:
+        weapon_ak47: -1
+        weapon_m4a1: -1
+        weapon_m4a1_silencer: -1
+        weapon_sg556: -1
+        weapon_aug: -1
+        weapon_galilar: -1
+        weapon_famas: -1
+        weapon_awp: -1
+        weapon_ssg08: -1
+        weapon_g3sg1: -1
+        weapon_scar20: -1
+        weapon_m249: -1
+        weapon_negev: -1
+        weapon_nova: -1
+        weapon_xm1014: -1
+        weapon_sawedoff: -1
+        weapon_mag7: -1
+        weapon_mac10: -1
+        weapon_mp9: -1
+        weapon_mp7: -1
+        weapon_mp5sd: -1
+        weapon_ump45: -1
+        weapon_p90: -1
+        weapon_bizon: -1
+
+      Secondary:
+        weapon_glock: -1
+        weapon_p250: -1
+        weapon_cz75a: -1
+        weapon_usp_silencer: -1
+        weapon_fiveseven: -1
+        weapon_deagle: -1
+        weapon_revolver: -1
+        weapon_elite: -1
+        weapon_tec9: -1
+        weapon_hkp2000: -1
+
+      Tertiary:
+        dm_zeus: 'no'  # Allow players to use a taser.
+        dm_zeus_spawn: 'no'  # Give players a taser on spawn.
+        dm_zeus_kill: 'no'  # Give players a taser after any kill.
+        dm_zeus_kill_taser: 'no'  # Give players a taser after a taser kill.
+        dm_zeus_kill_knife: 'no'  # Give players a taser after a knife kill.
+      Grenades:
+        # Grenade                  # Amount
+        dm_nades_incendiary: 0
+        dm_nades_molotov: 0
+        dm_nades_decoy: 0
+        dm_nades_flashbang: 0
+        dm_nades_he: 0
+        dm_nades_smoke: 0
+        dm_nades_tactical: 0
+
+      Utilities:
+        dm_healthshot: 'no'  # Allow players to use a healthshot.
+        dm_healthshot_health: 50  # Total amount of health given when a healthshot is used.
+        dm_healthshot_total: 4   # Total amount of healthshots a player may have at once.
+        dm_healthshot_spawn: 'no'  # Give players a healthshot on spawn.
+        dm_healthshot_kill: 'no'  # Give players a healthshot after any kill.
+        dm_healthshot_kill_knife: 'no'  # Give players a healthshot after a knife kill.
+
+      Armor:
+        dm_armor: "2"  # Give players armor. 0) Disable. 1) Chest. 2) Chest + Helmet.
+
+      TeamSkins:
+        weapon_ak47: T
+        weapon_m4a1: CT
+        weapon_m4a1_silencer: CT
+        weapon_sg556: T
+        weapon_aug: CT
+        weapon_galilar: T
+        weapon_famas: CT
+        weapon_g3sg1: T
+        weapon_scar20: CT
+        weapon_sawedoff: T
+        weapon_mag7: CT
+        weapon_mac10: T
+        weapon_mp9: CT
+        weapon_mp7: CT
+        weapon_glock: T
+        weapon_usp_silencer: CT
+        weapon_fiveseven: CT
+        weapon_tec9: T
+        weapon_hkp2000: CT

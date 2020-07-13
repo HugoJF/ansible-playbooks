@@ -1,12 +1,6 @@
 ---
 
-- name: install sourcemod
+- name: setup csgo servers
   hosts: epsilon_root
   roles:
     - role: csgo
-
-# - name: test bug
-#   hosts: epsilon_root
-#   roles:
-#     - role: copy-bug
-#       tags: bug

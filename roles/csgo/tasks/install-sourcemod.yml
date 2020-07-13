@@ -4,14 +4,21 @@
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
-    force: yes
   loop:
     - url: "{{ mm_download_url }}"
       dest: /tmp/mm.tar.gz
     - url: "{{ sm_download_url }}"
       dest: /tmp/sm.tar.gz
 
-- name: ensure extraction directories exists
+- name: cleanup extraction directories
+  file:
+    path: "/tmp/{{ item }}"
+    state: absent
+  with_items:
+    - mm
+    - sm
+
+- name: create extraction directories
   file:
     path: "/tmp/{{ item }}"
     state: directory
@@ -48,4 +55,4 @@
     src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     remote_src: yes
-  with_items: "{{ sm_disabled_plugins }}"
+  with_items: "{{ sm_disabled_plugins | default([]) }}"
