@@ -4,7 +4,7 @@
 sm_core_block_bad_plugins: 'no' 
 sm_core_follow_csgo_server_guidelines: 'no'
 
-#addons/sourcemod/configs/admins_simple.ini
+# addons/sourcemod/configs/admins_simple.ini
 sm_admins_simple:
   STEAM_1:1:107619130: '99:z'
   STEAM_1:1:36509127: '99:z'

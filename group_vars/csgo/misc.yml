@@ -1,0 +1,89 @@
+---
+
+# "Restart Empty" (1.4) by Alex Dragokas
+install_restart_empty: yes
+sm_restart_empty_delay: 30
+
+# "Gloves" (1.0.3) by kgns | oyunhost.net
+install_gloves: yes
+sm_gloves_db_connection: kaganus_gloves # TODO: I need to implement this database
+sm_gloves_float_increment_size: 0.2
+
+# "AFK Manager" (4.2.5) by Rothgar
+install_afk_manager: yes
+sm_afk_admins_flag: a
+sm_afk_autoupdate: 0
+sm_afk_kick_announce: 2
+sm_afk_move_announce: 2
+sm_afk_kick_time: 45
+sm_afk_kick_warn_time: 20
+sm_afk_move_spec: 0
+sm_afk_prefix_short: 1
+sm_afk_log_days: 7
+sm_afk_move_min_players: 10 # TODO: maybe per server?
+sm_afk_exclude_dead: 1
+
+# "Name Change Punisher" (1.1) by Powerlord
+install_name_change_punisher: yes
+ncp_detections: 10
+ncp_detectiontime: 20
+
+# "TeamChange Unlimited" (1.2.2) by Sheepdude
+install_teamchange_unlimited: yes
+sm_teamchange_unlimited_chat: 0
+sm_teamchange_unlimited_immunity: 1
+sm_teamchange_unlimited_maplimit: 10
+
+# "[CS:GO] Fake Competitive Ranks/Coins" (1.2) by Laam4
+install_frank: yes
+
+# "AbNeR Kill Feed Filter" (1.3) by AbNeR @CSB
+install_killfeed: yes
+
+# "Fix Hint Color Messages" (1.0.0) by Phoenix (˙·٠●Феникс●٠·˙)
+install_fix_hints: yes
+
+# "Print to client console" (1.0) by AlliedModders LLC, de_nerd
+install_print_to_console: yes
+
+# "Dynamic" (0.0.32) by Neuro Toxin
+install_dynamic: yes
+
+# "Bullet position fix" (1.0) by xutaxkamay
+install_firebulletsfix: yes
+
+# "Resetscore" (2.6.0) by shavit
+install_abner_reset_score: yes # TODO: Maybe this has a cfg?
+sm_resetscore_public: 0
+sm_resetscore_savescores: 0
+
+# "Chat-Processor" (2.2.2) by Drixevel
+install_chat_processor: yes
+sm_chatprocessor_colors_flag: a
+
+# "No Blood" (1.0.1) by Bara
+install_noblood: yes
+
+# "Free2BeKicked - CS:GO" (1.0.0) by Asher "asherkin" Baker, psychonic
+install_free2bekicked: yes
+
+# "[ANY] Player Analytics" (1.3.1) by Dr. McKay
+install_analytics: yes
+
+# "Skybox" (1.01) by Deathknife
+install_skybox: yes
+
+# "Weapons & Knives" (1.6.0) by kgns | oyunhost.net
+install_weapons: yes
+sm_weapons_db_connection: kaganus_weapons
+sm_weapons_enable_overwrite: 0
+
+# HexTags
+install_hex_tags: yes
+sm_hextags_roundend: 1
+
+# ServerAdvertisements3
+install_advertisements: yes
+
+# Modded slot reservation
+install_slot: yes

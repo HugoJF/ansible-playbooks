@@ -1,8 +1,0 @@
----
-
-hex_config:
-  STEAM_0:1:36509127:
-    ScoreTag: nerd
-    ChatTag: "{default}[{darkred}ADMIN{default}]"
-    ChatColor: "{default}"
-    NameColor: "{grey}"

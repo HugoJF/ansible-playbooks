@@ -1,7 +1,5 @@
 ---
 
-csgo_root: /home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3
-
 mm_download_url: https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz
 sm_download_url: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz
 

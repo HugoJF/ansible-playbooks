@@ -1,7 +1,5 @@
 ---
 
-install_advertisements: yes
-
 sa3_config:
   Settings:
     ServerName: "[{orange}SERVER{default}]" # Server tag

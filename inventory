@@ -1,7 +1,9 @@
 [web]
 main ansible_host=104.156.246.245 ansible_user=runcloud
 epsilon ansible_host=177.54.150.15 ansible_user=ogpbot
-epsilon_root ansible_host=177.54.150.15 ansible_user=root
+
+[test]
+ptero ansible_host=177.54.150.15 ansible_user=root csgo_root=/home/runcloud/webapps/pterodactyl-daemon/daemon-data/272d30a6-9b7d-46c3-b4db-4429a5376ca3
 
 [denerd]
 dm1 csgo_root=/home/ogpbot/OGP_User_Files/81
@@ -20,5 +22,6 @@ ansible_host=177.54.150.15
 ansible_user=ogpbot
 
 [csgo:children]
+test
 denerd
 web

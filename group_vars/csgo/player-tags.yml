@@ -1,0 +1,34 @@
+---
+
+hex_config:
+  # Anova
+  STEAM_0:0:66095696:
+    ScoreTag: "faketaxi "
+    ChatTag: "faketaxi "
+
+  # Me
+  STEAM_0:1:36509127:
+    ScoreTag: "[DONO]#{rmRank} "
+    ChatTag: "{default}[{darkred}DONO{default}]#{rmRank} "
+
+  # Example
+  STEAM_0:1:36509121:
+    ScoreTag: [DONO]
+    ChatTag: "{default}[{darkred}DONO{default}]"
+    ChatColor: "{default}"
+    NameColor: "{grey}"
+
+  # Hidden tags
+  o:
+    ScoreTag: ""
+    ChatTag: ""
+
+  # Moderadores
+  b:
+    ScoreTag: "[MODERADOR] "
+    ChatTag: "{default}[{darkred}MODERADOR{default}] "
+
+  # VIPs
+  a:
+    ScoreTag: "[VIP] "
+    ChatTag: "{default}[{darkred}VIP{default}] "
