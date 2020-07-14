@@ -1,6 +1,9 @@
 ---
 
-- name: Install CS:GO servers
-  hosts: dm2
+- hosts: denerd
   roles:
     - role: csgo
+      tags: install
+      
+    - role: backup-csgo
+      tags: backup

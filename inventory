@@ -3,9 +3,21 @@ main ansible_host=104.156.246.245 ansible_user=runcloud
 epsilon ansible_host=177.54.150.15 ansible_user=ogpbot
 epsilon_root ansible_host=177.54.150.15 ansible_user=root
 
-
 [denerd]
-dm2 ansible_host=177.54.150.15 ansible_user=ogpbot csgo_root=/home/ogpbot/OGP_User_Files/82
+dm1 csgo_root=/home/ogpbot/OGP_User_Files/81
+dm2 csgo_root=/home/ogpbot/OGP_User_Files/82
+dm3 csgo_root=/home/ogpbot/OGP_User_Files/83
+arena csgo_root=/home/ogpbot/OGP_User_Files/84
+retake1 csgo_root=/home/ogpbot/OGP_User_Files/85
+retake2 csgo_root=/home/ogpbot/OGP_User_Files/86
+surf csgo_root=/home/ogpbot/OGP_User_Files/87
+executes csgo_root=/home/ogpbot/OGP_User_Files/198
+comp csgo_root=/home/ogpbot/OGP_User_Files/89
+kz csgo_root=/home/ogpbot/OGP_User_Files/156
+
+[denerd:vars]
+ansible_host=177.54.150.15
+ansible_user=ogpbot
 
 [csgo:children]
 denerd

@@ -1,0 +1,19 @@
+---
+
+- name: Create a bz2 archive of a globbed path, while excluding a glob of dirnames
+  archive:
+    path:
+      - "{{ csgo_root }}/csgo/addons/"
+      - "{{ csgo_root }}/csgo/cfg/"
+    dest: "/tmp/{{ inventory_hostname }}.tar.gz"
+
+- name: Download backup
+  fetch:
+    src: "/tmp/{{ inventory_hostname }}.tar.gz"
+    dest: "/home/vagrant/ansible/_data/{{ ansible_date_time.date }}/{{ inventory_hostname }}_{{ ansible_date_time.iso8601_basic_short }}.tar.gz"
+    flat: yes
+
+- name: Remove backup from remote
+  file:
+    path: "/tmp/{{ inventory_hostname }}.tar.gz"
+    state: absent
