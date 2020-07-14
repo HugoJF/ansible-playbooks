@@ -1,7 +1,6 @@
 ---
 
-- name: configure sourcemod databases
-hosts: dm2
+- name: Install CS:GO servers
+  hosts: dm2
   roles:
-    - role: configure-sourcemod
-      tags: [sourcemod, configure]
+    - role: csgo
