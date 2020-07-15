@@ -114,3 +114,6 @@ install_calladmin: yes
 sm_calladmin_admin_action: 1
 sm_calladmin_advert_interval: 0
 sm_calladmin_spamtime: 300
+
+# GeoIPCity
+install_geoipcity: yes
