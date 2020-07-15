@@ -1,8 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: dm-defaults.yml
-
 - name: install deathmatch
   include_tasks: install-plugin-github.yml
   vars:

@@ -1,8 +1,10 @@
 ---
 # TODO:
-# use get_url dest to and stop redownloading files if they have the same name (are the same) + delete dest temp folder
 # flag to redownload
 # task name prefixes
+# determinar como os templates/cfgs serão setados (eliminar defaults? exigir sempre valores? fornecer um yml com doc e tudo?)
+# fazer tudo ficar idempotente (nunca copiar uma config, sempre gerar)
+# permitir selecao de quais plugins serao instalados (em packs com varios plugins)
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup

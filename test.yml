@@ -1,6 +1,6 @@
 ---
 
 - name: setup csgo servers
-  hosts: epsilon_root
+  hosts: ptero
   roles:
     - role: csgo

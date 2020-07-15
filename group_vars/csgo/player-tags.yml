@@ -8,8 +8,8 @@ hex_config:
 
   # Me
   STEAM_0:1:36509127:
-    ScoreTag: "[DONO]#{rmRank} "
-    ChatTag: "{default}[{darkred}DONO{default}]#{rmRank} "
+    ScoreTag: "[DONO]"
+    ChatTag: "{default}[{darkred}DONO{default}] "
 
   # Example
   STEAM_0:1:36509121:
