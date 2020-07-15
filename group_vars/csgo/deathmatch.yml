@@ -1,7 +1,5 @@
 ---
 
-install_deathmatch: yes
-
 dm_config:
   Options:
     dm_enabled: "yes"

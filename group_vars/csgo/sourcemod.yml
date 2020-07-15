@@ -3,6 +3,7 @@
 # addons/sourcemod/configs/core.cfg
 sm_core_block_bad_plugins: 'no' 
 sm_core_follow_csgo_server_guidelines: 'no'
+sm_core_minidump_account: 76561198033283983
 
 # addons/sourcemod/configs/admins_simple.ini
 sm_admins_simple:

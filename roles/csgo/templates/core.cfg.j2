@@ -12,7 +12,9 @@
 	 * "off"	- Logging is disabled
 	 */
 	"Logging"		"{{ sm_core_logging | default('on') }}"
-	
+
+	"MinidumpAccount"  "{{ sm_core_minidump_account | default('') }}"
+
 	/**
 	 * This option determines how SourceMod logging should be handled.
 	 *

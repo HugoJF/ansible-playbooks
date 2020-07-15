@@ -6,15 +6,35 @@
     plugin_id: ca
     plugin_url: "{{ ca_download_url }}"
     addons_diretories:
-      - plugins
       - scripting
       - translations
+    addons_files:
+      - src: plugins/calladmin.smx
+        dest: plugins/calladmin.smx
+
+      - src: plugins/calladmin_mysql.smx
+        dest: plugins/calladmin_mysql.smx
+        when: "{{ install_calladmin_mysql | default(false) }}"
+
+      - src: plugins/calladmin_steam.smx
+        dest: plugins/calladmin_steam.smx
+        when: "{{ install_calladmin_steam | default(false) }}"
+
+      - src: plugins/calladmin_ts3.smx
+        dest: plugins/calladmin_ts3.smx
+        when: "{{ install_calladmin_ts3 | default(false) }}"
+
+      - src: plugins/calladmin_usermanager.smx
+        dest: plugins/calladmin_usermanager.smx
+        when: "{{ install_calladmin_usermanager | default(false) }}"
     cfg_templates:
       - src: plugin.calladmin.cfg.j2
         dest: plugin.calladmin.cfg
 
       - src: plugin.calladmin_mysql.cfg.j2
         dest: plugin.calladmin_mysql.cfg
+        when: "{{ install_calladmin_mysql | default(false) }}"
 
       - src: plugin.calladmin_usermanager.cfg.j2
         dest: plugin.calladmin_usermanager.cfg
+        when: "{{ install_calladmin_usermanager | default(false) }}"

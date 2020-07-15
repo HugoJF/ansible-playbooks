@@ -1,7 +1,0 @@
----
-
-cleanup: yes
-install_sourcemod: yes
-configure_sourcemod: yes
-install_chat_processor: yes
-install_hex_tags: yes

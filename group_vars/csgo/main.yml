@@ -1,5 +1,10 @@
 ---
 
+# Sourcemod
+cleanup: yes
+install_sourcemod: yes
+configure_sourcemod: yes
+
 # "Restart Empty" (1.4) by Alex Dragokas
 install_restart_empty: yes
 sm_restart_empty_delay: 30
@@ -97,6 +102,12 @@ install_slot: yes
 # "CallAdmin Reports" (1.0) by de_nerd
 install_reports: yes
 sm_cr_webhook: "https://calladmin-middleware.denerdtv.com/api/v2/reports" # TODO: update this
+
+# Sourcebans++
+install_sourcebanspp: yes
+
+# Deathmatch v2.0.9
+install_deathmatch: yes
 
 # "CallAdmin" (0.1.7) by Impact, dordnung
 install_calladmin: yes
