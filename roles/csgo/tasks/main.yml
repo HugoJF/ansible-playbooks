@@ -188,8 +188,8 @@
   when: install_slot | default(false)
 
 - import_tasks: install-kento-rankme.yml
-  tags: kento
-  when: install_kento | default(false)
+  tags: rankme
+  when: install_rankme | default(false)
 
 - import_tasks: install-server-advertisements-3.yml
   tags: advertisements

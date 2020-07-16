@@ -6,15 +6,10 @@ hex_config:
     ScoreTag: "faketaxi "
     ChatTag: "faketaxi "
 
-  # Me
-  STEAM_0:1:36509127:
-    ScoreTag: "[DONO]"
-    ChatTag: "{default}[{darkred}DONO{default}] "
-
   # Example
   STEAM_0:1:36509121:
-    ScoreTag: [DONO]
-    ChatTag: "{default}[{darkred}DONO{default}]"
+    ScoreTag: "Rank {rmRank} [DONO]"
+    ChatTag: "{green}Rank {rmRank} {default}[{darkred}DONO{default}] "
     ChatColor: "{default}"
     NameColor: "{grey}"
 
@@ -25,10 +20,10 @@ hex_config:
 
   # Moderadores
   b:
-    ScoreTag: "[MODERADOR] "
-    ChatTag: "{default}[{darkred}MODERADOR{default}] "
+    ScoreTag: "Rank {rmRank} [MODERADOR]"
+    ChatTag: "{green}Rank {rmRank} {default}[{darkred}MODERADOR{default}] "
 
   # VIPs
   a:
-    ScoreTag: "[VIP] "
-    ChatTag: "{default}[{darkred}VIP{default}] "
+    ScoreTag: "Rank {rmRank} [VIP]"
+    ChatTag: "{green}Rank {rmRank} {default}[{darkred}VIP{default}] "
