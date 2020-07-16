@@ -37,9 +37,6 @@ sm_teamchange_unlimited_maplimit: 10
 # "[CS:GO] Fake Competitive Ranks/Coins" (1.2) by Laam4
 install_frank: yes
 
-# "AbNeR Kill Feed Filter" (1.3) by AbNeR @CSB
-install_killfeed: yes
-
 # "Fix Hint Color Messages" (1.0.0) by Phoenix (˙·٠●Феникс●٠·˙)
 install_fix_hints: yes
 
@@ -51,7 +48,6 @@ install_dynamic: yes
 
 # "Bullet position fix" (1.0) by xutaxkamay
 install_firebulletsfix: yes
-# Dependency
 install_dhooks: yes
 
 # "Resetscore" (2.6.0) by shavit
@@ -63,12 +59,8 @@ sm_resetscore_savescores: 0
 install_chat_processor: yes
 sm_chatprocessor_colors_flag: a
 
-# "No Blood" (1.0.1) by Bara
-install_noblood: yes
-
 # "Free2BeKicked - CS:GO" (1.0.0) by Asher "asherkin" Baker, psychonic
 install_free2bekicked: yes
-# Dependency
 install_steamworks: yes
 
 # "[ANY] Player Analytics" (1.3.1) by Dr. McKay
@@ -84,10 +76,9 @@ sm_gloves_float_increment_size: 0.2
 
 # "Weapons & Knives" (1.6.0) by kgns | oyunhost.net
 install_weapons: yes
+install_ptah: yes
 sm_weapons_db_connection: kaganus_weapons
 sm_weapons_enable_overwrite: 0
-# Dependency
-install_ptah: yes
 
 # HexTags
 install_hex_tags: yes
@@ -105,9 +96,6 @@ sm_cr_webhook: "https://calladmin-middleware.denerdtv.com/api/v2/reports" # TODO
 
 # Sourcebans++
 install_sourcebanspp: yes
-
-# Deathmatch v2.0.9
-install_deathmatch: yes
 
 # "CallAdmin" (0.1.7) by Impact, dordnung
 install_calladmin: yes

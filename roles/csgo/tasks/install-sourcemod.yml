@@ -69,4 +69,3 @@
     path: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     state: absent
   with_items: "{{ sm_disable_plugins | default([]) }}"
-  

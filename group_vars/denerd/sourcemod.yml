@@ -1,5 +1,8 @@
 ---
 
+sm_disable_plugins:
+  - reservedslots.smx
+
 # addons/sourcemod/configs/core.cfg
 sm_core_block_bad_plugins: 'no' 
 sm_core_follow_csgo_server_guidelines: 'no'
