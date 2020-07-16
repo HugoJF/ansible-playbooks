@@ -1,8 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: tct-defaults.yml
-
 - name: install togs clantags
   include_tasks: install-plugin-github.yml
   vars:
@@ -17,7 +14,7 @@
       - src: sm-cfg.j2
         dest: configs/togsclantags.cfg
         data:
-          Setups: "{{ tct_config }}"
+          Setups: "{{ tct_config | default({}) }}"
     cfg_templates:
       - src: togsclantags.cfg.j2
         dest: togsclantags.cfg

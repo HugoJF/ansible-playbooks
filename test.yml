@@ -1,6 +1,6 @@
 ---
 
 - name: setup csgo servers
-  hosts: ptero
+  hosts: test1
   roles:
     - role: csgo

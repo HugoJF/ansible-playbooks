@@ -16,7 +16,7 @@
   when: install_sourcemod | default(false)
 
 - import_tasks: configure-sourcemod.yml
-  tags: sourcemod
+  tags: configure
   when: configure_sourcemod | default(false)
 
 - import_tasks: install-geoipcity.yml

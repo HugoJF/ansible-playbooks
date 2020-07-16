@@ -1,8 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: sourcemod-defaults.yml
-
 - name: configure sourcemod core
   template:
     src: core.cfg.j2
@@ -19,14 +16,14 @@
 - name: configure sourcemod admin simple
   template:
     src: admins-simple.ini.j2
-    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admins_simple.ini.ansible"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admins_simple.ini"
   vars:
     admins: "{{ sm_admins_simple | default({}) }}"
 
 - name: configure sourcemod databases
   template:
     src: sm-cfg.j2
-    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/databases.cfg.ansible"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/databases.cfg"
   vars:
     data:
       Databases: "{{ sm_databases | default({}) }}"
@@ -45,3 +42,11 @@
   template:
     src: funvotes.cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funvotes.cfg"
+
+- name: generate /cfg configs
+  template:
+    src: cvar-cfg.j2
+    dest: "{{ csgo_root }}/csgo/cfg/{{ item.key }}"
+  vars:
+    data: "{{ item.value }}"
+  loop: "{{ sm_cvars | default({}) | dict2items }}"

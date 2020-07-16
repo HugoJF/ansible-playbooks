@@ -1,11 +1,5 @@
 ---
 
-- name: include default custom rounds
-  include_vars: arena-custom-rounds.yml
-
-- name: include default weapons
-  include_vars: arena-weapons.yml
-
 - name: install multi1v1
   include_tasks: install-plugin-github.yml
   vars:
@@ -22,11 +16,11 @@
       - src: sm-cfg.j2
         dest: configs/multi1v1_customrounds.cfg
         data:
-          CustomRoundTypes: "{{ arena_custom_rounds }}"
+          CustomRoundTypes: "{{ arena_custom_rounds | default({}) }}"
       - src: sm-cfg.j2
         dest: configs/multi1v1_weapons.cfg
         data:
-          Weapons: "{{ arena_weapons }}"
+          Weapons: "{{ arena_weapons | default({}) }}"
     cfg_directories:
       - multi1v1
     cfg_files:

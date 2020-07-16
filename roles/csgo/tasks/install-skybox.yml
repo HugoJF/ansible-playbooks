@@ -1,8 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: skybox-defaults.yml
-
 - name: install skybox
   include_tasks: install-plugin-github.yml
   vars:
@@ -16,7 +13,7 @@
       - src: sm-cfg.j2
         dest: configs/skybox.ini
         data:
-          skybox: "{{ sm_skybox_config }}"
+          skybox: "{{ sm_skybox_config | default({}) }}"
     other_files:
       - src: skybox/
         dest: materials/skybox

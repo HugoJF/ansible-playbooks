@@ -1,11 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: sbpp-defaults.yml
-
-- name: include sourcecomms default vars
-  include_vars: sourcecomms-defaults.yml
-
 - name: install sourcebans++
   include_tasks: install-plugin-github.yml
   vars:
@@ -22,8 +16,8 @@
       - src: sm-cfg.j2
         dest: configs/sourcebans/sourcebans.cfg
         data:
-          SourceBans: "{{ sbpp_config }}"
+          SourceBans: "{{ sbpp_config | default({}) }}"
       - src: sm-cfg.j2
         dest: configs/sourcebans/sourcecomms.cfg
         data:
-          SourceComms: "{{ sourcecomms_config }}"
+          SourceComms: "{{ sourcecomms_config | default({}) }}"

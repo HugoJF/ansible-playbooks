@@ -1,7 +1,7 @@
 ---
 
 sm_disable_plugins:
-  - reservedslots.smx
+  - reservedslots
 
 # addons/sourcemod/configs/core.cfg
 sm_core_block_bad_plugins: 'no' 

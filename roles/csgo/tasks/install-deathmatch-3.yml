@@ -1,8 +1,5 @@
 ---
 
-- name: include default vars
-  include_vars: dm3-defaults.yml
-
 - name: install deathmatch
   include_tasks: install-plugin-github.yml
   vars:
@@ -17,4 +14,4 @@
       - src: sm-cfg.j2
         dest: configs/deathmatch/deathmatch.ini
         data:
-          Deathmatch Config: "{{ dm3_config }}"
+          Deathmatch Config: "{{ dm3_config | default({}) }}"
