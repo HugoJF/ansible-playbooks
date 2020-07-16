@@ -106,6 +106,9 @@ sm_calladmin_spamtime: 300
 # GeoIPCity
 install_geoipcity: yes
 
+# FPS Boost
+install_fps: yes
+
 # RankME (this is defined globally to avoid inconsistencies, while install_rankme is per-host)
 sm_rankme_announcer_player_disconnect: 0
 sm_rankme_announcer_top_pos_player_connect: 50

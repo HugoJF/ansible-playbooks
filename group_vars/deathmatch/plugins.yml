@@ -1,13 +1,7 @@
 ---
 
-# Deathmatch v2.0.9
-install_deathmatch: yes
-
 # "AbNeR Kill Feed Filter" (1.3) by AbNeR @CSB
 install_killfeed: yes
-
-# "No Blood" (1.0.1) by Bara
-install_noblood: yes
 
 # RankME
 install_rankme: yes

@@ -1,5 +1,8 @@
 ---
 
+sm_enable_plugins:
+  - admin-sql-threaded
+
 sm_disable_plugins:
   - reservedslots
 
