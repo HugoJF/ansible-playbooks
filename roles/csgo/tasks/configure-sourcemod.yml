@@ -50,3 +50,17 @@
   vars:
     data: "{{ item.value }}"
   loop: "{{ sm_cvars | default({}) | dict2items }}"
+
+- name: generate maplist.txt
+  template:
+    src: map-cfg.j2
+    dest: "{{ csgo_root }}/csgo/maplist.txt"
+  vars:
+    data: "{{ maplist }}"
+
+- name: generate mapcycle.txt
+  template:
+    src: map-cfg.j2
+    dest: "{{ csgo_root }}/csgo/mapcycle.txt"
+  vars:
+    data: "{{ mapcycle }}"
