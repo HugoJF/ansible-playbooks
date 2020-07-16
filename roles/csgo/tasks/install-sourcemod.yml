@@ -50,9 +50,23 @@
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 
-- name: copy disable plugins
+- name: enable disabled plugins
   copy:
     src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     remote_src: yes
-  with_items: "{{ sm_disabled_plugins | default([]) }}"
+  with_items: "{{ sm_enable_plugins | default([]) }}"
+
+- name: copy default plugins to disabled directory
+  copy:
+    src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
+    remote_src: yes
+  with_items: "{{ sm_disable_plugins | default([]) }}"
+
+- name: delete disabled default plugins
+  file:
+    path: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
+    state: absent
+  with_items: "{{ sm_disable_plugins | default([]) }}"
+  
