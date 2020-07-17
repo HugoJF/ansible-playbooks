@@ -1,0 +1,25 @@
+---
+
+- name: install kz timer
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: kz
+    plugin_url: "{{ kz_download_url }}"
+    addons_basepath: addons/sourcemod/
+    cfg_basepath: cfg/sourcemod
+    addons_diretories:
+      - configs
+      - plugins
+      - scripting
+      - translations
+    other_files:
+      - src: cfg/
+        dest: cfg/
+      - src: maps/
+        dest: maps/
+      - src: materials/
+        dest: materials/
+      - src: models/
+        dest: models/
+      - src: sound/
+        dest: sound/

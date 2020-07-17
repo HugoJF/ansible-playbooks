@@ -13,6 +13,7 @@
 # map: set maps/maplist/mapcycle
 # maps: download_maps
 # grupos mais especificos tem menor precedencia na hora de computar as variaveis
+# bot quota fix
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup
@@ -134,10 +135,6 @@
   tags: curl
   when: install_curl | default(false)
 
-- import_tasks: install-dhooks.yml
-  tags: dhooks
-  when: install_dhooks | default(false)
-
 - import_tasks: install-ptah.yml
   tags: ptah
   when: install_ptah | default(false)
@@ -217,3 +214,11 @@
 - import_tasks: install-jansson.yml
   tags: jansson
   when: install_jansson | default(false)
+
+- import_tasks: install-kz-timer.yml
+  tags: kz
+  when: install_kz | default(false)
+
+- import_tasks: install-dhooks.yml
+  tags: dhooks
+  when: install_dhooks | default(false)

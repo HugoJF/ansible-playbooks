@@ -1,0 +1,9 @@
+---
+
+sm_databases:
+  kztimer:
+    driver: sqlite
+    database: kztimer
+
+
+    kz_auto_timer: 1

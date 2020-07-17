@@ -1,0 +1,10 @@
+---
+
+# KZ
+install_kz: yes
+
+# DHooks
+install_dhooks: yes
+
+# Maps
+install_maps: yes
