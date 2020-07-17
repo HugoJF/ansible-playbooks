@@ -48,3 +48,7 @@ re_download_url: https://github.com/HugoJF/restart-empty/releases/download/v0.2/
 ars_download_url: https://github.com/abnerfs/abner_resetscore/releases/download/v1.5fix/AbNeR_ResetScore_v1.5.zip
 sbpp_download_url: https://github.com/sbpp/sourcebans-pp/releases/download/1.6.3/sourcebans-pp-1.6.3.plugin-only.zip
 gipc_download_url: https://forums.alliedmods.net/attachment.php?attachmentid=143904&d=1428308284
+surf_download_url: https://github.com/surftimer/Surftimer-olokos/archive/d9aaca640205918e9bbc9881150f43d4e03d2ec3.zip
+surf_smx_download_url: https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
+surf_discord_download_url: https://github.com/surftimer/Surftimer-olokos/releases/download/285/discord_api.smx
+jansson_download_url: https://github.com/HugoJF/SMJansson/archive/e1fe6e24198785d9ffb8eb9d9714ca257e9dbfa1.zip

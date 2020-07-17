@@ -1,0 +1,14 @@
+---
+
+# Surf
+install_surf: yes
+
+# SMJansson
+install_jansson: yes
+
+# maps
+install_maps: yes
+
+# 11 "Rock The Vote" (1.9.0.6259) by AlliedModders LLC
+sm_enable_plugins:
+  - rockthevote

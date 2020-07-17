@@ -3,7 +3,6 @@
 # "AbNeR Kill Feed Filter" (1.3) by AbNeR @CSB
 install_killfeed: yes
 
-
 # challenge
 install_challenge: yes
 

@@ -1,0 +1,11 @@
+---
+
+- name: Install SMJansson
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: jansson
+    plugin_url: "{{ jansson_download_url }}"
+    ignore_first_directory: yes
+    addons_diretories:
+      - extensions
+      - scripting

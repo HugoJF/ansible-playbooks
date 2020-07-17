@@ -206,3 +206,11 @@
 - import_tasks: install-server-advertisements-3.yml
   tags: advertisements
   when: install_advertisements | default(false)
+
+- import_tasks: install-surf.yml
+  tags: surf
+  when: install_surf | default(false)
+
+- import_tasks: install-jansson.yml
+  tags: jansson
+  when: install_jansson | default(false)

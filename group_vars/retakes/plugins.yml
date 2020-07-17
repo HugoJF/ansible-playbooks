@@ -17,3 +17,5 @@ sm_mywa_rounds_chance: yes
 
 # 40 "CS:GO Retakes" (0.3.4) by splewis
 install_retakes: yes
+
+# TODO: set maplist e mapcycle

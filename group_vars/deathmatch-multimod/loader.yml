@@ -7,3 +7,5 @@ dm_loader_config:
   deathmatch_desert.ini: 2
   deathmatch_m4s.ini: 5
   deathmatch_pistol.ini: 3
+
+# TODO: verificar se ta tudo executando corretmaente

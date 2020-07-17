@@ -7,23 +7,44 @@
     mode: 0755
   with_items: "{{ maps | default([]) }}"
 
-- name: download files
+- name: download map
   get_url:
     url: "https://minio.epsilon.denerdtv.com/fastdl/csgo/maps/{{ item }}.bsp.bz2"
     dest: "/tmp/maps/{{ item }}.bsp.bz2"
   with_items: "{{ maps | default([]) }}"
 
-- name: make sure there are no extracted files
+- name: download nav
+  get_url:
+    url: "https://minio.epsilon.denerdtv.com/fastdl/csgo/maps/{{ item }}.nav.bz2"
+    dest: "/tmp/maps/{{ item }}.nav.bz2"
+  with_items: "{{ maps | default([]) }}"
+  ignore_errors: yes
+
+- name: make sure there are no extracted maps
   file:
     path: "/tmp/maps/{{ item }}.bsp"
     state: absent
   with_items: "{{ maps | default([]) }}"
 
-- name: unbzip2
+- name: make sure there are no extracted navs
+  file:
+    path: "/tmp/maps/{{ item }}.nav"
+    state: absent
+  with_items: "{{ maps | default([]) }}"
+  ignore_errors: yes
+
+- name: unbzip2 map
   shell:
     cmd: "bzip2 -d {{ item }}.bsp.bz2"
     chdir: "/tmp/maps/"
   with_items: "{{ maps | default([]) }}"
+
+- name: unbzip2 nav
+  shell:
+    cmd: "bzip2 -d {{ item }}.nav.bz2"
+    chdir: "/tmp/maps/"
+  with_items: "{{ maps | default([]) }}"
+  ignore_errors: yes
 
 - name: copy maps to server
   copy:
@@ -31,3 +52,11 @@
     dest: "{{ csgo_root }}/csgo/maps/{{ item }}.bsp"
     remote_src: yes
   with_items: "{{ maps | default([]) }}"
+
+- name: copy navs to server
+  copy:
+    src: "/tmp/maps/{{ item }}.nav"
+    dest: "{{ csgo_root }}/csgo/maps/{{ item }}.nav"
+    remote_src: yes
+  with_items: "{{ maps | default([]) }}"
+  ignore_errors: yes
