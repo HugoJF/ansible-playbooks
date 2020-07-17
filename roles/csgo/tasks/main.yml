@@ -6,6 +6,10 @@
 # fazer tudo ficar idempotente (nunca copiar uma config, sempre gerar)
 # permitir selecao de quais plugins serao instalados (em packs com varios plugins)
 # idempotencia = se nao instalar, ele remove
+# cmd/update rate
+# 128 tick
+# bots?
+# mapa inicial?
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup
@@ -19,12 +23,20 @@
   tags: configure
   when: configure_sourcemod | default(false)
 
+- import_tasks: install-maps.yml
+  tags: maps
+  when: install_maps | default(false)
+
 - import_tasks: install-geoipcity.yml
   tags: geoipcity
+  async: 60
+  poll: 0
   when: install_geoipcity | default(false)
 
 - import_tasks: install-sourcebanspp.yml
   tags: sourcebanspp
+  async: 60
+  poll: 0
   when: install_sourcebanspp | default(false)
 
 - import_tasks: install-deathmatch-3.yml

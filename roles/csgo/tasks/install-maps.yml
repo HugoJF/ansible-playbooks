@@ -1,0 +1,33 @@
+---
+
+- name: create extraction directories
+  file:
+    path: "/tmp/maps/"
+    state: directory
+    mode: 0755
+  with_items: "{{ maps | default([]) }}"
+
+- name: download files
+  get_url:
+    url: "https://minio.epsilon.denerdtv.com/fastdl/csgo/maps/{{ item }}.bsp.bz2"
+    dest: "/tmp/maps/{{ item }}.bsp.bz2"
+  with_items: "{{ maps | default([]) }}"
+
+- name: make sure there are no extracted files
+  file:
+    path: "/tmp/maps/{{ item }}.bsp"
+    state: absent
+  with_items: "{{ maps | default([]) }}"
+
+- name: unbzip2
+  shell:
+    cmd: "bzip2 -d {{ item }}.bsp.bz2"
+    chdir: "/tmp/maps/"
+  with_items: "{{ maps | default([]) }}"
+
+- name: copy maps to server
+  copy:
+    src: "/tmp/maps/{{ item }}.bsp"
+    dest: "{{ csgo_root }}/csgo/maps/{{ item }}.bsp"
+    remote_src: yes
+  with_items: "{{ maps | default([]) }}"
