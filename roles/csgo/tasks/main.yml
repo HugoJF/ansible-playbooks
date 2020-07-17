@@ -10,6 +10,8 @@
 # 128 tick
 # bots?
 # mapa inicial?
+# map: set maps/maplist/mapcycle
+# maps: download_maps
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup

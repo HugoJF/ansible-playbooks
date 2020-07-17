@@ -1,7 +1,4 @@
 ---
 
-maplist:
-  - de_dust2
-
-mapcycle:
-  - de_dust2
+mapcycle: [de_dust2]
+maplist: [de_dust2]

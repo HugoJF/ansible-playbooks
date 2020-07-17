@@ -1,5 +1,5 @@
 ---
-maps:
-  - am_multimap_denerd
 
-# TODO: set maplist e mapcycle
+maps: [am_multimap_denerd]
+mapcycle: [am_multimap_denerd]
+maplist: [am_multimap_denerd]
