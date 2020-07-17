@@ -7,7 +7,7 @@ hex_config:
     ChatTag: "faketaxi "
 
   # Example
-  STEAM_0:1:36509121:
+  STEAM_0:1:36509127:
     ScoreTag: "Rank {rmRank} [DONO]"
     ChatTag: "{green}Rank {rmRank} {default}[{darkred}DONO{default}] "
     ChatColor: "{default}"

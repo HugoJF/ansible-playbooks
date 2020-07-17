@@ -5,4 +5,3 @@ install_killfeed: yes
 
 # RankME
 install_rankme: yes
-sm_rankme_minimal_kills: 100

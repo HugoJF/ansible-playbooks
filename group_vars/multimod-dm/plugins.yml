@@ -1,5 +1,7 @@
 ---
 
-aqui
 # "[CS:GO] Deathmatch" (3.0.0 BETA) by Maxximou5
+install_deathmatch_3: yes
+
 # "[CS:GO] Custom Deathmatch Loader" (1.0.0) by de_nerd, Maxximou5
+install_dm_loader: yes

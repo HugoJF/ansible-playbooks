@@ -1,12 +1,12 @@
 ---
 
 dm_config:
-  deathmatch.ini:
+  deathmatch_m4s.ini:
     Config:
       # Name of configuration file
       # --
       # Default: Default
-      dm_config_name: Deathmatch normal
+      dm_config_name: M4A1/M4A4 only
 
     Options:
       # Enable Deathmatch.
@@ -19,6 +19,7 @@ dm_config:
       # Default: no
       dm_enable_valve_deathmatch: "no"
 
+      # Display a message saying that your server is running Deathmatch.
       # --
       # Default: yes
       dm_welcomemsg: "yes"
@@ -36,12 +37,12 @@ dm_config:
       # Enable kill feed to be displayed to all players.
       # --
       # Default: yes
-      dm_display_killfeed: "yes"
+      dm_display_killfeed: "no"
 
       # Enable to show kill feed to only the attacker and victim.
       # --
       # Default: no
-      dm_display_killfeed_player: "no"
+      dm_display_killfeed_player: "yes"
 
       # Display a panel showing enemies health and the damage done to a player.
       # --
@@ -327,15 +328,15 @@ dm_config:
 
       Primary:
         # Weapon                   # Limit
-        weapon_ak47:               -1
-        weapon_m4a1:               -1
-        weapon_m4a1_silencer:      -1
-        weapon_sg556:              -1
-        weapon_aug:                -1
-        weapon_galilar:            -1
-        weapon_famas:              -1
-        weapon_awp:                -1
-        weapon_ssg08:              -1
+        weapon_ak47:               0
+        weapon_m4a1:               1
+        weapon_m4a1_silencer:      1
+        weapon_sg556:              0
+        weapon_aug:                0
+        weapon_galilar:            0
+        weapon_famas:              0
+        weapon_awp:                0
+        weapon_ssg08:              0
         weapon_g3sg1:              0
         weapon_scar20:             0
         weapon_m249:               0
