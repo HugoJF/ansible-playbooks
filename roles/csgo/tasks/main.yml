@@ -12,6 +12,7 @@
 # mapa inicial?
 # map: set maps/maplist/mapcycle
 # maps: download_maps
+# grupos mais especificos tem menor precedencia na hora de computar as variaveis
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup

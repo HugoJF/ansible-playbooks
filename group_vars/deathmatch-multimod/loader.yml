@@ -1,5 +1,6 @@
 ---
 
+# TODO: verificar se ta tudo executando corretmaente
 dm_loader_config:
   deathmatch.ini: 7
   deathmatch_awp.ini: 3
@@ -7,5 +8,3 @@ dm_loader_config:
   deathmatch_desert.ini: 2
   deathmatch_m4s.ini: 5
   deathmatch_pistol.ini: 3
-
-# TODO: verificar se ta tudo executando corretmaente

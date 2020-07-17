@@ -21,7 +21,6 @@ sm_cvars:
     - mp_roundtime: 60
     - mp_roundtime_hostage: 60
     - mp_roundtime_defuse: 60
-    - mp_backup_round_auto: 0
     - sv_talk_enemy_living: 1
     - sv_talk_enemy_dead: 1
     - sv_infinite_ammo: 2
