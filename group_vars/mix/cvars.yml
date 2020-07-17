@@ -8,6 +8,7 @@ sm_cvars:
     - mp_warmuptime_all_players_connected: 15
     - sv_auto_full_alltalk_during_warmup_half_end: 1
     - mp_match_end_changelevel: 1
+    - mp_match_end_restart: 0
     - mp_overtime_enable: 1
     - mp_overtime_halftime_pausetimer: 0
     - mp_overtime_maxrounds: 6

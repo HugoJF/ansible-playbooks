@@ -1,0 +1,7 @@
+---
+
+sm_cvars:
+  - mp_match_end_changelevel: 1
+  - mp_match_end_restart: 0
+  - mp_maxrounds: 60
+  - mp_freezetime: 2
