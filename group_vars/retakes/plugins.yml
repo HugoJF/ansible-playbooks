@@ -1,0 +1,19 @@
+---
+
+# 01 "Insta-Defuse" (1.2) by Jacoblairm
+install_instadefuse: yes
+
+# 11 "Rock The Vote" (1.9.0.6259) by AlliedModders LLC
+sm_enable_plugins:
+  - rockthevote
+
+# 15 "MapChooser Extended" (1.10.2) by Powerlord, Zuko, and AlliedModders LLC
+# 26 "[Retakes] Autoplant" (2.3.0) by B3none
+install_autoplant: yes
+
+# 35 "MyWeaponAllocator" (2.2) by shanapu
+install_allocator: yes
+sm_mywa_rounds_chance: yes
+
+# 40 "CS:GO Retakes" (0.3.4) by splewis
+install_retakes: yes
