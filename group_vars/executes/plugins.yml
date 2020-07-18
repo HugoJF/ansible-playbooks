@@ -1,0 +1,8 @@
+---
+
+# 11 "Rock The Vote" (1.9.0.6259) by AlliedModders LLC
+sm_enable_plugins:
+  - rockthevote
+
+# 40 "CS:GO Retakes" (0.3.4) by splewis
+install_executes: yes
