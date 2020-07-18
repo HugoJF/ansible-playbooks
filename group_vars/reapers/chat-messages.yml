@@ -1,0 +1,61 @@
+---
+
+sa3_config:
+  Settings:
+    ServerName: "{darkred}[{default}AUTO{darkred}]{default}"
+    ServerType: default
+    Time: 30
+    Languages: EN
+    Default language: geoip
+    Log expired messages: "0"
+
+  Welcome Message:
+    Enabled: 1
+    Type: T
+    en: "{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻ \n{default}Bem-vindo ao servidor do {darkred}Team Reapers {PLAYERNAME}!\n\n{darkred}⦿{default} Nossas redes sociais: \n\n{darkred}✓{default} https://twitter.com/{darkred}TeamReapersBR\n{darkred}✓{default} https://instagram.com/{darkred}TeamReapersBR\n{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻"
+    Delay: 10.0
+    flags: ""
+
+  Messages:
+    vip:
+      Enabled: 1
+      Tag: {darkred}⦿{default}
+      Maps: all
+      Type: T
+      en: Seja VIP em {darkred}www.teamreapers.com.br/vip
+    SKINS:
+      enabled: 1
+      maps: all
+      en: Disponibilizamos {darkred} !knife !gloves !ws
+      type: T
+      tag: {darkred}⦿{default}
+    discord:
+      enabled: 1
+      maps: all
+      en: Quer fazer um report, de xingamento ou pessoas usando cheats? Reporte pelo nosso {darkred}discord.me/serversreapers
+      type: T
+      tag: {darkred}⦿{default}
+    1:
+      enabled: 1
+      maps: all
+      en: "Siga a página da Team Reapers: {darkred} instagram.com/{darkred}TeamReapersBR"
+      type: T
+      tag: {darkred}⦿{default}
+    2:
+      enabled: 1
+      maps: all
+      en: "Siga a página da Team Reapers: {darkred} twitter.com/{darkred}TeamReapersBR"
+      type: T
+      tag: {darkred}⦿{default}
+    face:
+      enabled: 1
+      maps: all
+      en: "Curta a página do Facebook da Team Reapers: {darkred}www.facebook.com/TeamReapersBR"
+      type: T
+      tag: {darkred}⦿{default}
+    discord2:
+      enabled: 1
+      maps: all
+      en: Fique por dentro de todas as novidades dos servidores, entre em {darkred}discord.me/serversreapers {default}e se junte a nosso discord.
+      type: T
+      tag: {darkred}⦿{default}

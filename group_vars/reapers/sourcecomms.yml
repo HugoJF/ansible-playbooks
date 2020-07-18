@@ -1,0 +1,51 @@
+---
+
+sourcecomms_config:
+  Config:
+    # default time in minutes. if < 0 -> blocking for session. Permanent (0) - is not allowed!
+    DefaultTime: 30
+
+    # 0, 1. If 1, player can be ungagged only by issuer admin, console or admin with special flag
+    # Also, If 0 player maybe unblocked by Admin with higher immunity level then issuer admin.
+    # Default value is 0
+    DisableUnblockImmunityCheck: 0
+
+    # Immunity Level of server console. If not specified - 0.
+    ConsoleImmunity: 20
+
+    # Max allowed punishment length (in minutes) for admins without ADMFLAG_CUSTOM2 (p).
+    # 0 disables restriction. Any value > 0 restricts permanent punishment.
+    MaxLength: 0
+
+    # Set this option to 1 to applying on players punishments only from servers listed in WhiteList and this server.
+    # 0 applies on players punishments from any server.
+    OnlyWhiteListServers: 0
+
+  CommsReasons:
+    Insult players: Insult players
+    Admin disrespect: Admin disrespect
+    Inappropriate Language: Inappropriate Language
+    Spam in chat/voice: Spam
+    Advertisement: Advertisement
+    Other: Other
+
+  # If time <0 -> blocking comms for player session
+  CommsTimes:
+    -1: Session
+    30: 30 minutes
+    120: 2 hours
+    360: 6 hours
+    1440: 24 hours
+    2880: 2 days
+    10080: 7 days
+    20160: 2 weeks
+    0: Permanent
+
+  #---------------------------------------#
+  # "id": "ServerID from sourcebans.cfg"  #
+  #---------------------------------------#
+  # Web Punishments (from sourcebans web pages)
+  ServersWhiteList:
+  # id: 0
+  # for example: uncommenting this line will add server with ServerID 3 to white list.
+  # id: 3

@@ -1,0 +1,77 @@
+---
+
+sm_cvars:
+  server.cfg:
+    - game_type: 0
+    - game_mode: 1
+    - rcon_password: !vault |
+        $ANSIBLE_VAULT;1.1;AES256
+        62326336333166396362333863623236373739623337353630643062663135623766393332636139
+        3738663635633064616534356162373961613965363934370a373030646332633364303465633561
+        37373661336238663063653432653035376439303463343838306536613930386338393438343435
+        3138326337376364330a616238636430663863636230363035623164643137653931646565643633
+        3638
+    - sv_region: 2
+    - sv_minrate: 5000
+    - mp_match_end_changelevel: 1
+    - sv_hibernate_when_empty: 1
+    - sv_infinite_ammo: 2
+    - mp_warmup_end:
+    - mp_respawn_on_death_ct: 1
+    - mp_respawn_on_death_t: 1
+    - mp_match_restart_delay: 0
+    - mp_match_end_changelevel: 1
+    - mp_respawnwavetime_ct: 2
+    - mp_respawnwavetime_t: 2
+    - mp_death_drop_defuser: 0
+    - mp_death_drop_grenade: 0
+    - mp_death_drop_gun: 0
+    - mp_give_player_c4: 1
+    - mp_spectators_max: 0
+    - mp_freezetime: 0
+    - bot_quota: 0
+    - bot_quota_mode: normal
+    - mp_friendlyfire: 0
+    - mp_teammates_are_enemies: 0
+    - mp_autokick: 0
+    - mp_solid_teammates: 1
+    - host_name_store: 1
+    - host_info_show: 2
+    - host_players_show: 2
+    - mp_warmuptime: 0
+    - mp_freezetime: 0
+    - mp_do_warmup_period: 0
+    - sv_teamid_overhead_always_prohibit: 1
+    - sv_show_team_equipment_prohibit: 1
+    - log: on
+    - sv_logfile: 1            //Log server information in the log file.
+    - sv_logsdir: logs_1    //Folder in the game directory where server logs will be stored.
+    - sv_logecho: 0            //Echo log information to the console.
+    - sv_log_onefile: 1        //Log server information to only one file.
+    - sv_logbans: 1            //Log server bans in the server logs.
+    - sv_logdownloadlist: 1
+    - sv_maxrate: 0
+    - sv_max_queries_window: 15
+    - sv_mincmdrate: 128
+    - sv_minupdaterate: 128
+    - exec: autoexec.cfg
+    - exec: banned_user.cfg
+    - exec: banned_ip.cfg
+    - exec: server_extra.cfg
+    - writeid:
+    - writeip:
+    - sv_allow_votes: 0
+    - sv_vote_allow_in_warmup: 0
+    - sv_vote_allow_spectators: 0
+    - sv_vote_command_delay: 2
+    - sv_vote_creation_timer: 120
+    - sv_vote_failure_timer: 300
+    - sv_vote_issue_kick_allowed: 1
+    - sv_vote_kick_ban_duration: 30
+    - sv_vote_quorum_ratio: 60
+    - sv_vote_timer_duration: 10
+    - mp_endmatch_votenextmap: 0
+    - mp_endmatch_votenextleveltime: 20
+    - mp_endmatch_votenextmap_keepcurrent: 0
+    - sv_max_queries_sec: 20
+    - sv_max_queries_sec_global: 500

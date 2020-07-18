@@ -1,0 +1,17 @@
+---
+
+hex_config:
+  # Admin
+  z:
+    ScoreTag: "|ADMIN|"
+    ChatTag: "{default}|{darkred}ADMIN{default}| "
+
+  # Time
+  b:
+    ScoreTag: "|TIME|"
+    ChatTag: "{default}|{darkred}TIME{default}| "
+
+  # VIP
+  a:
+    ScoreTag: "|VIP|"
+    ChatTag: "{default}|{darkred}VIP{default}| "
