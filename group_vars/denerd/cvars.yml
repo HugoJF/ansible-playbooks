@@ -1,6 +1,5 @@
 ---
 
-# TODO: missing password
 sm_cvars:
   server.cfg:
     - game_type: 0

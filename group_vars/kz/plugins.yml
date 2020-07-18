@@ -1,7 +1,9 @@
 ---
-# TODO: sv_pure: 0 ?
+
 # KZ
 install_kz: yes
+# TODO: kz_auto_timer: 1
+# TODO: sv_pure: 0 ?
 
 # DHooks
 install_dhooks: yes
