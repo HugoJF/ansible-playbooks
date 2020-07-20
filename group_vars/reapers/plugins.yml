@@ -5,6 +5,9 @@ cleanup: yes
 install_sourcemod: yes
 configure_sourcemod: yes
 
+# Token changer
+install_tokens: yes
+
 # "AFK Manager" (4.2.5) by Rothgar
 install_afk_manager: yes
 sm_afk_admins_flag: a

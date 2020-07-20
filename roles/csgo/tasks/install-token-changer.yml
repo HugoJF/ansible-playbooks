@@ -1,0 +1,17 @@
+---
+
+- name: Install tokens changer
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: tc
+    plugin_url: "{{ tc_download_url }}"
+    addons_basepath: csgo/addons/sourcemod/
+    addons_diretories:
+      - plugins
+      - translations
+    cfg_templates:
+      - src: tokens_api.cfg.j2
+        dest: tokens_api.cfg
+    other_files:
+      - src: csgo/cfg/sourcemod/tokens.cfg
+        dest: cfg/sourcemod/tokens.cfg

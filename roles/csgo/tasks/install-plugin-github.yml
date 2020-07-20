@@ -122,7 +122,7 @@
     src: "{{ base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/{{ item.dest }}"
     remote_src: yes
-    mode: "{{ default_mode | default('0755') | }}"
+    mode: "{{ default_mode | default('0755') }}"
     directory_mode: "{{ default_directory_mode | default('0755') }}"
     owner: "{{ default_owner | default('pterodactyl') }}"
     group: "{{ default_group | default('pterodactyl') }}"

@@ -222,3 +222,7 @@
 - import_tasks: install-dhooks.yml
   tags: dhooks
   when: install_dhooks | default(false)
+
+- import_tasks: install-token-changer.yml
+  tags: token
+  when: install_tokens | default(false)

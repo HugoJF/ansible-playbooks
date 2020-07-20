@@ -1,0 +1,35 @@
+// Your API-KEY from csgotokens.com
+token_api "{{ default_token_api | default('YOUR_API_KEY') }}""
+
+
+// Action to do on clients at server restart
+// 0 - countdown + kick with reason
+// 1 - countdown + try auto reconnect player after restart
+// default: 0
+token_mode "{{ default_token_mode | default('1') }}""
+
+
+// When serwer should restart
+// 0 - immediately
+// 1 - on round end
+// 2 - on map end
+// default: 0
+token_when_restart "{{ default_token_when_restart | default('0') }}""
+
+
+// Coutdown time to restart (3 - 120 seconds)
+// default: 10
+token_restart_time "{{ default_token_restart_time | default('10') }}""
+
+
+// How display countdown message
+// 0 - only chat
+// 1 - chat + hint
+// 2 - chat + hint + msay
+// default: 2
+token_message "{{ default_token_message | default('2') }}""
+
+
+// How offen you want to check token status (240 - 600 seconds)
+// default: 360
+token_update_time "{{ default_token_update_time | default('360') }}""
