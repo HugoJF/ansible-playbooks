@@ -4,7 +4,7 @@
   file:
     path: /tmp/ansible-db-dumps/{{ ansible_date_time.date }}
     state: directory
-    mode: '0755'
+    mode: "{{ default_mode | default('0755') }}"
 
 - name: dump databases
   mysql_db:

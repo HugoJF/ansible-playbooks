@@ -15,7 +15,7 @@
   file:
     path: "/tmp/surf/"
     state: directory
-    mode: 0755
+    mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip
   unarchive:
@@ -44,10 +44,10 @@
     src: "{{ addons_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   with_items:
     - configs
     - scripting
@@ -70,27 +70,27 @@
     src: "{{ base }}/maps/replay_bot.nav"
     dest: "{{ csgo_root }}/csgo/maps/"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
 
 - name: Copy sounds
   copy:
     src: "{{ base }}/sound/"
     dest: "{{ csgo_root }}/csgo"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
 
 - name: Copy static configs
   copy:
     src: "{{ base }}/cfg/"
     dest: "{{ csgo_root }}/csgo/cfg/"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"

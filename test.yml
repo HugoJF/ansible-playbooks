@@ -4,3 +4,4 @@
   hosts: test1
   roles:
     - role: csgo
+#    - role: playground

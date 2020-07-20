@@ -22,7 +22,7 @@
   file:
     path: "/tmp/{{ item }}"
     state: directory
-    mode: 0755
+    mode: "{{ default_mode | default('0755') }}"
   with_items:
     - mm
     - sm

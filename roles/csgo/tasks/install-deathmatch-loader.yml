@@ -22,9 +22,9 @@
   template:
     src: sm-cfg.j2
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/deathmatch/{{ item.key }}"
-    mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   vars:
     data:
       Deathmatch Config: "{{ item.value | default({}) }}"

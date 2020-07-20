@@ -18,7 +18,7 @@
   file:
     path: /tmp/geoipcity/
     state: directory
-    mode: 0755
+    mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip GeoIPCity
   unarchive:
@@ -31,6 +31,6 @@
     src: /tmp/geoipcity/GeoIPCity.dat
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/geoip/"
     remote_src: yes
-    mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"

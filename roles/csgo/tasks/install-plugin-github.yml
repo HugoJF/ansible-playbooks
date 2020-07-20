@@ -15,7 +15,7 @@
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: directory
-    mode: 0755
+    mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip
   unarchive:
@@ -55,10 +55,10 @@
     src: "{{ addons_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   when: "'when' not in item or item.when"
   with_items: "{{ addons_diretories | default([]) }}"
 
@@ -67,10 +67,10 @@
     src: "{{ addons_base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   when: "'when' not in item or item.when"
   with_items: "{{ addons_files | default({}) }}"
 
@@ -78,9 +78,9 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
-    mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   vars:
     data: "{{ item.data | default({}) }}"
   when: "'when' not in item or item.when"
@@ -90,18 +90,18 @@
   file:
     path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
     state: directory
-    mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   with_items: "{{ cfg_directories | default([]) }}"
 
 - name: Copy /csgo/cfg/ templates
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
-    mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_templates | default({}) }}"
 
@@ -110,10 +110,10 @@
     src: "{{ cfg_base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_files | default({}) }}"
 
@@ -122,9 +122,9 @@
     src: "{{ base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/{{ item.dest }}"
     remote_src: yes
-    mode: 0755
-    directory_mode: 0755
-    owner: pterodactyl
-    group: pterodactyl
+    mode: "{{ default_mode | default('0755') | }}"
+    directory_mode: "{{ default_directory_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
   when: "'when' not in item or item.when"
   with_items: "{{ other_files | default({}) }}"
