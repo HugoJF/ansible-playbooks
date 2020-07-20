@@ -1,6 +1,6 @@
 ---
 
-- name: install fps booster
+- name: Install FPS Booster
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: fps

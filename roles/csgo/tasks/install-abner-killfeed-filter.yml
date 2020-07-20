@@ -1,6 +1,6 @@
 ---
 
-- name: install abner killfeed filter
+- name: Install abner killfeed filter
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: akf

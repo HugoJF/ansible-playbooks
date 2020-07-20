@@ -1,6 +1,6 @@
 ---
 
-- name: install calladmin reports
+- name: Install CallAdmin reports
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: car

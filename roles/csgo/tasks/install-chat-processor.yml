@@ -1,6 +1,6 @@
 ---
 
-- name: install chat processor
+- name: Install chat-processor
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: cp

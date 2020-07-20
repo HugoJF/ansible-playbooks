@@ -1,6 +1,6 @@
 ---
 
-- name: install teamchange unlimited
+- name: Install teamchange unlimited
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: tcu

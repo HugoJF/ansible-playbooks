@@ -1,6 +1,6 @@
 ---
 
-- name: install curl extension
+- name: Install CURL extension
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: curl

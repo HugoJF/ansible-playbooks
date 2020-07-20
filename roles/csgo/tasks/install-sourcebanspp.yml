@@ -1,6 +1,6 @@
 ---
 
-- name: install sourcebans++
+- name: Install sourcebans++
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: sbpp

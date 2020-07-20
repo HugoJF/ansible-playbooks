@@ -1,6 +1,6 @@
 ---
 
-- name: install multi1v1
+- name: Install multi1v1
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: arena

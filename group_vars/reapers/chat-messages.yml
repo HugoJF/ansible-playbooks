@@ -19,7 +19,7 @@ sa3_config:
   Messages:
     vip:
       Enabled: 1
-      Tag: {darkred}⦿{default}
+      Tag: "{darkred}⦿{default}"
       Maps: all
       Type: T
       en: Seja VIP em {darkred}www.teamreapers.com.br/vip
@@ -28,34 +28,34 @@ sa3_config:
       maps: all
       en: Disponibilizamos {darkred} !knife !gloves !ws
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"
     discord:
       enabled: 1
       maps: all
       en: Quer fazer um report, de xingamento ou pessoas usando cheats? Reporte pelo nosso {darkred}discord.me/serversreapers
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"
     1:
       enabled: 1
       maps: all
       en: "Siga a página da Team Reapers: {darkred} instagram.com/{darkred}TeamReapersBR"
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"
     2:
       enabled: 1
       maps: all
       en: "Siga a página da Team Reapers: {darkred} twitter.com/{darkred}TeamReapersBR"
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"
     face:
       enabled: 1
       maps: all
       en: "Curta a página do Facebook da Team Reapers: {darkred}www.facebook.com/TeamReapersBR"
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"
     discord2:
       enabled: 1
       maps: all
       en: Fique por dentro de todas as novidades dos servidores, entre em {darkred}discord.me/serversreapers {default}e se junte a nosso discord.
       type: T
-      tag: {darkred}⦿{default}
+      tag: "{darkred}⦿{default}"

@@ -1,6 +1,6 @@
 ---
 
-- name: install name change punisher
+- name: Install name change punisher
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: ncp

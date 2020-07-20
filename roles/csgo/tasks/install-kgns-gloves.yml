@@ -1,6 +1,6 @@
 ---
 
-- name: install kgns gloves
+- name: Install kgns gloves
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: glo

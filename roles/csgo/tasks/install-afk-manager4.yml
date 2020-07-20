@@ -1,6 +1,6 @@
 ---
 
-- name: install afk manager4
+- name: Install AFK Manager
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: afkm

@@ -1,6 +1,6 @@
 ---
 
-- name: install retakes autoplant
+- name: Install Retakes autoplant
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: rap

@@ -1,6 +1,6 @@
 ---
 
-- name: install fake frank
+- name: Install agentes chooser
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: fac

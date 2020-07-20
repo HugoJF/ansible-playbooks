@@ -1,6 +1,6 @@
 ---
 
-- name: install retakes instadefuse
+- name: Install retakes instadefuse
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: rid

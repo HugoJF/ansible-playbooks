@@ -1,6 +1,6 @@
 ---
 
-- name: install deathmatch
+- name: Install Deathmatch v3
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: dm3

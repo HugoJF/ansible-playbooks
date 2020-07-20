@@ -1,45 +1,45 @@
 ---
 
-- name: download files
+- name: Download files
   get_url:
     url: "{{ surf_download_url }}"
     dest: "/tmp/surf.zip"
     force: yes
 
-- name: ensure extraction directory is clean
+- name: Ensure extraction directory is clean
   file:
     path: "/tmp/surf/"
     state: absent
 
-- name: create extraction directory
+- name: Create extraction directory
   file:
     path: "/tmp/surf/"
     state: directory
     mode: 0755
 
-- name: unzip
+- name: Unzip
   unarchive:
     src: "/tmp/surf.zip"
     dest: "/tmp/surf/"
     remote_src: yes
 
-- name: find root directory path that was created unzipping the plugin
+- name: Find root directory path that was created unzipping the plugin
   find:
     paths: "/tmp/surf/"
     file_type: directory
   register: basefiles
 
-- name: extract directory path
+- name: Extract directory path
   set_fact:
     weird_github_dir: "{{ basefiles.files[0].path }}/"
 
-- name: set basepath to plugins
+- name: Set basepath to plugins
   set_fact:
     base: "{{ weird_github_dir }}"
     addons_base: "{{ weird_github_dir }}addons/sourcemod/"
     cfg_base: "{{ weird_github_dir }}{{ cfg_basepath | default('') }}"
 
-- name: copy addons/ directories
+- name: Copy /csgo/addons/ directories
   copy:
     src: "{{ addons_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
@@ -53,19 +53,19 @@
     - scripting
     - translations
 
-- name: download plugin
+- name: Download plugin
   get_url:
     url: "{{ surf_smx_download_url }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/SurfTimer.smx"
     force: yes
 
-- name: download plugin
+- name: Download plugin
   get_url:
     url: "{{ surf_discord_download_url }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/discord_api.smx"
     force: yes
 
-- name: copy replay_bot.nav
+- name: Copy replay_bot.nav
   copy:
     src: "{{ base }}/maps/replay_bot.nav"
     dest: "{{ csgo_root }}/csgo/maps/"
@@ -75,7 +75,7 @@
     owner: pterodactyl
     group: pterodactyl
 
-- name: copy sounds
+- name: Copy sounds
   copy:
     src: "{{ base }}/sound/"
     dest: "{{ csgo_root }}/csgo"
@@ -85,7 +85,7 @@
     owner: pterodactyl
     group: pterodactyl
 
-- name: copy static configs
+- name: Copy static configs
   copy:
     src: "{{ base }}/cfg/"
     dest: "{{ csgo_root }}/csgo/cfg/"
@@ -94,70 +94,3 @@
     directory_mode: 0755
     owner: pterodactyl
     group: pterodactyl
-
-#- name: copy addons/ files
-#  copy:
-#    src: "{{ addons_base }}{{ item.src }}"
-#    dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
-#    remote_src: yes
-#    mode: 0755
-#    directory_mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  when: "'when' not in item or item.when"
-#  with_items: "{{ addons_files | default({}) }}"
-#
-#- name: copy addons/ templates
-#  template:
-#    src: "{{ item.src }}"
-#    dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
-#    mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  vars:
-#    data: "{{ item.data | default({}) }}"
-#  when: "'when' not in item or item.when"
-#  with_items: "{{ addons_templates | default({}) }}"
-#
-#- name: create cfg/ directories
-#  file:
-#    path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
-#    state: directory
-#    mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  with_items: "{{ cfg_directories | default([]) }}"
-#
-#- name: copy cfg/ templates
-#  template:
-#    src: "{{ item.src }}"
-#    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
-#    mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  when: "'when' not in item or item.when"
-#  with_items: "{{ cfg_templates | default({}) }}"
-#
-#- name: copy cfg/ files
-#  copy:
-#    src: "{{ cfg_base }}{{ item.src }}"
-#    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
-#    remote_src: yes
-#    mode: 0755
-#    directory_mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  when: "'when' not in item or item.when"
-#  with_items: "{{ cfg_files | default({}) }}"
-#
-#- name: copy other files
-#  copy:
-#    src: "{{ base }}{{ item.src }}"
-#    dest: "{{ csgo_root }}/csgo/{{ item.dest }}"
-#    remote_src: yes
-#    mode: 0755
-#    directory_mode: 0755
-#    owner: pterodactyl
-#    group: pterodactyl
-#  when: "'when' not in item or item.when"
-#  with_items: "{{ other_files | default({}) }}"

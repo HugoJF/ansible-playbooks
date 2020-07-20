@@ -1,6 +1,6 @@
 ---
 
-- name: install togs clantags
+- name: Install TOGS clantags
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: tct

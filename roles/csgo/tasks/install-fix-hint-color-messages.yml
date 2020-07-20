@@ -1,6 +1,6 @@
 ---
 
-- name: install fix hint color messages
+- name: Install fix hint color messages
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: fhcm

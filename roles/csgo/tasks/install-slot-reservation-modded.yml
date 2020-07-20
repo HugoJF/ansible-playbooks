@@ -1,6 +1,6 @@
 ---
 
-- name: install kento rankme
+- name: Install modded slot reservation
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: srm

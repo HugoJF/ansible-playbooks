@@ -1,6 +1,6 @@
 ---
 
-- name: install arena crash fix
+- name: Install arena crashifix
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: acf

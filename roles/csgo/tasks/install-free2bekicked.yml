@@ -1,6 +1,6 @@
 ---
 
-- name: install free2bekicked
+- name: Install free2bekicked
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: f2bk

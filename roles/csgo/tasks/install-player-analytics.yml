@@ -1,6 +1,6 @@
 ---
 
-- name: install player analytics
+- name: Install player analytics
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: pa

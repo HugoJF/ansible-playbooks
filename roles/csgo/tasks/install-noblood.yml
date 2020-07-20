@@ -1,6 +1,6 @@
 ---
 
-- name: install noblood
+- name: Install noblood
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: nb

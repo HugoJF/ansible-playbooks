@@ -1,6 +1,6 @@
 ---
 
-- name: install fake frank
+- name: Install fake rank
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: frank

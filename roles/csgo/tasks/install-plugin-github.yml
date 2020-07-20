@@ -1,48 +1,48 @@
 ---
 
-- name: download files
+- name: Download files
   get_url:
     url: "{{ plugin_url }}"
     dest: "/tmp/{{ plugin_id }}.zip"
     force: yes
 
-- name: ensure extraction directory is clean
+- name: Ensure extraction directory is clean
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: absent
 
-- name: create extraction directory
+- name: Create extraction directory
   file:
     path: "/tmp/{{ plugin_id }}/"
     state: directory
     mode: 0755
 
-- name: unzip
+- name: Unzip
   unarchive:
     src: "/tmp/{{ plugin_id }}.zip"
     dest: "/tmp/{{ plugin_id }}/"
     remote_src: yes
 
-- name: find root directory path that was created unzipping the plugin
+- name: Find root directory path that was created unzipping the plugin
   find:
     paths: "/tmp/{{ plugin_id }}/"
     file_type: directory
   register: basefiles
   when: ignore_first_directory|default(false)|bool
 
-- name: extract directory path
+- name: Extract directory path
   set_fact:
     weird_github_dir: "{{ basefiles.files[0].path }}/"
   when: ignore_first_directory|default(false)|bool
 
-- name: set basepath to plugins
+- name: Set basepath to plugins
   set_fact:
     base: "{{ weird_github_dir }}"
     addons_base: "{{ weird_github_dir }}{{ addons_basepath | default('') }}"
     cfg_base: "{{ weird_github_dir }}{{ cfg_basepath | default('') }}"
   when: ignore_first_directory|default(false)|bool
 
-- name: set basepath to plugins
+- name: Set basepath to plugins
   set_fact:
     base: "/tmp/{{ plugin_id }}/"
     addons_base: "/tmp/{{ plugin_id }}/{{ addons_basepath | default('') }}"
@@ -50,7 +50,7 @@
   when: not (ignore_first_directory|default(false)|bool)
 
 
-- name: copy addons/ directories
+- name: Copy /csgo/addons/ directories
   copy:
     src: "{{ addons_base }}{{ item }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/"
@@ -62,7 +62,7 @@
   when: "'when' not in item or item.when"
   with_items: "{{ addons_diretories | default([]) }}"
 
-- name: copy addons/ files
+- name: Copy /csgo/addons/ files
   copy:
     src: "{{ addons_base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
@@ -74,7 +74,7 @@
   when: "'when' not in item or item.when"
   with_items: "{{ addons_files | default({}) }}"
 
-- name: copy addons/ templates
+- name: Copy /csgo/addons/ templates
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/{{ item.dest }}"
@@ -86,7 +86,7 @@
   when: "'when' not in item or item.when"
   with_items: "{{ addons_templates | default({}) }}"
 
-- name: create cfg/ directories
+- name: Create /csgo/cfg/ directories
   file:
     path: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item }}"
     state: directory
@@ -95,7 +95,7 @@
     group: pterodactyl
   with_items: "{{ cfg_directories | default([]) }}"
 
-- name: copy cfg/ templates
+- name: Copy /csgo/cfg/ templates
   template:
     src: "{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
@@ -105,7 +105,7 @@
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_templates | default({}) }}"
 
-- name: copy cfg/ files
+- name: Copy /csgo/cfg/ files
   copy:
     src: "{{ cfg_base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/{{ item.dest }}"
@@ -117,7 +117,7 @@
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_files | default({}) }}"
 
-- name: copy other files
+- name: Copy other files
   copy:
     src: "{{ base }}{{ item.src }}"
     dest: "{{ csgo_root }}/csgo/{{ item.dest }}"

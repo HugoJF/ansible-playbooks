@@ -1,6 +1,6 @@
 ---
 
-- name: install kgns weapons
+- name: Install kgns weapons
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: wep

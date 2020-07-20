@@ -1,6 +1,6 @@
 ---
 
-- name: install my weapon allocator
+- name: Install MyWeaponAllocator for retakes
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: mwa

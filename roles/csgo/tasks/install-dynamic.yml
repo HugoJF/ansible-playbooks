@@ -1,6 +1,6 @@
 ---
 
-- name: install dynamic
+- name: Install Dynamic
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: dyn

@@ -1,6 +1,6 @@
 ---
 
-- name: install steamworks
+- name: Install SteamWorks
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: sw

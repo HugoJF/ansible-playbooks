@@ -1,6 +1,6 @@
 ---
 
-- name: install restart empty
+- name: Install restart empty
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: re

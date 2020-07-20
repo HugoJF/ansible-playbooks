@@ -1,6 +1,6 @@
 ---
 
-- name: install arena challenge
+- name: Install arena challenge
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: arc

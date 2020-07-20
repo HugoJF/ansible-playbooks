@@ -1,6 +1,6 @@
 ---
 
-- name: install executes
+- name: Install Executes
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: exec

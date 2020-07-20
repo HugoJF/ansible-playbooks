@@ -1,6 +1,6 @@
 ---
 
-- name: install dhooks
+- name: Install DHooks
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: dh

@@ -1,6 +1,6 @@
 ---
 
-- name: install accelerator
+- name: Install Accelerator
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: acc

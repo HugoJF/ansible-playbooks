@@ -1,6 +1,6 @@
 ---
 
-- name: install print to console
+- name: Install print to console
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: ptc

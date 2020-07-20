@@ -1,6 +1,6 @@
 ---
 
-- name: install abner reset score
+- name: Install Abner Reset Score
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: ars

@@ -1,6 +1,6 @@
 ---
 
-- name: install server advertisements 3
+- name: Install ServerAdvertisements3
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: sa3

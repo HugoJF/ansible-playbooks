@@ -1,6 +1,6 @@
 ---
 
-- name: install calladmin
+- name: Install CallAdmin
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: ca

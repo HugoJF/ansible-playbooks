@@ -1,6 +1,6 @@
 ---
 
-- name: download files
+- name: Download files
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
@@ -10,7 +10,7 @@
     - url: "{{ sm_download_url }}"
       dest: /tmp/sm.tar.gz
 
-- name: cleanup extraction directories
+- name: Cleanup extraction directories
   file:
     path: "/tmp/{{ item }}"
     state: absent
@@ -18,7 +18,7 @@
     - mm
     - sm
 
-- name: create extraction directories
+- name: Create extraction directories
   file:
     path: "/tmp/{{ item }}"
     state: directory
@@ -27,7 +27,7 @@
     - mm
     - sm
 
-- name: unzip
+- name: Unzip
   unarchive:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
@@ -38,33 +38,33 @@
     - src: /tmp/sm.tar.gz
       dest: /tmp/sm/
 
-- name: install metamod
+- name: Install metamod
   synchronize:
     src: /tmp/mm/
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 
-- name: install sourcemod
+- name: Install sourcemod
   synchronize:
     src: /tmp/sm/
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 
-- name: enable disabled plugins
+- name: Rnable disabled plugins
   copy:
     src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     remote_src: yes
   with_items: "{{ sm_enable_plugins | default([]) }}"
 
-- name: copy default plugins to disabled directory
+- name: Copy default plugins to disabled directory
   copy:
     src: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/disabled/{{ item }}.smx"
     remote_src: yes
   with_items: "{{ sm_disable_plugins | default([]) }}"
 
-- name: delete disabled default plugins
+- name: Delete disabled default plugins
   file:
     path: "{{ csgo_root }}/csgo/addons/sourcemod/plugins/{{ item }}.smx"
     state: absent

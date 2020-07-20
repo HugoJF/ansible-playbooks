@@ -1,26 +1,26 @@
 ---
 
-- name: configure sourcemod core
+- name: Configure SourceMod core
   template:
     src: core.cfg.j2
-    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/core.cfg.ansible"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/core.cfg"
 
-- name: configure sourcemod admin overrides
+- name: Configure SourceMod admin overrides
   template:
     src: sm-cfg.j2
-    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admin_overrides.cfg.ansible"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admin_overrides.cfg"
   vars:
     data:
       Overrides: "{{ sm_overrides | default({}) }}"
 
-- name: configure sourcemod admin simple
+- name: Configure SourceMod admin simple
   template:
     src: admins-simple.ini.j2
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/admins_simple.ini"
   vars:
     admins: "{{ sm_admins_simple | default({}) }}"
 
-- name: configure sourcemod databases
+- name: Configure SourceMod databases
   template:
     src: sm-cfg.j2
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/databases.cfg"
@@ -28,22 +28,22 @@
     data:
       Databases: "{{ sm_databases | default({}) }}"
 
-- name: configure basevotes plugin
+- name: Configure basevotes.smx
   template:
     src: basevotes.cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/basevotes.cfg"
 
-- name: configure fun commands plugin
+- name: Configure funcommands.smx
   template:
     src: funcommands.cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funcommands.cfg"
 
-- name: configure fun votes plugin
+- name: Configure funvotes.smx
   template:
     src: funvotes.cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funvotes.cfg"
 
-- name: generate /cfg configs
+- name: Generate /csgo/cfg files
   template:
     src: cvar-cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/{{ item.key }}"
@@ -51,14 +51,14 @@
     data: "{{ item.value }}"
   loop: "{{ sm_cvars | default({}) | dict2items }}"
 
-- name: generate maplist.txt
+- name: Generate maplist.txt
   template:
     src: map-cfg.j2
     dest: "{{ csgo_root }}/csgo/maplist.txt"
   vars:
     data: "{{ maplist }}"
 
-- name: generate mapcycle.txt
+- name: Generate mapcycle.txt
   template:
     src: map-cfg.j2
     dest: "{{ csgo_root }}/csgo/mapcycle.txt"

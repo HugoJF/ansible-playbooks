@@ -1,6 +1,6 @@
 ---
 
-- name: install ptah
+- name: Install PTaH
   include_tasks: install-plugin-github.yml
   vars:
     plugin_id: ptah
