@@ -1,0 +1,9 @@
+---
+
+- hosts: reapers
+  roles:
+    - role: csgo
+      tags: install
+
+#    - role: backup-csgo
+#      tags: backup

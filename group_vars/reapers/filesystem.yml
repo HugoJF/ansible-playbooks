@@ -1,6 +1,6 @@
 ---
 
-default_mode: 0755
-default_directory_mode: 0755
+default_mode: '0755'
+default_directory_mode: '0755'
 default_owner: ogp_agent
 default_group: ogp_agent
