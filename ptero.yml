@@ -1,0 +1,6 @@
+---
+
+- hosts: ptero
+  roles:
+    - role: csgo
+      tags: install

@@ -2,6 +2,8 @@
 
 sm_cvars:
   gamemode_competitive_server.cfg:
+    - bot_quota: 0
+    - bot_quota_mode: normal
     - mp_solid_teammates: 1
     - mp_teammates_are_enemies: 1
     - mp_respawn_on_death_ct: 1

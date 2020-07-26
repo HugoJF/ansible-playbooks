@@ -1,0 +1,6 @@
+---
+
+- hosts: ogp
+  roles:
+#    - role: backup-csgo
+#      tags: backup

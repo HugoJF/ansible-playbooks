@@ -1,9 +1,0 @@
----
-
-- hosts: denerd
-  roles:
-    - role: csgo
-      tags: install
-      
-    - role: backup-csgo
-      tags: backup
