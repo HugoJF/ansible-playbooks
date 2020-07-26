@@ -24,7 +24,7 @@ mwa_download_url: https://github.com/shanapu/MyWeaponAllocator/archive/88c265a7c
 ptah_download_url: https://ptah.zizt.ru/files/PTaH-V1.1.2-build18-linux.zip
 dh_download_url: https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours14/dhooks-2.2.0-detours14-sm110.zip
 curl_download_url: http://csgottt.com/curl.zip
-ret_download_url: https://ci.splewis.net/job/csgo-retakes/lastSuccessfulBuild/artifact/builds/retakes-release/retakes-170.zip
+ret_download_url: https://ci.splewis.net/job/csgo-retakes/170/artifact/builds/retakes-release/retakes-170.zip
 arena_download_url: https://ci.splewis.net/job/csgo-multi-1v1/lastSuccessfulBuild/artifact/builds/multi1v1-release/multi1v1-220.zip
 frank_download_url: https://github.com/rogeraabbccdd/Fake-Competitive-Rank-and-Coins/archive/84e88ca75d05f99ddeec0272f473bbb7a052b0be.zip
 arc_download_url: https://github.com/Headline/Challenge/releases/download/v1.1.5/hl_challenge.zip

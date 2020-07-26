@@ -117,6 +117,15 @@
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_files | default({}) }}"
 
+- name: Create /csgo/ directories
+  file:
+    path: "{{ csgo_root }}/csgo/{{ item }}"
+    state: directory
+    mode: "{{ default_mode | default('0755') }}"
+    owner: "{{ default_owner | default('pterodactyl') }}"
+    group: "{{ default_group | default('pterodactyl') }}"
+  with_items: "{{ other_directories | default([]) }}"
+
 - name: Copy other files
   copy:
     src: "{{ base }}{{ item.src }}"

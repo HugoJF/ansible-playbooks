@@ -43,6 +43,4 @@ sm_cvars:
     - sv_downloadurl: "https://minio.epsilon.denerdtv.com/fastdl/csgo"
     - sv_allowdownload: 1
     - sv_allowupload: 1
-    - tv_delay: 120
-    - tv_delay1: 15
     - sv_tags: kz,climb,pulo,jumpbr,brasil,brazil,deathmatch,ffa,dm,de_nerdtv,de_nerd,denerd,denerdtv,tdm,aim,treino,ws,glove,gloves,knife,knifes,knive,knives,skin,paint

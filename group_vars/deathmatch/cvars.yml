@@ -28,3 +28,8 @@ sm_cvars:
     - sv_infinite_ammo: 2
     - sv_teamid_overhead_always_prohibit: 1
     - sv_show_team_equipment_prohibit: 1
+    - tv_enable: 1
+    - tv_advertise_watchable: 1
+    - tv_maxclients: 5
+    - tv_delay: 120
+    - tv_snapshotrate: 16

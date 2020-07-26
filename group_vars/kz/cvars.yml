@@ -2,10 +2,6 @@
 
 sm_cvars:
   gamemode_competitive_server.cfg:
-    - mp_match_end_changelevel: 1
-    - mp_match_end_restart: 0
-    - mp_maxrounds: 30
-    - mp_freezetime: 2
     - tv_enable: 1
     - tv_advertise_watchable: 1
     - tv_maxclients: 5

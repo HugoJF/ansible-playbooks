@@ -1,0 +1,5 @@
+---
+
+sm_enable_plugins:
+  - admin-sql-threaded
+  - mapchooser

@@ -10,8 +10,11 @@
     addons_diretories:
       - configs
       - plugins
+      - gamedata
       - scripting
       - translations
+    other_directories:
+      - sound
     other_files:
       - src: cfg/
         dest: cfg/
