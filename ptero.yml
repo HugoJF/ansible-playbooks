@@ -1,6 +1,6 @@
 ---
 
-- hosts: ptero
+- hosts: deathmatch
   roles:
     - role: csgo
       tags: install
