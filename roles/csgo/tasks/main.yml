@@ -1,19 +1,4 @@
 ---
-# TODO:
-# flag to redownload
-# task name prefixes
-# determinar como os templates/cfgs serão setados (eliminar defaults? exigir sempre valores? fornecer um yml com doc e tudo?)
-# fazer tudo ficar idempotente (nunca copiar uma config, sempre gerar)
-# permitir selecao de quais plugins serao instalados (em packs com varios plugins)
-# idempotencia = se nao instalar, ele remove
-# cmd/update rate
-# 128 tick
-# bots?
-# mapa inicial?
-# map: set maps/maplist/mapcycle
-# maps: download_maps
-# grupos mais especificos tem menor precedencia na hora de computar as variaveis
-# bot quota fix
 
 - import_tasks: cleanup-sourcemod.yml
   tags: cleanup
