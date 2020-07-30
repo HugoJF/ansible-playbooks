@@ -2,6 +2,7 @@
 
 sm_cvars:
   server.cfg:
+    - hostname: "{{ hostname }}"
     - game_type: 0
     - game_mode: 1
     - hostip: -1321822705 # 177.54.150.15
@@ -22,7 +23,7 @@ sm_cvars:
     - mp_spectators_max: 0
     - mp_autokick: 0
     - mp_backup_round_auto: 0
-    - log: on
+    - log: 'on'
     - sv_logfile: 1
     - sv_logsdir: logs_source
     - sv_logecho: 0
