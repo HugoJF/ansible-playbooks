@@ -1,7 +1,6 @@
 ---
 
 webapps:
-  - vip-admin
   - calladmin-middleware
   - vip-admin-2
   - vip-admin-2-staging
