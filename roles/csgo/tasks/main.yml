@@ -211,3 +211,7 @@
 - import_tasks: install-token-changer.yml
   tags: token
   when: install_tokens | default(false)
+
+- import_tasks: install-franug-agents-chooser.yml
+  tags: agents
+  when: install_agents | default(false)

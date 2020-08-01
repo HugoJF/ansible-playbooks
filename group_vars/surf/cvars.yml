@@ -2,6 +2,7 @@
 
 sm_cvars:
   gamemode_competitive_server.cfg:
+    - sv_allow_votes: 0
     - tv_enable: 1
     - tv_advertise_watchable: 1
     - tv_maxclients: 5

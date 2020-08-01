@@ -106,6 +106,9 @@ sm_calladmin_spamtime: 300
 # GeoIPCity
 install_geoipcity: yes
 
+# Agents Chooser
+install_agents: yes
+
 # FPS Boost
 install_fps: yes
 

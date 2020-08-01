@@ -2,6 +2,7 @@
 
 sm_cvars:
   - gamemode_competitive_server.cfg:
+    - sv_allow_votes: 0
     - mp_match_end_restart: 1
     - mp_maxrounds: 600
     - mp_timelimit: 60
