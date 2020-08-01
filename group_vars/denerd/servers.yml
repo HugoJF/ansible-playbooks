@@ -2,5 +2,47 @@
 
 sr_config:
   server_1:
+    ip: 177.54.150.15:27001
+    display_name: "vip.denerdtv.com - #1 - DM FFA 128 TICK MIRAGE !ws !knife"
+  server_2:
+    ip: 177.54.150.15:27002
+    display_name: "vip.denerdtv.com - #2 - DM FFA 128 TICK DUST2 !ws !knife"
+  server_3:
     ip: 177.54.150.15:27003
-    display_name: Pog
+    display_name: "vip.denerdtv.com - #3 - MULTIMOD DM MIRAGE 128 TICK !ws !knife"
+  server_4:
+    ip: 177.54.150.15:27004
+    display_name: "vip.denerdtv.com - #4 - ARENA 1v1 128 TICK !ws !knife"
+  server_5:
+    ip: 177.54.150.15:27005
+    display_name: "vip.denerdtv.com - #5 - RETAKES 128 TICK !ws !knife"
+  server_6:
+    ip: 177.54.150.15:27006
+    display_name: "vip.denerdtv.com - #6 - RETAKES MISTO 128 TICK !ws !knife"
+  server_7:
+    ip: 177.54.150.15:27007
+    display_name: "vip.denerdtv.com - #7 - SURF 128 TICK !ws !knife"
+  server_8:
+    ip: 177.54.150.15:27008
+    display_name: "vip.denerdtv.com - #8 - EXECUTES 128 TICK !ws !knife"
+  server_9:
+    ip: 177.54.150.15:27009
+    display_name: "vip.denerdtv.com - #9 - MIX 5x5 128 TICK !ws !knife"
+  server_10:
+    ip: 177.54.150.15:27010
+    display_name: "vip.denerdtv.com - #10 - KZ 128 TICK !ws !knife"
+  server_11:
+    ip: 177.54.150.15:27028
+    display_name: "vip.denerdtv.com - #7.2 - SURF_KITSUNE !ws !knife"
+  server_12:
+    ip: 177.54.150.15:27029
+    display_name: "vip.denerdtv.com - #7.3 - SURF_MESA !ws !knife"
+  server_13:
+    ip: 177.54.150.15:27030
+    display_name: "vip.denerdtv.com - #7.4 - SURF_ROOKIE !ws !knife"
+  server_14:
+    ip: 177.54.150.15:27031
+    display_name: "vip.denerdtv.com - #7.5 - SURF_CLASSICS !ws !knife"
+  server_15:
+    ip: 177.54.150.15:27032
+    display_name: "vip.denerdtv.com - #7.6 - SURF_WATERWORKS !ws !knife"

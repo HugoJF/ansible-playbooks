@@ -109,6 +109,9 @@ install_geoipcity: yes
 # Agents Chooser
 install_agents: yes
 
+# Socket extension
+install_socket: yes
+
 # Server redirect
 install_server_redirect: yes
 

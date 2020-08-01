@@ -219,3 +219,7 @@
 - import_tasks: install-server-redirect.yml
   tags: redirect
   when: install_server_redirect | default(false)
+
+- import_tasks: install-socket.yml
+  tags: socket
+  when: install_socket | default(false)
