@@ -1,6 +1,9 @@
 ---
 
 hex_config:
+  ScoreTag: ""
+  ChatTag: ""
+
   # Anova
   STEAM_0:0:66095696:
     ScoreTag: "faketaxi "

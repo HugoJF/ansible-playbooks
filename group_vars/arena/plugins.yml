@@ -3,6 +3,9 @@
 # multi1v1
 install_arena: yes
 
+# RankME
+install_rankme: yes
+
 # "AbNeR Kill Feed Filter" (1.3) by AbNeR @CSB
 install_killfeed: yes
 

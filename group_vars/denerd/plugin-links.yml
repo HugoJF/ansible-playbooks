@@ -1,7 +1,7 @@
 ---
 
 mm_download_url: https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz
-sm_download_url: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz
+sm_download_url: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6492-linux.tar.gz
 
 sm_rankme_url: https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip
 srm_download_url: https://github.com/HugoJF/sourcemod-slotreservation-modded/archive/4c016a4257f1f04af53eb15a2085a1cf9b4e8de5.zip
@@ -9,7 +9,7 @@ sa3_download_url: https://github.com/ESK0/ServerAdvertisement3/archive/f88fe5054
 pa_download_url: https://github.com/HugoJF/PlayerAnalytics/releases/download/v0.3/player_analytics-sm1.10.6490.zip
 akf_download_url: https://github.com/abnerfs/killfeed_filter/archive/70fdf1a2be779f94f790477173db0e4da0d0bb39.zip
 ptc_download_url: https://github.com/HugoJF/print-to-console/archive/00d841831b9218b28f9e521204779402d1d5deb3.zip
-dm_download_url: https://github.com/Maxximou5/csgo-deathmatch/releases/download/v2.0.9/deathmatch.zip
+dm_download_url: https://github.com/HugoJF/csgo-deathmatch/releases/download/v2.0.10/deathmatch.zip
 dm3_download_url: https://github.com/HugoJF/csgo-deathmatch/releases/download/v3.0.2/deathmatch-sm1.10.6462.zip
 dyn_download_url: https://github.com/ntoxin66/Dynamic/archive/0.0.32.zip
 tct_download_url: https://github.com/ThatOneHomelessGuy/togsclantags/archive/fb49af0a3e4267184699083495c8f1b0d9692ae2.zip

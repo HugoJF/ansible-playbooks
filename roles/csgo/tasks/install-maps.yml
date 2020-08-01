@@ -2,33 +2,32 @@
 
 - name: Create extraction directories
   file:
-    path: "/tmp/maps/"
+    path: "/tmp/maps/{{ inventory_hostname }}"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
-  with_items: "{{ maps | default([]) }}"
 
 - name: Download maps
   get_url:
     url: "https://minio.epsilon.denerdtv.com/fastdl/csgo/maps/{{ item }}.bsp.bz2"
-    dest: "/tmp/maps/{{ item }}.bsp.bz2"
+    dest: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.bsp.bz2"
   with_items: "{{ maps | default([]) }}"
 
 - name: Download navs
   get_url:
     url: "https://minio.epsilon.denerdtv.com/fastdl/csgo/maps/{{ item }}.nav.bz2"
-    dest: "/tmp/maps/{{ item }}.nav.bz2"
+    dest: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.nav.bz2"
   with_items: "{{ maps | default([]) }}"
   ignore_errors: yes
 
 - name: Make sure there are no extracted maps
   file:
-    path: "/tmp/maps/{{ item }}.bsp"
+    path: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.bsp"
     state: absent
   with_items: "{{ maps | default([]) }}"
 
 - name: Make sure there are no extracted navs
   file:
-    path: "/tmp/maps/{{ item }}.nav"
+    path: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.nav"
     state: absent
   with_items: "{{ maps | default([]) }}"
   ignore_errors: yes
@@ -36,26 +35,26 @@
 - name: Unbzip2 map
   shell:
     cmd: "bzip2 -d {{ item }}.bsp.bz2"
-    chdir: "/tmp/maps/"
+    chdir: "/tmp/maps/{{ inventory_hostname }}"
   with_items: "{{ maps | default([]) }}"
 
 - name: Unbzip2 nav
   shell:
     cmd: "bzip2 -d {{ item }}.nav.bz2"
-    chdir: "/tmp/maps/"
+    chdir: "/tmp/maps/{{ inventory_hostname }}"
   with_items: "{{ maps | default([]) }}"
   ignore_errors: yes
 
 - name: Copy maps to server
   copy:
-    src: "/tmp/maps/{{ item }}.bsp"
+    src: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.bsp"
     dest: "{{ csgo_root }}/csgo/maps/{{ item }}.bsp"
     remote_src: yes
   with_items: "{{ maps | default([]) }}"
 
 - name: Copy navs to server
   copy:
-    src: "/tmp/maps/{{ item }}.nav"
+    src: "/tmp/maps/{{ inventory_hostname }}/{{ item }}.nav"
     dest: "{{ csgo_root }}/csgo/maps/{{ item }}.nav"
     remote_src: yes
   with_items: "{{ maps | default([]) }}"

@@ -36,6 +36,7 @@ sm_cvars:
     - host_players_show: 2
     - exec: banned_user.cfg
     - exec: banned_ip.cfg
+    - exec: performance.cfg
     - writeid:
     - writeip:
     - sv_max_queries_sec: 50

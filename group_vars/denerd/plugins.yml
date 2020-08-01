@@ -20,7 +20,7 @@ sm_afk_kick_warn_time: 20
 sm_afk_move_spec: 0
 sm_afk_prefix_short: 1
 sm_afk_log_days: 7
-sm_afk_move_min_players: 10 # TODO: maybe per server?
+sm_afk_move_min_players: 14 # TODO: maybe per server?
 sm_afk_exclude_dead: 1
 
 # "Name Change Punisher" (1.1) by Powerlord

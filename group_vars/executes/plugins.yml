@@ -6,3 +6,9 @@ sm_enable_plugins:
 
 # 40 "CS:GO Retakes" (0.3.4) by splewis
 install_executes: yes
+
+# RankME
+install_rankme: yes
+
+# "AFK Manager" (4.2.5) by Rothgar
+sm_afk_move_min_players: 8
