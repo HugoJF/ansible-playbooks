@@ -8,3 +8,4 @@
     addons_diretories:
       - plugins
       - scripting
+      - translations
