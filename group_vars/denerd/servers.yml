@@ -1,0 +1,6 @@
+---
+
+sr_config:
+  server_1:
+    ip: 177.54.150.15:27003
+    display_name: Pog

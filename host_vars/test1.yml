@@ -1,4 +1,5 @@
 ---
 
+hostname: "TEST SERVER"
 mapcycle: [de_mirage]
 maplist: [de_mirage]

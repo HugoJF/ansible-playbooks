@@ -215,3 +215,7 @@
 - import_tasks: install-franug-agents-chooser.yml
   tags: agents
   when: install_agents | default(false)
+
+- import_tasks: install-server-redirect.yml
+  tags: redirect
+  when: install_server_redirect | default(false)

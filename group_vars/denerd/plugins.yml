@@ -109,6 +109,9 @@ install_geoipcity: yes
 # Agents Chooser
 install_agents: yes
 
+# Server redirect
+install_server_redirect: yes
+
 # FPS Boost
 install_fps: yes
 
