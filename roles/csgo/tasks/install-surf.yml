@@ -3,29 +3,29 @@
 - name: Download files
   get_url:
     url: "{{ surf_download_url }}"
-    dest: "/tmp/surf.zip"
+    dest: "/tmp/{{ inventory_hostname }}/surf.zip"
     force: yes
 
 - name: Ensure extraction directory is clean
   file:
-    path: "/tmp/surf/"
+    path: "/tmp/{{ inventory_hostname }}/surf/"
     state: absent
 
 - name: Create extraction directory
   file:
-    path: "/tmp/surf/"
+    path: "/tmp/{{ inventory_hostname }}/surf/"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip
   unarchive:
-    src: "/tmp/surf.zip"
-    dest: "/tmp/surf/"
+    src: "/tmp/{{ inventory_hostname }}/surf.zip"
+    dest: "/tmp/{{ inventory_hostname }}/surf/"
     remote_src: yes
 
 - name: Find root directory path that was created unzipping the plugin
   find:
-    paths: "/tmp/surf/"
+    paths: "/tmp/{{ inventory_hostname }}/surf/"
     file_type: directory
   register: basefiles
 

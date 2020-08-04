@@ -12,23 +12,23 @@
 - name: Download GeoIPCity.zip
   get_url:
     url: https://share.snksrv.com/f/ypA7GK.zip
-    dest: /tmp/geoipcity.zip
+    dest: "/tmp/{{ inventory_hostname }}/geoipcity.zip"
 
 - name: Ensure extraction directory exists
   file:
-    path: /tmp/geoipcity/
+    path: "/tmp/{{ inventory_hostname }}/geoipcity/"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip GeoIPCity
   unarchive:
-    src: /tmp/geoipcity.zip
-    dest: /tmp/geoipcity/
+    src: "/tmp/{{ inventory_hostname }}/geoipcity.zip"
+    dest: "/tmp/{{ inventory_hostname }}/geoipcity/"
     remote_src: yes
 
 - name: Copy GeoIPCity.dat
   copy:
-    src: /tmp/geoipcity/GeoIPCity.dat
+    src: "/tmp/{{ inventory_hostname }}/geoipcity/GeoIPCity.dat"
     dest: "{{ csgo_root }}/csgo/addons/sourcemod/configs/geoip/"
     remote_src: yes
     mode: "{{ default_mode | default('0755') }}"

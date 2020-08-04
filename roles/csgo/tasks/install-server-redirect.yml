@@ -16,3 +16,6 @@
         dest: configs/server_redirect.cfg
         data:
           Servers: "{{ sr_config }}"
+    cfg_templates:
+      - src: plugin.server_redirect.cfg.j2
+        dest: plugin.server_redirect.cfg

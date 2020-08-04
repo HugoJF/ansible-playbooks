@@ -6,14 +6,14 @@
     dest: "{{ item.dest }}"
   loop:
     - url: "https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1131-linux.tar.gz"
-      dest: /tmp/mm.tar.gz
+      dest: "/tmp/{{ inventory_hostname }}/mm.tar.gz"
     - url: "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6490-linux.tar.gz"
-      dest: /tmp/sm.tar.gz
+      dest: "/tmp/{{ inventory_hostname }}/sm.tar.gz"
 
 
 - name: ensure extraction directories exists
   file:
-    path: /tmp/{{ item }}
+    path: "/tmp/{{ inventory_hostname }}/{{ item }}"
     state: directory
   with_items:
     - mm
@@ -26,28 +26,28 @@
     dest: "{{ item.dest }}"
     remote_src: yes
   loop:
-    - src: /tmp/mm.tar.gz
-      dest: /tmp/mm/
-    - src: /tmp/sm.tar.gz
-      dest: /tmp/sm/
+    - src: "/tmp/{{ inventory_hostname }}/mm.tar.gz"
+      dest: "/tmp/{{ inventory_hostname }}/mm/"
+    - src: "/tmp/{{ inventory_hostname }}/sm.tar.gz"
+      dest: "/tmp/{{ inventory_hostname }}/sm/"
 
 
 - name: copy metamod
   synchronize:
-    src: /tmp/mm/
-    dest: /tmp/merged
+    src: "/tmp/{{ inventory_hostname }}/mm/"
+    dest: "/tmp/{{ inventory_hostname }}/merged"
   delegate_to: "{{ inventory_hostname }}"
 
 
 - name: copy sourcemod
   synchronize:
-    src: /tmp/sm/
-    dest: /tmp/merged
+    src: "/tmp/{{ inventory_hostname }}/sm/"
+    dest: "/tmp/{{ inventory_hostname }}/merged"
   delegate_to: "{{ inventory_hostname }}"
 
 
 - stat:
-    path: /tmp/merged/addons/metamod/sourcemod.vdf
+    path: "/tmp/{{ inventory_hostname }}/merged/addons/metamod/sourcemod.vdf"
   register: missing
 
 - debug: var=missing

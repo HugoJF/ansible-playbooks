@@ -1,18 +1,24 @@
 ---
 
+- name: Make sure extraction diretories exist
+  file:
+    path: "/tmp/{{ inventory_hostname }}/"
+    state: directory
+    mode: "{{ default_mode | default('0755') }}"
+
 - name: Download files
   get_url:
     url: "{{ item.url }}"
     dest: "{{ item.dest }}"
   loop:
     - url: "{{ mm_download_url }}"
-      dest: /tmp/mm.tar.gz
+      dest: "/tmp/{{ inventory_hostname }}/mm.tar.gz"
     - url: "{{ sm_download_url }}"
-      dest: /tmp/sm.tar.gz
+      dest: "/tmp/{{ inventory_hostname }}/sm.tar.gz"
 
 - name: Cleanup extraction directories
   file:
-    path: "/tmp/{{ item }}"
+    path: "/tmp/{{ inventory_hostname }}/{{ item }}"
     state: absent
   with_items:
     - mm
@@ -20,7 +26,7 @@
 
 - name: Create extraction directories
   file:
-    path: "/tmp/{{ item }}"
+    path: "/tmp/{{ inventory_hostname }}/{{ item }}"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
   with_items:
@@ -33,20 +39,20 @@
     dest: "{{ item.dest }}"
     remote_src: yes
   loop:
-    - src: /tmp/mm.tar.gz
-      dest: /tmp/mm/
-    - src: /tmp/sm.tar.gz
-      dest: /tmp/sm/
+    - src: "/tmp/{{ inventory_hostname }}/mm.tar.gz"
+      dest: "/tmp/{{ inventory_hostname }}/mm/"
+    - src: "/tmp/{{ inventory_hostname }}/sm.tar.gz"
+      dest: "/tmp/{{ inventory_hostname }}/sm/"
 
 - name: Install metamod
   synchronize:
-    src: /tmp/mm/
+    src: "/tmp/{{ inventory_hostname }}/mm/"
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 
 - name: Install sourcemod
   synchronize:
-    src: /tmp/sm/
+    src: "/tmp/{{ inventory_hostname }}/sm/"
     dest: "{{ csgo_root }}/csgo/"
   delegate_to: "{{ inventory_hostname }}"
 

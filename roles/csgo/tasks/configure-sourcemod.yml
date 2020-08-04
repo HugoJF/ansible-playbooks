@@ -43,6 +43,11 @@
     src: funvotes.cfg.j2
     dest: "{{ csgo_root }}/csgo/cfg/sourcemod/funvotes.cfg"
 
+- name: Configure Sourcemod
+  template:
+    src: sourcemod.cfg.j2
+    dest: "{{ csgo_root }}/csgo/cfg/sourcemod/sourcemod.cfg"
+
 - name: Generate /csgo/cfg files
   template:
     src: cvar-cfg.j2

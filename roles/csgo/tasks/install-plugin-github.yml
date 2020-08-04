@@ -3,29 +3,29 @@
 - name: Download files
   get_url:
     url: "{{ plugin_url }}"
-    dest: "/tmp/{{ plugin_id }}.zip"
+    dest: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}.zip"
     force: yes
 
 - name: Ensure extraction directory is clean
   file:
-    path: "/tmp/{{ plugin_id }}/"
+    path: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
     state: absent
 
 - name: Create extraction directory
   file:
-    path: "/tmp/{{ plugin_id }}/"
+    path: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
 
 - name: Unzip
   unarchive:
-    src: "/tmp/{{ plugin_id }}.zip"
-    dest: "/tmp/{{ plugin_id }}/"
+    src: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}.zip"
+    dest: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
     remote_src: yes
 
 - name: Find root directory path that was created unzipping the plugin
   find:
-    paths: "/tmp/{{ plugin_id }}/"
+    paths: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
     file_type: directory
   register: basefiles
   when: ignore_first_directory|default(false)|bool
@@ -44,9 +44,9 @@
 
 - name: Set basepath to plugins
   set_fact:
-    base: "/tmp/{{ plugin_id }}/"
-    addons_base: "/tmp/{{ plugin_id }}/{{ addons_basepath | default('') }}"
-    cfg_base: "/tmp/{{ plugin_id }}/{{ cfg_basepath | default('') }}"
+    base: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
+    addons_base: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/{{ addons_basepath | default('') }}"
+    cfg_base: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/{{ cfg_basepath | default('') }}"
   when: not (ignore_first_directory|default(false)|bool)
 
 
