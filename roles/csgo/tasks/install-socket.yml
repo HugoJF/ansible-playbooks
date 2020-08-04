@@ -1,0 +1,7 @@
+---
+
+- name: Install Socket
+  get_url:
+    url: "{{ socket_download_url }}"
+    dest: "{{ csgo_root }}/csgo/addons/sourcemod/extensions/socket.ext.so"
+    force: yes
