@@ -2,6 +2,7 @@
 
 sm_cvars:
   server.cfg:
+    - sm_franugshotsbyarea_distance: 1500 # LOS Sounds
     - hostname: "{{ hostname }}"
     - game_type: 0
     - game_mode: 1

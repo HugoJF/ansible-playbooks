@@ -1,0 +1,10 @@
+---
+
+- name: Install LOS Sounds
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: los
+    plugin_url: "{{ los_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting
