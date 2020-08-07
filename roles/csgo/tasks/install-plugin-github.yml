@@ -1,11 +1,5 @@
 ---
 
-- name: Download files
-  get_url:
-    url: "{{ plugin_url }}"
-    dest: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}.zip"
-    force: yes
-
 - name: Ensure extraction directory is clean
   file:
     path: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
@@ -16,6 +10,12 @@
     path: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}/"
     state: directory
     mode: "{{ default_mode | default('0755') }}"
+
+- name: Download files
+  get_url:
+    url: "{{ plugin_url }}"
+    dest: "/tmp/{{ inventory_hostname }}/{{ plugin_id }}.zip"
+    force: yes
 
 - name: Unzip
   unarchive:
