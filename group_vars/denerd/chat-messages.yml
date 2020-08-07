@@ -11,7 +11,7 @@ sa3_config:
 
   Welcome Message:
     Enabled: 1 # 1 = Enabled / 0 = Disabled,
-    Type: T # Type of message - Only T and C types are supported right now
+    Type: V # Type of message - Only T and C types are supported right now
     br: "{darkred}======================================================================= \\n{default}Bem vindo ao servidor {PLAYERNAME}! \\n\\n{green}Até 30％ de desconto no VIP por tempo limitado, aproveite! \\n{default}Acesse: {green}https://denerdtv.com/vip\\n{darkred}======================================================================="
     Delay: "5.0" # Time in seconds after is client connected to server to show message
     flags: "" # Client with this flag will get welcome message - Keep empty for all
@@ -21,70 +21,70 @@ sa3_config:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Curte nossos servidores? Considere nos apoiar diretamente comprando um slot VIP para nos ajudar a pagar a conta mensal dos servidores! {green}http://vip.denerdtv.com/"
 
     AdsAds2:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Quer saber suas {green}estatísticas diárias {default}nos servidores de DM? Acesse: {green}https://sessions.denerdtv.com/"
 
     Feedback:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Tem algo que {darkred}não gostou nos servidores{default}? Envie seu feedback para: {green}https://feedback.denerdtv.com/"
 
     AdsAds:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     CallAdmin:
       Enabled: 1
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "{green}Precisa reportar alguém? {default}Utilize o comando {green}!calladmin {default}para iniciar um report. {darkred}Reports desnecessários, incorretos e abusivos resultarão em bans! NÃO ABUSE!"
 
     VIP:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "VIP com até {darkred}30％ de desconto {default}com processamento automático no MercadoPago, Paypal e com skins! {green}APROVEITE AS VANTAGENS! {default}Acesse: {green}http://vip.denerdtv.com/"
 
     IP:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "IP do servidor atual: {green}{SERVERIP}"
 
     NewServers:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "{green}Hospedamos 10 servidores de CS:GO{default}, veja nossa lista completa em: {green}denerdtv.com/servidores/"
 
     VIPAdvantages:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "O VIP te garante {green}slot reservado {default}(conectar quando o servidor está cheio), acesso ao {green}!ws, !gloves, !rs e muito mais{default}! Consulte as vantagens em {green}http://denerdtv.com/vip/"
 
     MoreVIPs:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Quer apoiar o servidor e ter um {green}slot reservado{default}? Aproveite o VIP por até{darkred}30％ de desconto{default}, todas as informações podem ser encontradas acessando {green}http://denerdtv.com/vip/"
       zz:    "Quer apoiar o servidor e ter um {green}slot reservado{default}? Venha ser um {green}VIP do servidor {default}(R$ 10,00), todas as informações podem ser encontradas acessando {green}http://denerdtv.com/vip/"
 
@@ -92,63 +92,63 @@ sa3_config:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "VIP com até {darkred}30％ de desconto {default}com processamento automático no MercadoPago, Paypal e com skins! {green}APROVEITE AS VANTAGENS! {default}Acesse: {green}http://vip.denerdtv.com/"
 
     Twitter:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Meu Twitter: {green} twitter.com/de_nerdTV"
 
     Cost:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Você sabia que pagamos {green}mais de R$ 600,00 {default}por mês para manter todos os servidores online? Considere comprar slot VIP para ajudar a manter essa conta paga: {green}http://denerdtv.com/vip/"
 
     ServerList:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Para a lista de todos os nossos servidores, acesse: {green}https://denerdtv.com/servidores/"
 
     AdsAds3:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     SteamGroup:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Meu grupo na Steam: {green}steamcommunity.com/groups/de_nerdTV"
 
     AdsAds34:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     Discord:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "{default}Venha participar do nosso Discord: {green} denerdtv.com/discord/"
 
     Cost2:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "VIP com até {darkred}30％ de desconto {default}com pagamento por {green}MercadoPago, Boleto, Paypal e até mesmo skins {default}com ativação imediata : {green}http://denerdtv.com/vip/"
       zz: "VIP por R$ 10,00 por mês com pagamento por {green}MercadoPago, Boleto, Paypal e até mesmo skins {default}com ativação imediata : {green}http://denerdtv.com/vip/"
 
@@ -156,19 +156,19 @@ sa3_config:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Digite {green}!mm {default}para mudar sua patente ou coin no scoreboard!"
 
     AdsAds123123:
       Enabled: 0
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: T
+      Type: V
       br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     ResetScore:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
-      Type: T
+      Type: V
       br: "Você pode resetar seus kills/deaths com {green}!rs (VIP only)"
