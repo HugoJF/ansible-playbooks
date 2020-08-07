@@ -223,3 +223,7 @@
 - import_tasks: install-socket.yml
   tags: socket
   when: install_socket | default(false)
+
+- import_tasks: install-los-sounds.yml
+  tags: los-sounds
+  when: install_los_sounds | default(false)
