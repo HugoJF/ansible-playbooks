@@ -2,6 +2,7 @@
 
 sm_cvars:
   server.cfg:
+    - sv_downloadurl: http://fastdl.denerdtv.com/fastdl/csgo
     - game_type: 0
     - game_mode: 1
 #    - sv_password: testing

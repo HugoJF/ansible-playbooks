@@ -7,6 +7,7 @@ sm_cvars:
     - game_type: 0
     - game_mode: 1
     - hostip: -1321822705 # 177.54.150.15
+    - net_public_adr: 177.54.150.15
     - rcon_password: !vault |
         $ANSIBLE_VAULT;1.1;AES256
         63363066626637316266323938316334353262303765303137663731356132613035393463636265
