@@ -13,7 +13,7 @@ install_autoplant: yes
 
 # 35 "MyWeaponAllocator" (2.2) by shanapu
 install_allocator: yes
-sm_mywa_rounds_chance: yes
+sm_mywa_rounds_chance: 'yes'
 
 # "AFK Manager" (4.2.5) by Rothgar
 sm_afk_move_min_players: 8
