@@ -1,5 +1,6 @@
 ---
 
 hostname: "TEST SERVER"
-mapcycle: [de_mirage]
-maplist: [de_mirage]
+maps: [am_multimap_denerd_v2_debugging]
+mapcycle: [am_multimap_denerd_v2_debugging]
+maplist: [am_multimap_denerd_v2_debugging]
