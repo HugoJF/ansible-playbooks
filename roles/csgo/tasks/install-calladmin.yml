@@ -27,6 +27,10 @@
       - src: plugins/calladmin_usermanager.smx
         dest: plugins/calladmin_usermanager.smx
         when: "{{ install_calladmin_usermanager | default(false) }}"
+    addons_templates:
+      - src: simple-list-cfg.j2
+        dest: configs/calladmin_reasons.cfg
+        data: "{{ calladmin_reasons | default([]) }}"
     cfg_templates:
       - src: plugin.calladmin.cfg.j2
         dest: plugin.calladmin.cfg
