@@ -2,6 +2,8 @@
 
 # multi1v1
 install_arena: yes
+sm_multi1v1_randomize_arena_order: 1
+sm_multi1v1_roundtime: 35
 
 # RankME
 install_rankme: yes
