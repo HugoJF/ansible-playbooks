@@ -20,13 +20,13 @@ sm_admins_simple:
   STEAM_1:1:36509127: '99:z'
 
 # addons/sourcemod/configs/admin_overrides.cfg
-sm_overrides2:
-  buyammo1: a
-  sm_ws: a
-  sm_resetscore: a
-  sm_rs: a
-  sm_gloves: a
-  sm_glove: a
-  sm_eldiven: a
+sm_overrides:
   BypassPremiumCheck: a
+#  buyammo1: a
+#  sm_ws: a
+#  sm_resetscore: a
+#  sm_rs: a
+#  sm_gloves: a
+#  sm_glove: a
+#  sm_eldiven: a
 
