@@ -9,6 +9,3 @@ install_executes: yes
 
 # RankME
 install_rankme: yes
-
-# "AFK Manager" (4.2.5) by Rothgar
-sm_afk_move_min_players: 8

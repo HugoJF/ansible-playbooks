@@ -15,9 +15,6 @@ install_autoplant: yes
 install_allocator: yes
 sm_mywa_rounds_chance: 'yes'
 
-# "AFK Manager" (4.2.5) by Rothgar
-sm_afk_move_min_players: 8
-
 # RankME
 install_rankme: yes
 

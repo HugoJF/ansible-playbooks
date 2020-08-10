@@ -13,15 +13,17 @@ sm_restart_empty_delay: 30
 install_afk_manager: yes
 sm_afk_admins_flag: a
 sm_afk_autoupdate: 0
-sm_afk_kick_announce: 2
+sm_afk_admins_immune: 2
 sm_afk_move_announce: 2
-sm_afk_kick_time: 45
-sm_afk_kick_warn_time: 20
-sm_afk_move_spec: 0
+sm_afk_kick_announce: 2
+sm_afk_move_time: 25
+sm_afk_move_warn_time: 10
+sm_afk_move_spec: 1
+sm_afk_kick_time: 75
+sm_afk_kick_warn_time: 15
+sm_afk_kick_min_players: 8
 sm_afk_prefix_short: 1
 sm_afk_log_days: 7
-sm_afk_kick_min_players: 14 # TODO
-sm_afk_move_min_players: 10 # TODO: maybe per server?
 sm_afk_exclude_dead: 1
 
  #TODO: freezetime retakes

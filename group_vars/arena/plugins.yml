@@ -17,5 +17,8 @@ install_challenge: yes
 # panorama crash fix
 install_arena_crash_fix: yes
 
+# AFK Manager
+sm_afk_kick_min_players: 14
+
 # maps
 install_maps: yes

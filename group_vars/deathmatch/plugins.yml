@@ -8,3 +8,6 @@ install_rankme: yes
 
 # LOS Sounds
 install_los_sounds: yes
+
+# AFK Manager
+sm_afk_kick_min_players: 14
