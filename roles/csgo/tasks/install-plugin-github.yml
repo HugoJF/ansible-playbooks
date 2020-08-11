@@ -102,6 +102,8 @@
     mode: "{{ default_mode | default('0755') }}"
     owner: "{{ default_owner | default('pterodactyl') }}"
     group: "{{ default_group | default('pterodactyl') }}"
+  vars:
+    data: "{{ item.data | default([]) }}"
   when: "'when' not in item or item.when"
   with_items: "{{ cfg_templates | default({}) }}"
 
