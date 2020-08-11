@@ -88,6 +88,10 @@
   tags: executes
   when: install_executes | default(false)
 
+- import_tasks: install-executes-configs.yml
+  tags: executes
+  when: install_executes | default(false)
+
 - include_tasks: install-skybox.yml
   tags: skybox
   when: install_skybox | default(false)

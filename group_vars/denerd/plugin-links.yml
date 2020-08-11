@@ -6,7 +6,7 @@ sm_download_url: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6492-
 sm_rankme_url: https://github.com/rogeraabbccdd/Kento-Rankme/archive/f4c2567c463e34cc3a34c3efaa3e2c6ff9e85e65.zip
 srm_download_url: https://github.com/HugoJF/sourcemod-slotreservation-modded/archive/4c016a4257f1f04af53eb15a2085a1cf9b4e8de5.zip
 sr_download_url: https://github.com/GAMMACASE/ServerRedirect/releases/download/1.2.0/server_redirect_1.2.0.zip
-sa3_download_url: https://github.com/HugoJF/ServerAdvertisement3/releases/download/v0.4/ServerAdvertisements3-sm1.10.6492.zip
+sa3_download_url: https://github.com/HugoJF/ServerAdvertisement3/releases/download/v0.5/ServerAdvertisements3-sm1.10.6492.zip
 pa_download_url: https://github.com/HugoJF/PlayerAnalytics/releases/download/v0.3/player_analytics-sm1.10.6490.zip
 akf_download_url: https://github.com/abnerfs/killfeed_filter/archive/70fdf1a2be779f94f790477173db0e4da0d0bb39.zip
 ptc_download_url: https://github.com/HugoJF/print-to-console/archive/00d841831b9218b28f9e521204779402d1d5deb3.zip
@@ -26,6 +26,7 @@ ptah_download_url: https://ptah.zizt.ru/files/PTaH-V1.1.2-build18-linux.zip
 dh_download_url: https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours14/dhooks-2.2.0-detours14-sm110.zip
 curl_download_url: http://csgottt.com/curl.zip
 ret_download_url: https://ci.splewis.net/job/csgo-retakes/171/artifact/builds/retakes-release/retakes-171.zip
+
 arena_download_url: https://ci.splewis.net/job/csgo-multi-1v1/lastSuccessfulBuild/artifact/builds/multi1v1-release/multi1v1-220.zip
 frank_download_url: https://github.com/rogeraabbccdd/Fake-Competitive-Rank-and-Coins/archive/84e88ca75d05f99ddeec0272f473bbb7a052b0be.zip
 arc_download_url: https://github.com/Headline/Challenge/releases/download/v1.1.5/hl_challenge.zip
@@ -33,6 +34,7 @@ rap_download_url: https://github.com/HugoJF/retakes-autoplant/releases/download/
 fbf_download_url: https://github.com/HugoJF/firebulletsfix/releases/download/v0.5/firebulletsfix-sm1.10.6490.zip
 skybox_download_url: https://github.com/HugoJF/skybox/releases/download/v0.2/skybox-sm1.10.6490.zip
 exec_download_url: https://ci.splewis.net/job/csgo-executes/lastSuccessfulBuild/artifact/builds/executes-release/executes-44.zip
+exec_cfg_download_url: https://github.com/AG4lyf/configs/archive/cfa21b66c511bec77f72fd68cd86f94301b6161f.zip
 acf_download_url: https://github.com/ismail0234/Benson-Map-Crash-Fixer/archive/82b04e08feeba2fe3413cca35a77ca2efe97d010.zip
 fhcm_download_url: https://github.com/Franc1sco/FixHintColorMessages/archive/55a534655a58b998cddeded0e383367d6dbbceb5.zip
 fac_download_url: https://github.com/Franc1sco/Franug-AgentsChooser/archive/97bf89061a1d1cbb130a85edf208b343f031afff.zip

@@ -6,6 +6,7 @@ sm_enable_plugins:
 
 # 40 "CS:GO Retakes" (0.3.4) by splewis
 install_executes: yes
-
+sm_executes_default_extra_freeze_time: 0
+sm_executes_minplayers: 2
 # RankME
 install_rankme: yes
