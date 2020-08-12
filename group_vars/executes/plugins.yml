@@ -4,6 +4,9 @@
 sm_enable_plugins:
   - rockthevote
 
+# 01 "Insta-Defuse" (1.2) by Jacoblairm
+install_instadefuse: yes
+
 # 40 "CS:GO Retakes" (0.3.4) by splewis
 install_executes: yes
 sm_executes_default_extra_freeze_time: 0
