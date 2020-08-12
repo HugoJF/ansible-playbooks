@@ -23,9 +23,9 @@
           Weapons: "{{ arena_weapons | default({}) }}"
     cfg_directories:
       - multi1v1
-    cfg_files:
-      - src: multi1v1/game_cvars.cfg
-        dest: multi1v1/game_cvars.cfg
     cfg_templates:
+      - src: cvar-cfg.j2
+        dest: multi1v1/game_cvars.cfg
+        data: "{{ arena_cvars | default([]) }}"
       - src: multi1v1.cfg.j2
         dest: multi1v1.cfg
