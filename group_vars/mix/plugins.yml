@@ -2,3 +2,6 @@
 
 # RankME
 install_rankme: yes
+
+# bot_quota fix
+install_bot_quota_fix: yes

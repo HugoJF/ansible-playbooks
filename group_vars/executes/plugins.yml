@@ -13,3 +13,6 @@ sm_executes_default_extra_freeze_time: 0
 sm_executes_minplayers: 2
 # RankME
 install_rankme: yes
+
+# bot_quota fix
+install_bot_quota_fix: yes

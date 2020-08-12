@@ -11,3 +11,6 @@ install_los_sounds: yes
 
 # AFK Manager
 sm_afk_kick_min_players: 14
+
+# bot_quota fix
+install_bot_quota_fix: yes

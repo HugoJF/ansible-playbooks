@@ -231,3 +231,7 @@
 - import_tasks: install-los-sounds.yml
   tags: los-sounds
   when: install_los_sounds | default(false)
+
+- import_tasks: install-bot-quota-fix.yml
+  tags: bot-quota
+  when: install_bot_quota_fix | default(false)

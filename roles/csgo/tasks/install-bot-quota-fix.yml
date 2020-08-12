@@ -1,0 +1,10 @@
+---
+
+- name: Install bot_quota fix
+  include_tasks: install-plugin-github.yml
+  vars:
+    plugin_id: bqf
+    plugin_url: "{{ bqf_download_url }}"
+    addons_diretories:
+      - plugins
+      - scripting

@@ -20,3 +20,6 @@ install_rankme: yes
 
 # 40 "CS:GO Retakes" (0.3.4) by splewis
 install_retakes: yes
+
+# bot_quota fix
+install_bot_quota_fix: yes

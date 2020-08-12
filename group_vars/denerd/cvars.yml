@@ -38,6 +38,8 @@ sm_cvars:
     - exec: banned_user.cfg
     - exec: banned_ip.cfg
     - exec: performance.cfg
+    - exec: bots.cfg
+    - bot_chatter: off
     - writeid:
     - writeip:
     - sv_max_queries_sec: 50

@@ -58,3 +58,4 @@ jansson_download_url: https://github.com/HugoJF/SMJansson/archive/e1fe6e24198785
 kz_download_url: https://bitbucket.org/kztimerglobalteam/kztimerglobal/downloads/1.96_Full.zip
 socket_download_url: https://github.com/JoinedSenses/sm-ext-socket/releases/download/v0.2/socket.ext.so
 los_download_url: https://minio.epsilon.denerdtv.com/hugo/github/los-sounds/v0.4/los-sounds-sm1.10.6492.zip
+bqf_download_url: https://github.com/HugoJF/bot-quota-fix-sm/releases/download/v0.1/bot_quota_fix-sm1.10.6492.zip

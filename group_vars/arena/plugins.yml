@@ -22,3 +22,6 @@ sm_afk_kick_min_players: 14
 
 # maps
 install_maps: yes
+
+# bot_quota fix
+install_bot_quota_fix: yes
