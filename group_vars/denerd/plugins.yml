@@ -33,12 +33,6 @@ install_name_change_punisher: yes
 ncp_detections: 10
 ncp_detectiontime: 20
 
-# "TeamChange Unlimited" (1.2.2) by Sheepdude
-install_teamchange_unlimited: yes
-sm_teamchange_unlimited_chat: 0
-sm_teamchange_unlimited_immunity: 1
-sm_teamchange_unlimited_maplimit: 10
-
 # "[CS:GO] Fake Competitive Ranks/Coins" (1.2) by Laam4
 install_frank: yes
 
