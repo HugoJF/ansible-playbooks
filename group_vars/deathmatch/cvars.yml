@@ -2,9 +2,10 @@
 
 sm_cvars:
   bots.cfg:
-    - sm_bots_num: 6
+    - sm_bots_num: 10
     - sm_bots_mode: dm
   gamemode_competitive_server.cfg:
+    - bot_chatter: off
     - mp_autoteambalance: 0
     - mp_limitteams: 0
     - bot_quota: 0
