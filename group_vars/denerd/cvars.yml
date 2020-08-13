@@ -21,7 +21,7 @@ sm_cvars:
     - sv_minrate: 128000
     - sv_mincmdrate: 128 # TODO: check on SURF
     - sv_minupdaterate: 128
-    - mp_spectators_max: 0
+    - mp_spectators_max: 2
     - mp_autokick: 0
     - mp_backup_round_auto: 0
     - log: 'on'
