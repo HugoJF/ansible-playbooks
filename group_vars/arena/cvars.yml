@@ -2,8 +2,8 @@
 
 sm_cvars:
   bots.cfg:
-    - sm_bots_num: 1
-    - sm_bots_mode: arena
+    - sm_bots_num: 0
+    - sm_bots_mode: fix
   gamemode_competitive_server.cfg:
     - mp_autoteambalance: 0
     - mp_limitteams: 0
