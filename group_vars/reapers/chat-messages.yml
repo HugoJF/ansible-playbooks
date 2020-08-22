@@ -12,7 +12,7 @@ sa3_config:
   Welcome Message:
     Enabled: 1
     Type: T
-    en: "{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻ \n{default}Bem-vindo ao servidor do {darkred}Team Reapers {PLAYERNAME}!\n\n{darkred}⦿{default} Nossas redes sociais: \n\n{darkred}✓{default} https://twitter.com/{darkred}TeamReapersBR\n{darkred}✓{default} https://instagram.com/{darkred}TeamReapersBR\n{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻"
+    en: "{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻ \\n{default}Bem-vindo ao servidor do {darkred}Team Reapers {PLAYERNAME}!\\n\\n{darkred}⦿{default} Nossas redes sociais: \\n\\n{darkred}✓{default} https://twitter.com/{darkred}TeamReapersBR\\n{darkred}✓{default} https://instagram.com/{darkred}TeamReapersBR\\n{darkred}⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻"
     Delay: 10.0
     flags: ""
 
