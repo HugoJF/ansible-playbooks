@@ -9,6 +9,11 @@ hex_config:
     ScoreTag: "faketaxi "
     ChatTag: "faketaxi "
 
+  # Vitor
+  STEAM_1:1:64297652:
+    ScoreTag: "[BOT]"
+    ChatTag: "[BOT] "
+
   # Example
   STEAM_0:1:36509127:
     ScoreTag: "Rank {rmRank} [DONO]"
