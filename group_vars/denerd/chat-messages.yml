@@ -11,39 +11,39 @@ sa3_config:
 
   Welcome Message:
     Enabled: 1 # 1 = Enabled / 0 = Disabled,
-    Type: V # Type of message - Only T and C types are supported right now
-    br: "{darkred}======================================================================= \\n{default}Bem vindo ao servidor {PLAYERNAME}! \\n\\n{green}Até 30％ de desconto no VIP por tempo limitado, aproveite! \\n{default}Acesse: {green}https://denerdtv.com/vip\\n{darkred}======================================================================="
+    Type: T # Type of message - Only T and C types are supported right now
+    br: "{darkred}======================================================================= \\n{default}Bem vindo ao servidor {PLAYERNAME}! \\n\\n{green}Receba até R$ 50 para criar o seu próprio servidor de CS:GO ou Minecraft! \\n{default}Cadastre-se em: {green}https://host.denerdtv.com/\\n{darkred}======================================================================="
     Delay: "5.0" # Time in seconds after is client connected to server to show message
     flags: "" # Client with this flag will get welcome message - Keep empty for all
 
   Messages:
-    EndDate:
-      Enabled: 0
+    Host1:
+      Enabled: 1
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: V
-      br: "Curte nossos servidores? Considere nos apoiar diretamente comprando um slot VIP para nos ajudar a pagar a conta mensal dos servidores! {green}http://vip.denerdtv.com/"
+      Type: T
+      br: "{green}Está precisando de hospedagem para CS:GO? {default}! Cadastre-se em {green}https://host.denerdtv.com/ {default}e receba até R$ 50 para experimentar nossa nova plataforma de hospedagem!"
 
-    AdsAds2:
-      Enabled: 0
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "Quer saber suas {green}estatísticas diárias {default}nos servidores de DM? Acesse: {green}https://sessions.denerdtv.com/"
+#    Feedback:
+#      Enabled: 1
+#      Tag: "[{darkred}AUTO{default}]"
+#      Maps: all
+#      Type: V
+#      br: "Tem algo que {darkred}não gostou nos servidores{default}? Envie seu feedback para: {green}https://feedback.denerdtv.com/"
 
-    Feedback:
-      Enabled: 0
+    Host2:
+      Enabled: 1
       Tag: "[{darkred}AUTO{default}]"
       Maps: all
-      Type: V
-      br: "Tem algo que {darkred}não gostou nos servidores{default}? Envie seu feedback para: {green}https://feedback.denerdtv.com/"
+      Type: T
+      br: "Precisa de um servidor para mix, campeonatos ou treinos? Consulte nossos preços {green}por hora {default}da nossa hospedagem em: {green}https://host.denerdtv.com/"
 
-    AdsAds:
-      Enabled: 0
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
+#    AdsAds:
+#      Enabled: 1
+#      Tag: "[{darkred}AUTO{default}]"
+#      Maps: all
+#      Type: V
+#      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     CallAdmin:
       Enabled: 1
@@ -71,14 +71,14 @@ sa3_config:
       Enabled: 1
       Maps: all
       Type: V
-      br: "{green}Hospedamos 10 servidores de CS:GO{default}, veja nossa lista completa em: {green}denerdtv.com/servidores/"
+      br: "{green}Hospedamos 10 servidores de CS:GO{default}, veja nossa lista completa digitando {green}!servers {default}ou acessando {green}denerdtv.com/servidores/"
 
     VIPAdvantages:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
       Type: V
-      br: "O VIP te garante {green}slot reservado {default}(conectar quando o servidor está cheio), acesso ao {green}!ws, !gloves, !rs e muito mais{default}! Consulte as vantagens em {green}http://denerdtv.com/vip/"
+      br: "O VIP te garante {green}slot reservado {default}(conectar quando o servidor está cheio), acesso ao {green}!ws, !gloves, !rs (garantido) e muito mais{default}! Consulte as vantagens em {green}http://denerdtv.com/vip/"
 
     MoreVIPs:
       Tag: "[{darkred}AUTO{default}]"
@@ -95,12 +95,12 @@ sa3_config:
       Type: V
       br: "VIP com até {darkred}30％ de desconto {default}com processamento automático no MercadoPago, Paypal e com skins! {green}APROVEITE AS VANTAGENS! {default}Acesse: {green}http://vip.denerdtv.com/"
 
-    Twitter:
+    Host3:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
       Maps: all
       Type: V
-      br: "Meu Twitter: {green} twitter.com/de_nerdTV"
+      br: "Hospedagem de Minecraft, CS:GO e CoD4 com pagamento por hora (único no Brasil), acesse {green} https://host.denerdtv.com/"
 
     Cost:
       Tag: "[{darkred}AUTO{default}]"
@@ -114,28 +114,21 @@ sa3_config:
       Enabled: 1
       Maps: all
       Type: V
-      br: "Para a lista de todos os nossos servidores, acesse: {green}https://denerdtv.com/servidores/"
+      br: "Para a lista de todos os nossos servidores, digite {green}!servers {default}ou acesse: {green}https://denerdtv.com/servidores/"
 
-    AdsAds3:
-      Enabled: 0
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
+#    AdsAds3:
+#      Enabled: 0
+#      Tag: "[{darkred}AUTO{default}]"
+#      Maps: all
+#      Type: V
+#      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
-    SteamGroup:
-      Tag: "[{darkred}AUTO{default}]"
-      Enabled: 1
-      Maps: all
-      Type: V
-      br: "Meu grupo na Steam: {green}steamcommunity.com/groups/de_nerdTV"
-
-    AdsAds34:
-      Enabled: 0
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
+#    AdsAds34:
+#      Enabled: 0
+#      Tag: "[{darkred}AUTO{default}]"
+#      Maps: all
+#      Type: V
+#      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     Discord:
       Tag: "[{darkred}AUTO{default}]"
@@ -152,6 +145,13 @@ sa3_config:
       br: "VIP com até {darkred}30％ de desconto {default}com pagamento por {green}MercadoPago, Boleto, Paypal e até mesmo skins {default}com ativação imediata : {green}http://denerdtv.com/vip/"
       zz: "VIP por R$ 10,00 por mês com pagamento por {green}MercadoPago, Boleto, Paypal e até mesmo skins {default}com ativação imediata : {green}http://denerdtv.com/vip/"
 
+    Host4:
+      Tag: "[{darkred}AUTO{default}]"
+      Enabled: 1
+      Maps: all
+      Type: V
+      br: "Hospedagem de Minecraft, CS:GO e CoD4 com pagamento por hora (único no Brasil), acesse {green} https://host.denerdtv.com/"
+
     RankChanger:
       Tag: "[{darkred}AUTO{default}]"
       Enabled: 1
@@ -159,12 +159,12 @@ sa3_config:
       Type: V
       br: "Digite {green}!mm {default}para mudar sua patente ou coin no scoreboard!"
 
-    AdsAds123123:
-      Enabled: 0
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
+#    AdsAds123123:
+#      Enabled: 0
+#      Tag: "[{darkred}AUTO{default}]"
+#      Maps: all
+#      Type: V
+#      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
 
     ResetScore:
       Tag: "[{darkred}AUTO{default}]"
