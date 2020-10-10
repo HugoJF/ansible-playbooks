@@ -5,7 +5,6 @@
   vars:
     plugin_id: glo
     plugin_url: "{{ glo_download_url }}"
-    addons_basepath: addons/sourcemod/
     addons_diretories:
       - configs
       - plugins
