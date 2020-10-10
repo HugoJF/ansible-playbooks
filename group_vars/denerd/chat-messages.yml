@@ -24,6 +24,13 @@ sa3_config:
       Type: T
       br: "{green}Está precisando de hospedagem para CS:GO? {default}! Cadastre-se em {green}https://host.denerdtv.com/ {default}e receba até R$ 50 para experimentar nossa nova plataforma de hospedagem!"
 
+    CallAdmin:
+      Enabled: 1
+      Tag: "[{darkred}AUTO{default}]"
+      Maps: all
+      Type: V
+      br: "{green}Precisa reportar alguém? {default}Utilize o comando {green}!calladmin {default}para iniciar um report. {darkred}Reports desnecessários, incorretos e abusivos resultarão em bans! NÃO ABUSE!"
+
 #    Feedback:
 #      Enabled: 1
 #      Tag: "[{darkred}AUTO{default}]"
@@ -44,13 +51,6 @@ sa3_config:
 #      Maps: all
 #      Type: V
 #      br: "Estamos com uma {darkred}promoção por tempo limitado de até 30％ de desconto! {default}Aproveite: https://vip.denerdtv.com/"
-
-    CallAdmin:
-      Enabled: 1
-      Tag: "[{darkred}AUTO{default}]"
-      Maps: all
-      Type: V
-      br: "{green}Precisa reportar alguém? {default}Utilize o comando {green}!calladmin {default}para iniciar um report. {darkred}Reports desnecessários, incorretos e abusivos resultarão em bans! NÃO ABUSE!"
 
     VIP:
       Tag: "[{darkred}AUTO{default}]"
@@ -86,7 +86,6 @@ sa3_config:
       Maps: all
       Type: V
       br: "Quer apoiar o servidor e ter um {green}slot reservado{default}? Aproveite o VIP por até{darkred}30％ de desconto{default}, todas as informações podem ser encontradas acessando {green}http://denerdtv.com/vip/"
-      zz:    "Quer apoiar o servidor e ter um {green}slot reservado{default}? Venha ser um {green}VIP do servidor {default}(R$ 10,00), todas as informações podem ser encontradas acessando {green}http://denerdtv.com/vip/"
 
     VIP2:
       Tag: "[{darkred}AUTO{default}]"
