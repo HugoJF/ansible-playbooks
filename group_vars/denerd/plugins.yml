@@ -114,7 +114,7 @@ install_socket: yes
 # Server redirect
 install_server_redirect: yes
 sm_server_redirect_show_player_info: 0
-sm_server_redirect_advertisement_time: 90
+sm_server_redirect_advertisement_time: 120
 sm_server_redirect_advertisement_order: 1
 sm_server_redirect_remove_this: 1
 

@@ -4,21 +4,21 @@ sr_config:
   server_1:
     ip: 177.54.150.15:27001
     display_name: "vip.denerdtv.com - #1 - DM FFA 128 TICK MIRAGE !ws !knife"
-  server_2:
-    ip: 177.54.150.15:27002
-    display_name: "vip.denerdtv.com - #2 - DM FFA 128 TICK DUST2 !ws !knife"
-  server_3:
-    ip: 177.54.150.15:27003
-    display_name: "vip.denerdtv.com - #3 - MULTIMOD DM MIRAGE 128 TICK !ws !knife"
+#  server_2:
+#    ip: 177.54.150.15:27002
+#    display_name: "vip.denerdtv.com - #2 - DM FFA 128 TICK DUST2 !ws !knife"
+#  server_3:
+#    ip: 177.54.150.15:27003
+#    display_name: "vip.denerdtv.com - #3 - MULTIMOD DM MIRAGE 128 TICK !ws !knife"
   server_4:
     ip: 177.54.150.15:27004
     display_name: "vip.denerdtv.com - #4 - ARENA 1v1 128 TICK !ws !knife"
   server_5:
     ip: 177.54.150.15:27005
     display_name: "vip.denerdtv.com - #5 - RETAKES 128 TICK !ws !knife"
-  server_6:
-    ip: 177.54.150.15:27006
-    display_name: "vip.denerdtv.com - #6 - RETAKES MISTO 128 TICK !ws !knife"
+#  server_6:
+#    ip: 177.54.150.15:27006
+#    display_name: "vip.denerdtv.com - #6 - RETAKES MISTO 128 TICK !ws !knife"
   server_7:
     ip: 177.54.150.15:27007
     display_name: "vip.denerdtv.com - #7 - SURF 128 TICK !ws !knife"
